@@ -32,4 +32,7 @@ CGPaintViewOutput * paintview = [[CGPaintViewOutput alloc] initWithFrame:frame];
 
 模拟器不支持CoreVideo fast texture upload, 部分功能仅支持真机
 
-待开发功能, 相机...
+## 后续计划
+1. 支持相机预览
+2. 支持录制
+3. 视频编码
