@@ -29,3 +29,5 @@ CGPaintViewOutput * paintview = [[CGPaintViewOutput alloc] initWithFrame:frame];
 [filter addTarget:paintview];
 [inputSource requestRender];
 ```
+
+模拟器不支持CoreVideo fast texture upload, 部分功能仅支持真机
