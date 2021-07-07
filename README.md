@@ -7,15 +7,15 @@
 
 输入支持类型
 1. CGPaintImageInput(图片)
-2. CGPaintPixelBufferInput(CVPixelbufferRef)
-3. CGPaintRawDataInput(Uint8 *)
+2. CGPaintPixelBufferInput(CVPixelbufferRef)支持NV12和32BGRA格式转纹理
+3. CGPaintRawDataInput(Uint8 * )支持NV12/NV12/BGRA/RGBA/I420格式转纹理
 4. CGPaintTextureInput(纹理ID)
 5. CGPaintVideoInput(视频)
 
 输出支持类型
 1. CGPaintImageOutput(图片)
-2. CGPaintPixelBufferOutput(CVPixelbufferRef)支持NV12和32BGRA格式转纹理
-4. CGPaintRawDataOutput(Uint8 *)支持NV12/NV12/BGRA/RGBA/I420格式转纹理
+2. CGPaintPixelBufferOutput(CVPixelbufferRef)
+4. CGPaintRawDataOutput(Uint8 * )
 5. CGPaintTextureOutput(纹理ID)
 6. CGPaintVideoOutput(视频)
 
