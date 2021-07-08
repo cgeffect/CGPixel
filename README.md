@@ -1,23 +1,25 @@
 # CGPaint
-Image Processing Use OpenGL ES
+GPU accelerated processor for iOS based on OpenGL.
 
-框架设计参考GPUImage https://github.com/BradLarson/GPUImage
+idea from GPUImage https://github.com/BradLarson/GPUImage
 
 ![image](https://user-images.githubusercontent.com/15692322/124691103-da010180-df0d-11eb-8e20-e6d9791ff708.png)
 
-输入支持类型
-1. CGPaintImageInput(图片)
-2. CGPaintPixelBufferInput(CVPixelbufferRef)支持NV12和32BGRA格式转纹理
-3. CGPaintRawDataInput(Uint8 * )支持NV12/NV12/BGRA/RGBA/I420格式转纹理
-4. CGPaintTextureInput(纹理ID)
-5. CGPaintVideoInput(视频)
+Input source
+1. CGPaintImageInput
+2. CGPaintPixelBufferInput<br/>
+    support: NV12/32BGRA
+3. CGPaintRawDataInput<br/>
+    support: NV12/NV12/BGRA/RGBA/I420
+4. CGPaintTextureInput
+5. CGPaintVideoInput
 
-输出支持类型
-1. CGPaintImageOutput(图片)
-2. CGPaintPixelBufferOutput(CVPixelbufferRef)
-4. CGPaintRawDataOutput(Uint8 * )
-5. CGPaintTextureOutput(纹理ID)
-6. CGPaintVideoOutput(视频)
+Output
+1. CGPaintImageOutput
+2. CGPaintPixelBufferOutput
+4. CGPaintRawDataOutput
+5. CGPaintTextureOutput
+6. CGPaintVideoOutput
 
 ``` 
 UIImage *sourceImage = [UIImage imageNamed:@"rgba"];
@@ -30,9 +32,10 @@ CGPaintViewOutput * paintview = [[CGPaintViewOutput alloc] initWithFrame:frame];
 [inputSource requestRender];
 ```
 
-模拟器不支持CoreVideo fast texture upload, 部分功能仅支持真机
+iPhone simulator not support fast texture upload, please use machine debug
 
-## 后续计划
-1. 支持相机预览
-2. 支持录制
-3. 视频编码
+## future plan
+1. support camerm preview
+2. support camera record
+3. support video encode
+
