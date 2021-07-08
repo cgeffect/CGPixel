@@ -191,19 +191,11 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		96C028CB265951650009C77D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		E5E9815C2658D256008ED21D = {
 			isa = PBXGroup;
 			children = (
 				E5E981672658D257008ED21D /* CGPaint */,
 				E5E981662658D256008ED21D /* Products */,
-				96C028CB265951650009C77D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
