@@ -1,5 +1,5 @@
 # CGPaint
-基于OpenGL ES的图像和视频处理的iOS框架
+Image Processing Use OpenGL ES
 
 框架设计参考GPUImage https://github.com/BradLarson/GPUImage
 
