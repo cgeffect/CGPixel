@@ -1,5 +1,5 @@
 # CGPaint
-GPU accelerated processor for iOS based on OpenGL.
+GPU accelerated processor for iOS based on OpenGL
 
 idea from GPUImage https://github.com/BradLarson/GPUImage
 
