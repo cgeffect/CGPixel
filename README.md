@@ -34,7 +34,7 @@ CGPaintViewOutput * paintview = [[CGPaintViewOutput alloc] initWithFrame:frame];
 
 iPhone simulator not support fast texture upload, please use machine debug
 
-## future plan
+## Future Plan
 1. support camerm preview
 2. support camera record
 3. support video encode
