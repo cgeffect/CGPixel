@@ -5,6 +5,8 @@ idea from GPUImage https://github.com/BradLarson/GPUImage
 
 ![image](https://user-images.githubusercontent.com/15692322/124691103-da010180-df0d-11eb-8e20-e6d9791ff708.png)
 
+![image](https://user-images.githubusercontent.com/15692322/139862736-b8cb67b0-7b8f-4bb1-9f72-05d7b26d653d.gif)
+
 Input source
 1. CGPaintImageInput
 2. CGPaintPixelBufferInput<br/>
