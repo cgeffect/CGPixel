@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9655B331273582B900491380 /* CGPaintSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655B330273582B900491380 /* CGPaintSource.m */; };
 		96A94BC62659596E00CCF932 /* Test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 96A94BC52659596E00CCF932 /* Test.mp4 */; };
 		96A94BCA26595F3000CCF932 /* CGPaintTargetOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A94BC926595F3000CCF932 /* CGPaintTargetOutput.m */; };
 		96A94BCD26596F2400CCF932 /* CGPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A94BCC26596F2400CCF932 /* CGPreviewController.m */; };
@@ -65,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		96462A362673ABBA004B97E4 /* CGPaintFilterInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPaintFilterInput.h; sourceTree = "<group>"; };
+		9655B32F273582B900491380 /* CGPaintSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPaintSource.h; sourceTree = "<group>"; };
+		9655B330273582B900491380 /* CGPaintSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPaintSource.m; sourceTree = "<group>"; };
 		96A94BC52659596E00CCF932 /* Test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Test.mp4; sourceTree = "<group>"; };
 		96A94BC826595F3000CCF932 /* CGPaintTargetOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPaintTargetOutput.h; sourceTree = "<group>"; };
 		96A94BC926595F3000CCF932 /* CGPaintTargetOutput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPaintTargetOutput.m; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 				E5FE984E266507BD00548BB1 /* CGPaintVideoController.m */,
 				96B1D74E26652E71003C29D0 /* CGPaintSourceController.h */,
 				96B1D74F26652E71003C29D0 /* CGPaintSourceController.m */,
+				9655B32F273582B900491380 /* CGPaintSource.h */,
+				9655B330273582B900491380 /* CGPaintSource.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 				E5E982442658D756008ED21D /* CGPaintFilter.m in Sources */,
 				96C028C92659511A0009C77D /* CGPaintController.m in Sources */,
 				E5E9824B2658D756008ED21D /* CGPaintSoulFilter.m in Sources */,
+				9655B331273582B900491380 /* CGPaintSource.m in Sources */,
 				96A94BCA26595F3000CCF932 /* CGPaintTargetOutput.m in Sources */,
 				E5E982312658D756008ED21D /* CGPaintRenderPipeline.m in Sources */,
 				E5E982432658D756008ED21D /* CGPaintRadialRotateBlurFilter.m in Sources */,
