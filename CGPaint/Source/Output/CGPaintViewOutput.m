@@ -29,6 +29,8 @@
     if (self) {
         CAEAGLLayer *eaglLayer = (CAEAGLLayer*) self.layer;
         eaglLayer.opaque = NO;// 支持透明度
+        //这里设置layer使用像素值, 如果不设置则默认使用点位值, 设置像素值后, 对应的viewPort计算也是用像素值
+        eaglLayer.contentsScale = [UIScreen mainScreen].scale;
         eaglLayer.drawableProperties = @{
                 kEAGLDrawablePropertyRetainedBacking: @NO,
                 kEAGLDrawablePropertyColorFormat: kEAGLColorFormatRGBA8
@@ -52,7 +54,7 @@
 }
 
 - (void)newFrameReadyAtTime:(CMTime)frameTime timimgInfo:(CMSampleTimingInfo)timimgInfo {
-    [_renderPipline glDraw:[_inputFramebuffer texture] width:self.bounds.size.width height:self.bounds.size.height];
+    [_renderPipline glDraw:[_inputFramebuffer texture] width:_inputFramebuffer.fboSize.width height:_inputFramebuffer.fboSize.height];
     if (_inputFramebuffer.isOnlyGenTexture == NO) {
         [_inputFramebuffer recycle];
     }

@@ -63,6 +63,7 @@ GLfloat textureCoordinates[] = {
     GLint                  _backingWidth;
     GLint                  _backingHeight;
     CAEAGLLayer *_glLayer;
+    CGSize _mLayerSize;   // layer的尺寸，像素值
 }
 - (instancetype)init
 {
@@ -75,6 +76,9 @@ GLfloat textureCoordinates[] = {
 
 - (BOOL)glPrepareDrawToGLLayer:(CAEAGLLayer *)glLayer {
     _glLayer = glLayer;
+    _mLayerSize.width = glLayer.frame.size.width * [UIScreen mainScreen].scale;
+    _mLayerSize.height = glLayer.frame.size.height * [UIScreen mainScreen].scale;
+
     BOOL ret = FALSE;
     [self genRenderbuffer];
     [self genFramebuffer];
@@ -128,7 +132,13 @@ GLfloat textureCoordinates[] = {
     [self glDrawToRenderbuffer:inputTex width:width height:height aspectRatio:0];
 }
 - (void)glDrawToRenderbuffer:(int)inputTex width:(int)width height:(int)height aspectRatio:(float)aspectRatio {
-    glViewport(0, 0, width, height);
+    CGRect viewPort = [self glPrepareViewport:width height:height];
+    int x = (int) viewPort.origin.x;
+    int y = (int) viewPort.origin.y;
+    int w = (int) viewPort.size.width;
+    int h = (int) viewPort.size.height;
+    glViewport(x, y, w, h);
+    
     [_program use];
     glBindFramebuffer(GL_FRAMEBUFFER, _displayFramebuffer);
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
@@ -151,6 +161,28 @@ GLfloat textureCoordinates[] = {
     glBindFramebuffer(GL_FRAMEBUFFER, GL_NONE);
     glBindTexture(GL_TEXTURE_2D, GL_NONE);
     [_program unuse];
+}
+
+#pragma mark private
+- (CGRect)glPrepareViewport:(NSUInteger)texWidth height:(NSUInteger)texHeight {
+    if (texWidth == 0 || texHeight == 0) {
+        return CGRectZero;
+    }
+    int x, y, w, h;
+    int layerW = (int) self->_mLayerSize.width;
+    int layerH = (int) self->_mLayerSize.height;
+    float ratio_tex = (float) texHeight / texWidth;
+    float ratio_layer = (float)layerH / (float)layerW;
+    if (ratio_tex > ratio_layer) {
+        h = (int) layerH;
+        w = (int) (layerH / ratio_tex);
+    } else {
+        w = (int) layerW;
+        h = (int) (layerW * ratio_tex);
+    }
+    x = ((int) layerW - w) / 2;
+    y = ((int) layerH - h) / 2;
+    return CGRectMake(x, y, w, h);
 }
 
 - (void)dealloc
