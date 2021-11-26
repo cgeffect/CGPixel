@@ -1,4 +1,5 @@
 # CGPaint
+<img width="945" alt="截屏2021-11-27 上午12 08 45" src="https://user-images.githubusercontent.com/15692322/143607523-5e14a01f-6fd7-4e67-a086-87e363b08486.png">
 CGPaint 是一个适用于 iOS 的GPU加速OpenGL处理库<br>
 
 SDK 的 Github 地址：https://github.com/cgeffect/CGPaint
