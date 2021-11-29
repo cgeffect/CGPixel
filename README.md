@@ -10,6 +10,8 @@ SDK 的 Github 地址：https://github.com/cgeffect/CGPaint
 
 ![image](https://user-images.githubusercontent.com/15692322/139862736-b8cb67b0-7b8f-4bb1-9f72-05d7b26d653d.gif)
 
+主要功能是实现了滤镜链
+
 输入源
 1. CGPaintImageInput
 2. CGPaintPixelBufferInput<br/>
@@ -40,7 +42,5 @@ CGPaintViewOutput * paintview = [[CGPaintViewOutput alloc] initWithFrame:frame];
 
 模拟器不支持fast texture upload, 使用真机运行
 
-## 未来计划
-1. 支持相机预览/录制
-3. 支持视频编码
+CGPaint功能不更新了, 主要维护CGMetal, 参考https://github.com/cgeffect/CGMetal
 
