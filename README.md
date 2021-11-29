@@ -6,11 +6,12 @@ SDK 的 Github 地址：https://github.com/cgeffect/CGPaint
 
 感谢 GPUImage https://github.com/BradLarson/GPUImage
 
+主要功能是实现了滤镜链, 简化了GPUImage的功能, 对于初学者更容易理解.
+
 ![image](https://user-images.githubusercontent.com/15692322/124691103-da010180-df0d-11eb-8e20-e6d9791ff708.png)
 
 ![image](https://user-images.githubusercontent.com/15692322/139862736-b8cb67b0-7b8f-4bb1-9f72-05d7b26d653d.gif)
 
-主要功能是实现了滤镜链
 
 输入源
 1. CGPaintImageInput
