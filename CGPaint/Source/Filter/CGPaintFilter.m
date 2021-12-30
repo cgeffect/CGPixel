@@ -153,6 +153,9 @@ static const GLfloat textureCoordinates[] = {
     glBindTexture(GL_TEXTURE_2D, _inputFramebuffer.texture);
     glUniform1i(_uTexture, CG_TEXTURE0);
 
+    //这个地方要修改, 使用VBO
+    //纹理和顶点坐标一定要是有VBO, 否则某些情况下会出现bug
+    //Execution of the command buffer was aborted due to an error during execution. Ignored (for causing prior/excessive GPU errors) (IOAF code 4)
     glEnableVertexAttribArray(self->_position);
     glVertexAttribPointer(self->_position, 2, GL_FLOAT, 0, 0, vertices);
     glEnableVertexAttribArray(self->_aTexCoord);
