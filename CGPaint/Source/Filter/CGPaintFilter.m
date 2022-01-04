@@ -10,6 +10,42 @@
 #import "CGPaintFramebufferCache.h"
 #import "CGPaintUtils.h"
 
+/*
+ 旋转Z
+ float radX = 90.0 * PI / 180.0;
+ mat4 rotationMatrix = mat4(cos(radX) , sin(radX) , 0.0, 0.0,
+                            -sin(radX), cos(radX), 0.0, 0.0,
+                            0.0, 0.0, 1.0, 0.0,
+                            0.0, 0.0, 0.0, 1.0);
+ 
+ 旋转X
+ float radX = 150.0 * PI / 180.0;
+ mat4 rotationMatrix = mat4(1, 0, 0.0, 0.0,
+                            0, cos(radX), sin(radX), 0.0,
+                            0.0, -sin(radX), cos(radX), 0.0,
+                            0.0, 0.0, 0.0, 1.0);
+ 
+ 旋转Y
+ float radX = 30.0 * PI / 180.0;
+ mat4 rotationMatrix = mat4(cos(radX), 0, -sin(radX), 0,
+                            0, 1, 0, 0,
+                            sin(radX), 0, cos(radX), 0,
+                            0.0, 0.0, 0.0, 1.0);
+
+ 
+缩放
+ mat4 rotationMatrix = mat4(2 , 0 , 0.0, 0.0,
+                            0, 2, 0.0, 0.0,
+                            0.0, 0.0, 1.0, 0.0,
+                            0.0, 0.0, 0.0, 1.0);
+
+ 平移
+ mat4 rotationMatrix = mat4(1 , 0 , 0, 0,
+                            0, 1, 0, 0,
+                            0.0, 0.0, 1.0, 0.0,
+                            0.2, 0.2, 0.0, 1.0);
+
+ */
 NSString *const kCGVertexShaderString = CG_SHADER_STRING
 (
  attribute vec4 position;
