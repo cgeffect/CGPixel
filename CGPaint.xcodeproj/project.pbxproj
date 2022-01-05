@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9646E528278556FD00BFE83C /* CGPaintCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9646E526278556FD00BFE83C /* CGPaintCameraController.m */; };
+		9646E52B2785571C00BFE83C /* CGPaintCameraInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 9646E52A2785571C00BFE83C /* CGPaintCameraInput.m */; };
 		9655B331273582B900491380 /* CGPaintSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655B330273582B900491380 /* CGPaintSource.m */; };
 		96A94BC62659596E00CCF932 /* Test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 96A94BC52659596E00CCF932 /* Test.mp4 */; };
 		96A94BCA26595F3000CCF932 /* CGPaintTargetOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A94BC926595F3000CCF932 /* CGPaintTargetOutput.m */; };
@@ -65,6 +67,10 @@
 
 /* Begin PBXFileReference section */
 		96462A362673ABBA004B97E4 /* CGPaintFilterInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPaintFilterInput.h; sourceTree = "<group>"; };
+		9646E526278556FD00BFE83C /* CGPaintCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintCameraController.m; sourceTree = "<group>"; };
+		9646E527278556FD00BFE83C /* CGPaintCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintCameraController.h; sourceTree = "<group>"; };
+		9646E5292785571C00BFE83C /* CGPaintCameraInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintCameraInput.h; sourceTree = "<group>"; };
+		9646E52A2785571C00BFE83C /* CGPaintCameraInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintCameraInput.m; sourceTree = "<group>"; };
 		9655B32F273582B900491380 /* CGPaintSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPaintSource.h; sourceTree = "<group>"; };
 		9655B330273582B900491380 /* CGPaintSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPaintSource.m; sourceTree = "<group>"; };
 		96A94BC52659596E00CCF932 /* Test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Test.mp4; sourceTree = "<group>"; };
@@ -253,6 +259,8 @@
 		E5E981E12658D756008ED21D /* Input */ = {
 			isa = PBXGroup;
 			children = (
+				9646E5292785571C00BFE83C /* CGPaintCameraInput.h */,
+				9646E52A2785571C00BFE83C /* CGPaintCameraInput.m */,
 				E5E981E42658D756008ED21D /* CGPaintImageInput.h */,
 				E5E981E82658D756008ED21D /* CGPaintImageInput.m */,
 				E5E981E32658D756008ED21D /* CGPaintPixelBufferInput.h */,
@@ -322,6 +330,8 @@
 		E5E9820C2658D756008ED21D /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				9646E527278556FD00BFE83C /* CGPaintCameraController.h */,
+				9646E526278556FD00BFE83C /* CGPaintCameraController.m */,
 				96C028BF2659511A0009C77D /* CGPaintController.h */,
 				96C028C32659511A0009C77D /* CGPaintController.m */,
 				96C028C52659511A0009C77D /* CGPaintListController.h */,
@@ -454,6 +464,7 @@
 				96A94BCD26596F2400CCF932 /* CGPreviewController.m in Sources */,
 				E5E982442658D756008ED21D /* CGPaintFilter.m in Sources */,
 				96C028C92659511A0009C77D /* CGPaintController.m in Sources */,
+				9646E52B2785571C00BFE83C /* CGPaintCameraInput.m in Sources */,
 				E5E9824B2658D756008ED21D /* CGPaintSoulFilter.m in Sources */,
 				9655B331273582B900491380 /* CGPaintSource.m in Sources */,
 				96A94BCA26595F3000CCF932 /* CGPaintTargetOutput.m in Sources */,
@@ -472,6 +483,7 @@
 				E5E9822F2658D756008ED21D /* CGPaintPipelineOutput.m in Sources */,
 				E5E982342658D756008ED21D /* CGPaintProgram.m in Sources */,
 				E5E982462658D756008ED21D /* CGPaintRadialScaleBlurFilter.m in Sources */,
+				9646E528278556FD00BFE83C /* CGPaintCameraController.m in Sources */,
 				E5E9824D2658D756008ED21D /* CGPaintShakeFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

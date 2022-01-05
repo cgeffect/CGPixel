@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef enum {
-    CG_FILTER,
+    CG_FILTER = 0,
     CG_SOUL,
     CG_SHAKE,
     CG_GLITCH,

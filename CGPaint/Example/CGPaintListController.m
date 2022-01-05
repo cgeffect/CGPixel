@@ -18,7 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
-    self.navigationItem.title = _name;
 }
 
 #pragma mark - Table view data source
@@ -54,16 +53,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (_inputType == CG_VIDEO) {
-        CGPaintVideoController *vc = [[CGPaintVideoController alloc] init];
-        vc.filterType = (CGRFilterType)indexPath.row;
-        [self.navigationController pushViewController:vc animated:YES];
-    } else {
-        CGPaintController *vc = [[CGPaintController alloc] init];
-        vc.filterType = (CGRFilterType)indexPath.row;
-        vc.inputType = _inputType;
-        [self.navigationController pushViewController:vc animated:YES];
-    }
+    CGPaintController *vc = [[CGPaintController alloc] init];
+    vc.filterType = (CGRFilterType)indexPath.row;
+    vc.inputType = CG_IMAGE;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

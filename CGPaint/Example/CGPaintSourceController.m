@@ -7,6 +7,9 @@
 
 #import "CGPaintSourceController.h"
 #import "CGPaintListController.h"
+#import "CGPaintController.h"
+#import "CGPaintVideoController.h"
+#import "CGPaintCameraController.h"
 
 @interface CGPaintSourceController ()
 {
@@ -21,7 +24,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     self.navigationItem.title = @"CGPaint";
 
-    _inputList = @[@"texture input", @"data input", @"image input", @"pixel input", @"video input"];
+    _inputList = @[@"camera input", @"data input", @"image input", @"pixel input", @"video input", @"effect"];
     
 //    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"play" style:UIBarButtonItemStyleDone target:self action:@selector(goAction)];
 //    self.navigationItem.rightBarButtonItem = item;
@@ -53,20 +56,31 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    CGPaintListController *vc = [[CGPaintListController alloc] init];
     NSString *type = _inputList[indexPath.row];
-    if ([type isEqualToString:@"texture input"]) {
-        vc.inputType = CG_TEXTURE;
+    if ([type isEqualToString:@"camera input"]) {
+        CGPaintCameraController *vc = [[CGPaintCameraController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     } else if ([type isEqualToString:@"data input"]) {
+        CGPaintController *vc = [[CGPaintController alloc] init];
+        vc.filterType = CG_FILTER;
         vc.inputType = CG_RAWDATA;
+        [self.navigationController pushViewController:vc animated:YES];
     } else if ([type isEqualToString:@"image input"]) {
+        CGPaintController *vc = [[CGPaintController alloc] init];
+        vc.filterType = CG_FILTER;
         vc.inputType = CG_IMAGE;
+        [self.navigationController pushViewController:vc animated:YES];
     } else if ([type isEqualToString:@"pixel input"]) {
+        CGPaintController *vc = [[CGPaintController alloc] init];
+        vc.filterType = CG_FILTER;
         vc.inputType = CG_PIXELBUFFER;
+        [self.navigationController pushViewController:vc animated:YES];
     } else if ([type isEqualToString:@"video input"]) {
-        vc.inputType = CG_VIDEO;
+        CGPaintVideoController *vc = [[CGPaintVideoController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if ([type isEqualToString:@"effect"]) {
+        CGPaintListController *vc = [[CGPaintListController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
-    vc.name = type;
-    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

@@ -36,6 +36,7 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
         [[self displayLink] addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
         [[self displayLink] setPaused:YES];
         
+        //kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange
         NSDictionary *pixBuffAttributes = @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_32BGRA)};
         self.videoOutput = [[AVPlayerItemVideoOutput alloc] initWithPixelBufferAttributes:pixBuffAttributes];
         _myVideoOutputQueue = dispatch_queue_create("myVideoOutputQueue", DISPATCH_QUEUE_SERIAL);

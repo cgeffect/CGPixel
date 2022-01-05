@@ -125,6 +125,7 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
             [self->_shaderProgram use];
             [self->_outputFramebuffer bindFramebuffer];
             [self drawNV12ToFBO];
+            [self->_outputFramebuffer unbindFramebuffer];
         }
     });
 }
@@ -172,8 +173,8 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
         NSLog(@"CGPaintPixelBufferInput CVOpenGLESTextureCacheRef nil");
     }
     CVReturn err;
-    size_t planeCount = CVPixelBufferGetPlaneCount(pixelBuffer);
-    NSLog(@"平面个数: %zu", planeCount);
+//    size_t planeCount = CVPixelBufferGetPlaneCount(pixelBuffer);
+//    NSLog(@"平面个数: %zu", planeCount);
     
     _bufferWidth = (int) CVPixelBufferGetWidth(pixelBuffer);
     _bufferHeight = (int) CVPixelBufferGetHeight(pixelBuffer);

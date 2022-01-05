@@ -34,6 +34,7 @@ FOUNDATION_EXPORT const unsigned char CGPaintVersionString[];
 #import "CGPaintTextureInput.h"
 #import "CGPaintPixelBufferInput.h"
 #import "CGPaintVideoInput.h"
+#import "CGPaintCameraInput.h"
 
 #pragma mark -
 #pragma mark Output

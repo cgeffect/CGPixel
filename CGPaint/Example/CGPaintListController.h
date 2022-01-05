@@ -12,9 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CGPaintListController : UITableViewController
 
-@property(nonatomic, assign)CGRInputType inputType;
-@property(nonatomic, strong)NSString *name;
-
 @end
 
 NS_ASSUME_NONNULL_END
