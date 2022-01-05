@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CGPaintVideoController : UIViewController
-@property(nonatomic, assign)CGRFilterType filterType;
+
 @end
 
 NS_ASSUME_NONNULL_END
