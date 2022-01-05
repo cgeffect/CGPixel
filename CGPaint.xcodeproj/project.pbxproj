@@ -17,7 +17,6 @@
 		96C028C72659511A0009C77D /* CGPaintUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C028C02659511A0009C77D /* CGPaintUtils.m */; };
 		96C028C82659511A0009C77D /* CGPaintListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C028C12659511A0009C77D /* CGPaintListController.m */; };
 		96C028C92659511A0009C77D /* CGPaintController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C028C32659511A0009C77D /* CGPaintController.m */; };
-		96C028CA2659511A0009C77D /* CGImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C028C42659511A0009C77D /* CGImageCoder.m */; };
 		E5E9816A2658D257008ED21D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E981692658D257008ED21D /* AppDelegate.m */; };
 		E5E981752658D259008ED21D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E981742658D259008ED21D /* Assets.xcassets */; };
 		E5E981782658D259008ED21D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5E981762658D259008ED21D /* LaunchScreen.storyboard */; };
@@ -81,9 +80,7 @@
 		96C028BF2659511A0009C77D /* CGPaintController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintController.h; sourceTree = "<group>"; };
 		96C028C02659511A0009C77D /* CGPaintUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintUtils.m; sourceTree = "<group>"; };
 		96C028C12659511A0009C77D /* CGPaintListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintListController.m; sourceTree = "<group>"; };
-		96C028C22659511A0009C77D /* CGImageCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGImageCoder.h; sourceTree = "<group>"; };
 		96C028C32659511A0009C77D /* CGPaintController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintController.m; sourceTree = "<group>"; };
-		96C028C42659511A0009C77D /* CGImageCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGImageCoder.m; sourceTree = "<group>"; };
 		96C028C52659511A0009C77D /* CGPaintListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintListController.h; sourceTree = "<group>"; };
 		96C028C62659511A0009C77D /* CGPaintUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintUtils.h; sourceTree = "<group>"; };
 		E5E981652658D256008ED21D /* CGPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,27 +172,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		96C028BE2659511A0009C77D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				96C028BF2659511A0009C77D /* CGPaintController.h */,
-				96C028C32659511A0009C77D /* CGPaintController.m */,
-				96C028C52659511A0009C77D /* CGPaintListController.h */,
-				96C028C12659511A0009C77D /* CGPaintListController.m */,
-				96A94BCB26596F2400CCF932 /* CGPreviewController.h */,
-				96A94BCC26596F2400CCF932 /* CGPreviewController.m */,
-				96C028C22659511A0009C77D /* CGImageCoder.h */,
-				96C028C42659511A0009C77D /* CGImageCoder.m */,
-				E5FE984D266507BD00548BB1 /* CGPaintVideoController.h */,
-				E5FE984E266507BD00548BB1 /* CGPaintVideoController.m */,
-				96B1D74E26652E71003C29D0 /* CGPaintSourceController.h */,
-				96B1D74F26652E71003C29D0 /* CGPaintSourceController.m */,
-				9655B32F273582B900491380 /* CGPaintSource.h */,
-				9655B330273582B900491380 /* CGPaintSource.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		E5E9815C2658D256008ED21D = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +191,7 @@
 		E5E981672658D257008ED21D /* CGPaint */ = {
 			isa = PBXGroup;
 			children = (
+				E5E982252658D756008ED21D /* Resource */,
 				E5E9820C2658D756008ED21D /* Example */,
 				E5E981CA2658D755008ED21D /* Source */,
 				E5E981682658D257008ED21D /* AppDelegate.h */,
@@ -345,8 +322,18 @@
 		E5E9820C2658D756008ED21D /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				96C028BE2659511A0009C77D /* Controller */,
-				E5E982252658D756008ED21D /* Resource */,
+				96C028BF2659511A0009C77D /* CGPaintController.h */,
+				96C028C32659511A0009C77D /* CGPaintController.m */,
+				96C028C52659511A0009C77D /* CGPaintListController.h */,
+				96C028C12659511A0009C77D /* CGPaintListController.m */,
+				96A94BCB26596F2400CCF932 /* CGPreviewController.h */,
+				96A94BCC26596F2400CCF932 /* CGPreviewController.m */,
+				E5FE984D266507BD00548BB1 /* CGPaintVideoController.h */,
+				E5FE984E266507BD00548BB1 /* CGPaintVideoController.m */,
+				96B1D74E26652E71003C29D0 /* CGPaintSourceController.h */,
+				96B1D74F26652E71003C29D0 /* CGPaintSourceController.m */,
+				9655B32F273582B900491380 /* CGPaintSource.h */,
+				9655B330273582B900491380 /* CGPaintSource.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -476,7 +463,6 @@
 				96C028C82659511A0009C77D /* CGPaintListController.m in Sources */,
 				E5E982412658D756008ED21D /* CGPaintGlitchFilter.m in Sources */,
 				E5E9823E2658D756008ED21D /* CGPaintRawDataOutput.m in Sources */,
-				96C028CA2659511A0009C77D /* CGImageCoder.m in Sources */,
 				96B1D7482663963E003C29D0 /* CGPaintGrayFilter.m in Sources */,
 				E5E982322658D756008ED21D /* CGPaintFramebuffer.m in Sources */,
 				96B1D75026652E71003C29D0 /* CGPaintSourceController.m in Sources */,

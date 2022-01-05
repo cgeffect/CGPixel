@@ -7,7 +7,6 @@
 
 #import "CGPaintController.h"
 #import "CGPaint.h"
-#import "CGImageCoder.h"
 #import "CGPreviewController.h"
 #import "CGPaintSource.h"
 @interface CGPaintController ()
