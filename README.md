@@ -43,5 +43,4 @@ CGPaintViewOutput * paintview = [[CGPaintViewOutput alloc] initWithFrame:frame];
 
 模拟器不支持fast texture upload, 使用真机运行
 
-CGPaint功能不更新了, 主要维护CGMetal, 参考https://github.com/cgeffect/CGMetal
 
