@@ -2,7 +2,7 @@
 //  CGPaintSource.h
 //  CGPaint
 //
-//  Created by 王腾飞 on 2021/11/5.
+//  Created by Jason on 2021/11/5.
 //
 
 #import <Foundation/Foundation.h>

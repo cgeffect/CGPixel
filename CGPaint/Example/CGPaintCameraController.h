@@ -2,7 +2,7 @@
 //  CGPaintCameraController.h
 //  CGMetaliOS
 //
-//  Created by 王腾飞 on 2021/12/25.
+//  Created by Jason on 2021/12/25.
 //
 
 #import <UIKit/UIKit.h>

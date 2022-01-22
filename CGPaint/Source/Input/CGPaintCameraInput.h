@@ -2,7 +2,7 @@
 //  CGPaintCameraInput.h
 //  CGMetal
 //
-//  Created by 王腾飞 on 2021/12/23.
+//  Created by Jason on 2021/12/23.
 //
 
 #import "CGPaintOutput.h"

@@ -200,7 +200,7 @@ static const GLfloat textureCoordinates[] = {
         [self->_uvFramebuffer bindTexture];
         [self->_uvFramebuffer upload:byte + uvOffset size:uvSize internalformat:GL_LUMINANCE_ALPHA format:GL_LUMINANCE_ALPHA isOverride:_isOverride];
         [self->_uvFramebuffer unbindTexture];
-        
+        [self drawNV21NV12ToFBO];
     } else if (format == CGDataFormatI420) {
         int width = byteSize.width;
         int height = byteSize.height;
@@ -218,6 +218,7 @@ static const GLfloat textureCoordinates[] = {
         [self->_vFramebuffer bindTexture];
         [self->_vFramebuffer upload:byte + vOffset size:uvSize internalformat:GL_LUMINANCE format:GL_LUMINANCE isOverride:_isOverride];
         [self->_vFramebuffer unbindTexture];
+//        [self drawI420ToFBO];
     }
 }
 

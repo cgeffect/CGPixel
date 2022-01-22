@@ -7,6 +7,7 @@
 
 #import "CGPaintVideoInput.h"
 #import "CGPaintPixelBufferInput.h"
+#import "CGPaintRawDataInput.h"
 
 # define ONE_FRAME_DURATION 0.03
 # define LUMA_SLIDER_TAG 0
@@ -20,10 +21,13 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
     AVPlayerItem *_playerItem;
     AVAsset *_asset;
     dispatch_queue_t _myVideoOutputQueue;
+    UInt8 *_dstData;
 }
 @property(nonatomic, strong)AVPlayerItemVideoOutput *videoOutput;
 @property(nonatomic, strong)CADisplayLink *displayLink;
 @property(nonatomic, strong)CGPaintPixelBufferInput *pixInput;
+@property(nonatomic, strong)CGPaintRawDataInput *dataInput;
+
 @end
 
 @implementation CGPaintVideoInput
@@ -37,7 +41,7 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
         [[self displayLink] setPaused:YES];
         
         //kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange
-        NSDictionary *pixBuffAttributes = @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_32BGRA)};
+        NSDictionary *pixBuffAttributes = @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange)};
         self.videoOutput = [[AVPlayerItemVideoOutput alloc] initWithPixelBufferAttributes:pixBuffAttributes];
         _myVideoOutputQueue = dispatch_queue_create("myVideoOutputQueue", DISPATCH_QUEUE_SERIAL);
         [[self videoOutput] setDelegate:self queue:_myVideoOutputQueue];
@@ -72,15 +76,31 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
         CVPixelBufferRef pixelBuffer = NULL;
         pixelBuffer = [[self videoOutput] copyPixelBufferForItemTime:outputItemTime itemTimeForDisplay:NULL];
         [self.delegate output:self pixelbuffer:pixelBuffer];
+        size_t w = CVPixelBufferGetWidth(pixelBuffer);
+        size_t h = CVPixelBufferGetHeight(pixelBuffer);
+        if (_dstData == nil) {
+            _dstData = malloc(w * h * 3 / 2);
+        }
+        [self translate420VPixelBuffer:pixelBuffer toDataNV12:_dstData];
+        
         if (pixelBuffer != NULL) {
-            if (_pixInput == nil) {
-                _pixInput = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatBGRA];
+            if (_dataInput == nil) {
+                _dataInput = [[CGPaintRawDataInput alloc] initWithByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
             } else {
-                [_pixInput updatePixelBuffer:pixelBuffer format:CGPixelFormatBGRA];
+                [_dataInput uploadByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
             }
             [self _requestRender];
             CVPixelBufferRelease(pixelBuffer);
         }
+//        if (pixelBuffer != NULL) {
+//            if (_pixInput == nil) {
+//                _pixInput = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatBGRA];
+//            } else {
+//                [_pixInput updatePixelBuffer:pixelBuffer format:CGPixelFormatBGRA];
+//            }
+//            [self _requestRender];
+//            CVPixelBufferRelease(pixelBuffer);
+//        }
     } else {
         
     }
@@ -89,7 +109,7 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
     runSyncOnSerialQueue(^{
         [[CGPaintContext sharedRenderContext] useAsCurrentContext];
         for (id<CGPaintInput> currentTarget in self->_targets){
-            [currentTarget setInputFramebuffer:self->_pixInput.outFrameBuffer];
+            [currentTarget setInputFramebuffer:self->_dataInput.outFrameBuffer];
             CMSampleTimingInfo info = {0};
             [currentTarget newFrameReadyAtTime:kCMTimeZero timimgInfo:info];
         }
@@ -142,4 +162,33 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
     _myVideoOutputQueue = nil;
     NSLog(@"%@ dealloc", self);
 }
+
+- (void)translate420VPixelBuffer:(nonnull CVPixelBufferRef)pixelBuffer toDataNV12:(nonnull UInt8 *)data {
+    size_t pixelBufferWidth = CVPixelBufferGetWidth(pixelBuffer);
+    size_t pixelBufferHeight = CVPixelBufferGetHeight(pixelBuffer);
+
+    size_t bytePerRowY = CVPixelBufferGetBytesPerRowOfPlane(pixelBuffer, 0);
+    size_t bytesPerRowUV = CVPixelBufferGetBytesPerRowOfPlane(pixelBuffer, 1);
+
+    NSInteger y_line_width = pixelBufferWidth > bytePerRowY ? bytePerRowY : pixelBufferWidth;
+    NSInteger uv_line_width = pixelBufferWidth > bytesPerRowUV ? bytesPerRowUV : pixelBufferWidth;
+
+    CVPixelBufferLockBaseAddress(pixelBuffer, 0);
+
+    UInt8 *yData = CVPixelBufferGetBaseAddressOfPlane(pixelBuffer, 0);
+    UInt8 *uvData = CVPixelBufferGetBaseAddressOfPlane(pixelBuffer, 1);
+
+    // y
+    for (int i = 0; i < pixelBufferHeight; i++) {
+        memcpy(data + pixelBufferWidth * i, yData + bytePerRowY * i, (size_t) y_line_width);
+    }
+    // uv
+    NSInteger uv_offset_base = pixelBufferWidth * pixelBufferHeight;
+    for (int j = 0; j < pixelBufferHeight / 2; j++) {
+        // 按行拷贝
+        memcpy(data + uv_offset_base + pixelBufferWidth * j, uvData + bytesPerRowUV * j, (size_t) uv_line_width);
+    }
+    CVPixelBufferUnlockBaseAddress(pixelBuffer, 0);
+}
+
 @end
