@@ -25,8 +25,7 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
 }
 @property(nonatomic, strong)AVPlayerItemVideoOutput *videoOutput;
 @property(nonatomic, strong)CADisplayLink *displayLink;
-@property(nonatomic, strong)CGPaintPixelBufferInput *pixInput;
-@property(nonatomic, strong)CGPaintRawDataInput *dataInput;
+@property(nonatomic, strong)CGPaintOutput *input;
 
 @end
 
@@ -78,27 +77,28 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
         [self.delegate output:self pixelbuffer:pixelBuffer];
         size_t w = CVPixelBufferGetWidth(pixelBuffer);
         size_t h = CVPixelBufferGetHeight(pixelBuffer);
+        
         if (_dstData == nil) {
             _dstData = malloc(w * h * 3 / 2);
         }
         [self translate420VPixelBuffer:pixelBuffer toDataNV12:_dstData];
 
         if (pixelBuffer != NULL) {
-            if (_dataInput == nil) {
-                _dataInput = [[CGPaintRawDataInput alloc] initWithByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
+            if (_input == nil) {
+                _input = [[CGPaintRawDataInput alloc] initWithByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
             } else {
                 runSyncOnSerialQueue(^{
-                    [_dataInput uploadByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
+                    [(CGPaintRawDataInput *)_input uploadByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
                 });
             }
             [self _requestRender];
             CVPixelBufferRelease(pixelBuffer);
         }
 //        if (pixelBuffer != NULL) {
-//            if (_pixInput == nil) {
-//                _pixInput = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatNV12];
+//            if (_input == nil) {
+//                _input = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatNV12];
 //            } else {
-//                [_pixInput updatePixelBuffer:pixelBuffer format:CGPixelFormatNV12];
+//                [(CGPaintPixelBufferInput *)_input updatePixelBuffer:pixelBuffer format:CGPixelFormatNV12];
 //            }
 //            [self _requestRender];
 //            CVPixelBufferRelease(pixelBuffer);
@@ -111,7 +111,7 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
     runSyncOnSerialQueue(^{
         [[CGPaintContext sharedRenderContext] useAsCurrentContext];
         for (id<CGPaintInput> currentTarget in self->_targets){
-            [currentTarget setInputFramebuffer:self->_dataInput.outFrameBuffer];
+            [currentTarget setInputFramebuffer:self->_input.outFrameBuffer];
             CMSampleTimingInfo info = {0};
             [currentTarget newFrameReadyAtTime:kCMTimeZero timimgInfo:info];
         }
