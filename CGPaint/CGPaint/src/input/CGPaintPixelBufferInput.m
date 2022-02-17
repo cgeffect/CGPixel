@@ -110,9 +110,6 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
                 [self->_shaderProgram unuse];
                 [self->_outputFramebuffer unbindFramebuffer];
             }
-            if (pixelBuffer) {
-                CVPixelBufferRelease(pixelBuffer);
-            }
         });
     }
     return self;
@@ -180,8 +177,8 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
         NSLog(@"CGPaintPixelBufferInput CVOpenGLESTextureCacheRef nil");
     }
     CVReturn err;
-    size_t planeCount = CVPixelBufferGetPlaneCount(pixelBuffer);
-    NSLog(@"平面个数: %zu", planeCount);
+//    size_t planeCount = CVPixelBufferGetPlaneCount(pixelBuffer);
+//    NSLog(@"平面个数: %zu", planeCount);
     
     _bufferWidth = (int) CVPixelBufferGetWidth(pixelBuffer);
     _bufferHeight = (int) CVPixelBufferGetHeight(pixelBuffer);
@@ -257,8 +254,9 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
     glDisableVertexAttribArray(self->_position);
     glDisableVertexAttribArray(self->_aTexCoord);
     
-    glDeleteTextures(1, &(_yTex));
-    glDeleteTextures(1, &(_uvTex));
+    //这个纹理不需要删除吗? 删除会出问题, 难道是ios自己管理?
+//    glDeleteTextures(1, &(_yTex));
+//    glDeleteTextures(1, &(_uvTex));
 }
 
 - (void)requestRender {

@@ -149,6 +149,7 @@ static const GLfloat textureCoordinates[] = {
                     self->_yTexUniform = [self->_shaderProgram getUniformLocation:@"y_texture"];
                 }
                 
+                //使用init创建的CGPaintFramebuffer都不会需要进缓存, 自己销毁, fbo的缓存逻辑修改下, 如果是init不需要生成key, 自然也不会进缓存
                 self->_outputFramebuffer = [[CGPaintFramebuffer alloc] initWithSize:byteSize onlyTexture:NO];
                 self->_yFramebuffer = [[CGPaintFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
                 if (format == CGDataFormatNV21 || format == CGDataFormatNV12) {
@@ -253,6 +254,8 @@ static const GLfloat textureCoordinates[] = {
     glEnableVertexAttribArray(self->_aTexCoord);
     glVertexAttribPointer(_aTexCoord, 2, GL_FLOAT, 0, 0, textureCoordinates);
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    glDisableVertexAttribArray(self->_position);
+    glDisableVertexAttribArray(self->_aTexCoord);
 }
 
 - (void)drawI420ToFBO {

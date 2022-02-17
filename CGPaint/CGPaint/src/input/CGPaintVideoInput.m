@@ -78,31 +78,33 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
         size_t w = CVPixelBufferGetWidth(pixelBuffer);
         size_t h = CVPixelBufferGetHeight(pixelBuffer);
         
-        if (_dstData == nil) {
-            _dstData = malloc(w * h * 3 / 2);
-        }
-        [self translate420VPixelBuffer:pixelBuffer toDataNV12:_dstData];
-
-        if (pixelBuffer != NULL) {
-            if (_input == nil) {
-                _input = [[CGPaintRawDataInput alloc] initWithByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
-            } else {
-                runSyncOnSerialQueue(^{
-                    [(CGPaintRawDataInput *)_input uploadByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
-                });
-            }
-            [self _requestRender];
-            CVPixelBufferRelease(pixelBuffer);
-        }
+//        if (_dstData == nil) {
+//            _dstData = malloc(w * h * 3 / 2);
+//        }
+//        [self translate420VPixelBuffer:pixelBuffer toDataNV12:_dstData];
+//
 //        if (pixelBuffer != NULL) {
 //            if (_input == nil) {
-//                _input = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatNV12];
+//                _input = [[CGPaintRawDataInput alloc] initWithByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
 //            } else {
-//                [(CGPaintPixelBufferInput *)_input updatePixelBuffer:pixelBuffer format:CGPixelFormatNV12];
+//                runSyncOnSerialQueue(^{
+//                    [(CGPaintRawDataInput *)_input uploadByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
+//                });
 //            }
 //            [self _requestRender];
-//            CVPixelBufferRelease(pixelBuffer);
 //        }
+        if (pixelBuffer != NULL) {
+            if (_input == nil) {
+                _input = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatNV12];
+            } else {
+                [(CGPaintPixelBufferInput *)_input updatePixelBuffer:pixelBuffer format:CGPixelFormatNV12];
+            }
+            [self _requestRender];
+        }
+        
+        if (pixelBuffer) {
+            CVPixelBufferRelease(pixelBuffer);
+        }
     } else {
         
     }
