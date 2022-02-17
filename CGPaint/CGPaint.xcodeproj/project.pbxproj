@@ -97,7 +97,6 @@
 		E5E981792658D259008ED21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5E9817A2658D259008ED21D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5E981CC2658D755008ED21D /* CGPaintRenderPipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintRenderPipeline.h; sourceTree = "<group>"; };
-		E5E981CD2658D755008ED21D /* CGPaintPipelineInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintPipelineInput.h; sourceTree = "<group>"; };
 		E5E981CE2658D755008ED21D /* CGPaintPipelineOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintPipelineOutput.m; sourceTree = "<group>"; };
 		E5E981D02658D755008ED21D /* CGPaintRenderPipeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintRenderPipeline.m; sourceTree = "<group>"; };
 		E5E981D12658D755008ED21D /* CGPaintPipelineOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintPipelineOutput.h; sourceTree = "<group>"; };
@@ -199,7 +198,7 @@
 			children = (
 				E5E982252658D756008ED21D /* Resource */,
 				E5E9820C2658D756008ED21D /* Example */,
-				E5E981CA2658D755008ED21D /* Source */,
+				E5E981CA2658D755008ED21D /* src */,
 				E5E981682658D257008ED21D /* AppDelegate.h */,
 				E5E981692658D257008ED21D /* AppDelegate.m */,
 				E5E981742658D259008ED21D /* Assets.xcassets */,
@@ -210,34 +209,33 @@
 			path = CGPaint;
 			sourceTree = "<group>";
 		};
-		E5E981CA2658D755008ED21D /* Source */ = {
+		E5E981CA2658D755008ED21D /* src */ = {
 			isa = PBXGroup;
 			children = (
 				E5E9820B2658D756008ED21D /* CGPaint.h */,
 				96C028C62659511A0009C77D /* CGPaintUtils.h */,
 				96C028C02659511A0009C77D /* CGPaintUtils.m */,
-				E5E981D32658D755008ED21D /* Core */,
-				E5E981F62658D756008ED21D /* Filter */,
-				E5E981E12658D756008ED21D /* Input */,
-				E5E981EB2658D756008ED21D /* Output */,
-				E5E981CB2658D755008ED21D /* Pipeline */,
+				E5E981D32658D755008ED21D /* core */,
+				E5E981F62658D756008ED21D /* filter */,
+				E5E981E12658D756008ED21D /* input */,
+				E5E981EB2658D756008ED21D /* output */,
+				E5E981CB2658D755008ED21D /* pipeline */,
 			);
-			path = Source;
+			path = src;
 			sourceTree = "<group>";
 		};
-		E5E981CB2658D755008ED21D /* Pipeline */ = {
+		E5E981CB2658D755008ED21D /* pipeline */ = {
 			isa = PBXGroup;
 			children = (
-				E5E981CD2658D755008ED21D /* CGPaintPipelineInput.h */,
 				E5E981D12658D755008ED21D /* CGPaintPipelineOutput.h */,
 				E5E981CE2658D755008ED21D /* CGPaintPipelineOutput.m */,
 				E5E981CC2658D755008ED21D /* CGPaintRenderPipeline.h */,
 				E5E981D02658D755008ED21D /* CGPaintRenderPipeline.m */,
 			);
-			path = Pipeline;
+			path = pipeline;
 			sourceTree = "<group>";
 		};
-		E5E981D32658D755008ED21D /* Core */ = {
+		E5E981D32658D755008ED21D /* core */ = {
 			isa = PBXGroup;
 			children = (
 				E5E981E92658D756008ED21D /* CGPaintInput.h */,
@@ -253,10 +251,10 @@
 				E5E981D62658D755008ED21D /* CGPaintFramebufferCache.h */,
 				E5E981DC2658D756008ED21D /* CGPaintFramebufferCache.m */,
 			);
-			path = Core;
+			path = core;
 			sourceTree = "<group>";
 		};
-		E5E981E12658D756008ED21D /* Input */ = {
+		E5E981E12658D756008ED21D /* input */ = {
 			isa = PBXGroup;
 			children = (
 				9646E5292785571C00BFE83C /* CGPaintCameraInput.h */,
@@ -272,10 +270,10 @@
 				E5FE980426649E8600548BB1 /* CGPaintVideoInput.h */,
 				E5FE980526649E8600548BB1 /* CGPaintVideoInput.m */,
 			);
-			path = Input;
+			path = input;
 			sourceTree = "<group>";
 		};
-		E5E981EB2658D756008ED21D /* Output */ = {
+		E5E981EB2658D756008ED21D /* output */ = {
 			isa = PBXGroup;
 			children = (
 				E5E981EF2658D756008ED21D /* CGPaintViewOutput.h */,
@@ -291,10 +289,10 @@
 				E5E981F22658D756008ED21D /* CGPaintTextureOutput.h */,
 				E5E981ED2658D756008ED21D /* CGPaintTextureOutput.m */,
 			);
-			path = Output;
+			path = output;
 			sourceTree = "<group>";
 		};
-		E5E981F62658D756008ED21D /* Filter */ = {
+		E5E981F62658D756008ED21D /* filter */ = {
 			isa = PBXGroup;
 			children = (
 				E5E982092658D756008ED21D /* CGPaintFilter.h */,
@@ -324,7 +322,7 @@
 				96B1D7462663963E003C29D0 /* CGPaintGrayFilter.h */,
 				96B1D7472663963E003C29D0 /* CGPaintGrayFilter.m */,
 			);
-			path = Filter;
+			path = filter;
 			sourceTree = "<group>";
 		};
 		E5E9820C2658D756008ED21D /* Example */ = {

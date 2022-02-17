@@ -34,7 +34,9 @@
         }
         // Attach Shader to program
         glAttachShader(program, vertShader);
+        glCheckError("glAttachShader vertShader");
         glAttachShader(program, fragShader);
+        glCheckError("glAttachShader fragShader");
     }
     return self;
 }
@@ -106,9 +108,23 @@
     CFAbsoluteTime linkTime = (CFAbsoluteTimeGetCurrent() - startTime);
     NSLog(@"linked success in %f ms", linkTime * 1000.0);
     glCheckError("use");
+    
+    [self test];
     return YES;
 }
 
+- (void)test {
+    GLint logLength;
+    glGetProgramiv( program, GL_INFO_LOG_LENGTH, &logLength );
+    if ( logLength > 0 )
+    {
+        char* log = malloc(logLength +1);
+        log[ logLength ] = '\0';
+        glGetProgramInfoLog( program, logLength, &logLength, log );
+        NSLog(@"OpenGL Program Link Log:\n%s\n", log );
+        free(log);
+    }
+}
 #pragma mark -
 #pragma mark validate
 - (BOOL)validate;

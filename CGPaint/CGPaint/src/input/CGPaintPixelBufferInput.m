@@ -76,9 +76,9 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)pixelBuffer format:(CGPixelFormat)format {
     self = [super init];
     if (self) {
-        if ([CGPaintContext supportsFastTextureUpload] == NO) {
-            NSAssert(NO, @"iPhone simulator not support fast texture upload");
-        }
+//        if ([CGPaintContext supportsFastTextureUpload] == NO) {
+//            NSAssert(NO, @"iPhone simulator not support fast texture upload");
+//        }
         _bufferWidth = (int) CVPixelBufferGetWidth(pixelBuffer);
         _bufferHeight = (int) CVPixelBufferGetHeight(pixelBuffer);
         runSyncOnSerialQueue(^{
@@ -103,9 +103,15 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
                 [self glGenTexIdWithPixelBuffer420Yp8_CbCr8:pixelBuffer];
                 
                 self->_outputFramebuffer = [[CGPaintFramebuffer alloc] initWithSize:CGSizeMake(self->_bufferWidth, self->_bufferHeight) onlyTexture:NO];
+
                 [self->_shaderProgram use];
                 [self->_outputFramebuffer bindFramebuffer];
                 [self drawNV12ToFBO];
+                [self->_shaderProgram unuse];
+                [self->_outputFramebuffer unbindFramebuffer];
+            }
+            if (pixelBuffer) {
+                CVPixelBufferRelease(pixelBuffer);
             }
         });
     }
@@ -125,6 +131,7 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
             [self->_shaderProgram use];
             [self->_outputFramebuffer bindFramebuffer];
             [self drawNV12ToFBO];
+            [self->_shaderProgram unuse];
             [self->_outputFramebuffer unbindFramebuffer];
         }
     });
@@ -173,8 +180,8 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
         NSLog(@"CGPaintPixelBufferInput CVOpenGLESTextureCacheRef nil");
     }
     CVReturn err;
-//    size_t planeCount = CVPixelBufferGetPlaneCount(pixelBuffer);
-//    NSLog(@"平面个数: %zu", planeCount);
+    size_t planeCount = CVPixelBufferGetPlaneCount(pixelBuffer);
+    NSLog(@"平面个数: %zu", planeCount);
     
     _bufferWidth = (int) CVPixelBufferGetWidth(pixelBuffer);
     _bufferHeight = (int) CVPixelBufferGetHeight(pixelBuffer);

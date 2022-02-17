@@ -82,21 +82,23 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
             _dstData = malloc(w * h * 3 / 2);
         }
         [self translate420VPixelBuffer:pixelBuffer toDataNV12:_dstData];
-        
+
         if (pixelBuffer != NULL) {
             if (_dataInput == nil) {
                 _dataInput = [[CGPaintRawDataInput alloc] initWithByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
             } else {
-                [_dataInput uploadByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
+                runSyncOnSerialQueue(^{
+                    [_dataInput uploadByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
+                });
             }
             [self _requestRender];
             CVPixelBufferRelease(pixelBuffer);
         }
 //        if (pixelBuffer != NULL) {
 //            if (_pixInput == nil) {
-//                _pixInput = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatBGRA];
+//                _pixInput = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatNV12];
 //            } else {
-//                [_pixInput updatePixelBuffer:pixelBuffer format:CGPixelFormatBGRA];
+//                [_pixInput updatePixelBuffer:pixelBuffer format:CGPixelFormatNV12];
 //            }
 //            [self _requestRender];
 //            CVPixelBufferRelease(pixelBuffer);

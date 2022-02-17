@@ -223,7 +223,11 @@
     glBindTexture(GL_TEXTURE_2D, 0);
     
     GLenum status = glCheckFramebufferStatus(GL_FRAMEBUFFER);
-    NSAssert(status == GL_FRAMEBUFFER_COMPLETE, @"Incomplete filter FBO: %d", status);
+    glCheckError("glCheckFramebufferStatus");
+    if (status != GL_FRAMEBUFFER_COMPLETE) {
+        NSLog(@"FBO size: %f, %f", _fboSize.width, _fboSize.height);
+        NSAssert(NO, @"Incomplete filter FBO: %d", status);
+    }
 }
 
 //- (GLubyte *)byteBuffer

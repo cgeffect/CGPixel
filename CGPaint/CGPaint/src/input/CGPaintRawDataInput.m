@@ -171,11 +171,14 @@ static const GLfloat textureCoordinates[] = {
                 } else if (format == CGDataFormatI420) {
                     [self drawI420ToFBO];
                 }
+                [self->_outputFramebuffer bindFramebuffer];
+                [self->_shaderProgram unuse];
                 /**
                  The FBO cannot be recycle because in the requestRender method output is treated as driving into the next level target, but the FBO is not the raw data, it is the rendered data, so the effect will be overlaid, and each time the effect is applied not to the raw data, but to the rendered data
                  为什么RGBA的就不会重复绘制, 因为RGBA的是CGPaintFramebuffer是一个纹理类型的, 不进缓存, 但是NV21/NV12是fbo+纹理类型,进缓存会导致这个问题, 所以数据源的所有fbo都不进缓存
                  */
-                //[self->_outputFramebuffer recycle];
+//                [self->_outputFramebuffer recycle];
+                
             }
         });
     }
@@ -200,7 +203,6 @@ static const GLfloat textureCoordinates[] = {
         [self->_uvFramebuffer bindTexture];
         [self->_uvFramebuffer upload:byte + uvOffset size:uvSize internalformat:GL_LUMINANCE_ALPHA format:GL_LUMINANCE_ALPHA isOverride:_isOverride];
         [self->_uvFramebuffer unbindTexture];
-        [self drawNV21NV12ToFBO];
     } else if (format == CGDataFormatI420) {
         int width = byteSize.width;
         int height = byteSize.height;
@@ -218,12 +220,22 @@ static const GLfloat textureCoordinates[] = {
         [self->_vFramebuffer bindTexture];
         [self->_vFramebuffer upload:byte + vOffset size:uvSize internalformat:GL_LUMINANCE format:GL_LUMINANCE isOverride:_isOverride];
         [self->_vFramebuffer unbindTexture];
-//        [self drawI420ToFBO];
     }
+    
+    [self->_shaderProgram use];
+    [self->_outputFramebuffer bindFramebuffer];
+    if (format == CGDataFormatNV21 ||format == CGDataFormatNV12) {
+        [self drawNV21NV12ToFBO];
+    } else if (format == CGDataFormatI420) {
+        [self drawI420ToFBO];
+    }
+    [self->_outputFramebuffer bindFramebuffer];
+    [self->_shaderProgram unuse];
 }
 
 - (void)drawNV21NV12ToFBO {
     CGSize size = [_outputFramebuffer fboSize];
+
     glViewport(0, 0, size.width, size.height);
     glClearColor(1, 1, 1, 1);
     glClear(GL_COLOR_BUFFER_BIT);
