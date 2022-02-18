@@ -1,0 +1,18 @@
+PODS:
+  - CGPaint (1.0.0):
+    - CGPaint/shader (= 1.0.0)
+  - CGPaint/shader (1.0.0)
+
+DEPENDENCIES:
+  - CGPaint (from `../`)
+
+EXTERNAL SOURCES:
+  CGPaint:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CGPaint: a9d53166d45dd0bdb8b04e1e49a90d1d06e83abd
+
+PODFILE CHECKSUM: bd314935fa826fbfc8236d69e7f783e88b9f61e1
+
+COCOAPODS: 1.11.2

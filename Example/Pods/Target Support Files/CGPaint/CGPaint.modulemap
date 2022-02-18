@@ -1,0 +1,6 @@
+framework module CGPaint {
+  umbrella header "CGPaint-umbrella.h"
+
+  export *
+  module * { export * }
+}

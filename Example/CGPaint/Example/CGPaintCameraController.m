@@ -7,7 +7,6 @@
 
 #import "CGPaintCameraController.h"
 #import "CGPreviewController.h"
-#import "CGPaintCameraInput.h"
 #import "CGPaint.h"
 
 @interface CGPaintCameraController ()<CGPaintCaptureDelegate>
