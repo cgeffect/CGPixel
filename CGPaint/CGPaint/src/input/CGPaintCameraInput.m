@@ -121,7 +121,7 @@ API_AVAILABLE(ios(10.0))
     [self.videoDataOutput setAlwaysDiscardsLateVideoFrames:YES];
     
     [self.videoDataOutput setVideoSettings:
-     @{(id)kCVPixelBufferPixelFormatTypeKey:@(kCVPixelFormatType_32BGRA)}];
+     @{(id)kCVPixelBufferPixelFormatTypeKey:@(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)}];
     
     // take photo
     self.photoOutput = [[AVCapturePhotoOutput alloc] init];
@@ -172,9 +172,9 @@ API_AVAILABLE(ios(10.0))
         CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
         if (pixelBuffer != NULL) {
             if (self->_output == nil) {
-                self->_output = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatBGRA];
+                self->_output = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatNV12];
             } else {
-                [(CGPaintPixelBufferInput *)self->_output updatePixelBuffer:pixelBuffer format:CGPixelFormatBGRA];
+                [(CGPaintPixelBufferInput *)self->_output updatePixelBuffer:pixelBuffer format:CGPixelFormatNV12];
             }
             [self notifyNextTarget];
         } else {
