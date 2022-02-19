@@ -31,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		1ACA98F1DB460C461FF4FFBD /* Pods_CGRImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGRImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E6EB77AB3FB33D5D739A499 /* Pods-CGPaint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGPaint.release.xcconfig"; path = "Target Support Files/Pods-CGPaint/Pods-CGPaint.release.xcconfig"; sourceTree = "<group>"; };
 		9646E526278556FD00BFE83C /* CGPaintCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintCameraController.m; sourceTree = "<group>"; };
 		9646E527278556FD00BFE83C /* CGPaintCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintCameraController.h; sourceTree = "<group>"; };
 		9655B32F273582B900491380 /* CGPaintSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPaintSource.h; sourceTree = "<group>"; };
@@ -46,7 +45,6 @@
 		96C028C32659511A0009C77D /* CGPaintController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintController.m; sourceTree = "<group>"; };
 		96C028C52659511A0009C77D /* CGPaintListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintListController.h; sourceTree = "<group>"; };
 		98A558B9CEFCC69B7031A1EB /* Pods-CGRImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGRImage.debug.xcconfig"; path = "Target Support Files/Pods-CGRImage/Pods-CGRImage.debug.xcconfig"; sourceTree = "<group>"; };
-		BB409809694060940F7F00AB /* Pods-CGPaint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGPaint.debug.xcconfig"; path = "Target Support Files/Pods-CGPaint/Pods-CGPaint.debug.xcconfig"; sourceTree = "<group>"; };
 		CA02DD8EC87AFF29345AB2F8 /* Pods-CGRImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGRImage.release.xcconfig"; path = "Target Support Files/Pods-CGRImage/Pods-CGRImage.release.xcconfig"; sourceTree = "<group>"; };
 		E5E981652658D256008ED21D /* CGRImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGRImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E981682658D257008ED21D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,8 +79,6 @@
 		30F37C3CBD6CB3D0F49043F8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BB409809694060940F7F00AB /* Pods-CGPaint.debug.xcconfig */,
-				2E6EB77AB3FB33D5D739A499 /* Pods-CGPaint.release.xcconfig */,
 				98A558B9CEFCC69B7031A1EB /* Pods-CGRImage.debug.xcconfig */,
 				CA02DD8EC87AFF29345AB2F8 /* Pods-CGRImage.release.xcconfig */,
 			);
@@ -177,7 +173,7 @@
 				E5E981612658D256008ED21D /* Sources */,
 				E5E981622658D256008ED21D /* Frameworks */,
 				E5E981632658D256008ED21D /* Resources */,
-				D8651698ECCB59EBCA389AD2 /* [CP] Embed Pods Frameworks */,
+				F94FB1046750EDF4B9E8076E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,7 +258,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D8651698ECCB59EBCA389AD2 /* [CP] Embed Pods Frameworks */ = {
+		F94FB1046750EDF4B9E8076E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
