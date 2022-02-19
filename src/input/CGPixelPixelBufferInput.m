@@ -55,7 +55,7 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
 
 @interface CGPixelPixelBufferInput ()
 {
-    CGPaintProgram *_shaderProgram;
+    CGPixelProgram *_shaderProgram;
     //顶点属性,纹理属性
     GLint _position, _aTexCoord;
     
@@ -90,9 +90,9 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
             }
             if (format == CGPixelFormatBGRA) {
                 GLuint _texId = [self glGenTexIdWithPixelBufferBGRA:pixelBuffer];
-                self->_outputFramebuffer = [[CGPaintFramebuffer alloc] initWithSize:CGSizeMake(self->_bufferWidth, self->_bufferHeight) texture:_texId];
+                self->_outputFramebuffer = [[CGPixelFramebuffer alloc] initWithSize:CGSizeMake(self->_bufferWidth, self->_bufferHeight) texture:_texId];
             } else if (format == CGPixelFormatNV12) {
-                self->_shaderProgram = [[CGPaintProgram alloc] initWithVertexShaderString:gl_pix_vert fragmentShaderString:gl_pix_frag_nv12];
+                self->_shaderProgram = [[CGPixelProgram alloc] initWithVertexShaderString:gl_pix_vert fragmentShaderString:gl_pix_frag_nv12];
                 if (self->_shaderProgram && [self->_shaderProgram link]) {
                     self->_position = [self->_shaderProgram getAttribLocation:ATTR_POSITION];
                     self->_aTexCoord = [self->_shaderProgram getAttribLocation:ATTR_TEXCOORD];
@@ -102,7 +102,7 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
                
                 [self glGenTexIdWithPixelBuffer420Yp8_CbCr8:pixelBuffer];
                 
-                self->_outputFramebuffer = [[CGPaintFramebuffer alloc] initWithSize:CGSizeMake(self->_bufferWidth, self->_bufferHeight) onlyTexture:NO];
+                self->_outputFramebuffer = [[CGPixelFramebuffer alloc] initWithSize:CGSizeMake(self->_bufferWidth, self->_bufferHeight) onlyTexture:NO];
 
                 [self->_shaderProgram use];
                 [self->_outputFramebuffer bindFramebuffer];

@@ -5,11 +5,11 @@
 //  Created by Jason on 21/3/1.
 //
 
-#import "CGPaintFramebuffer.h"
+#import "CGPixelFramebuffer.h"
 #import "CGPixelOutput.h"
 #import "CGPixelContext.h"
 
-@implementation CGPaintFramebuffer
+@implementation CGPixelFramebuffer
 {
     GLuint           _framebuffer;
     GLTex            _texture;
@@ -243,6 +243,6 @@
 }
 
 - (void)recycle {
-    [[CGPaintFramebufferCache sharedFramebufferCache] recycleFramebufferToCache:self];
+    [[CGPixelFramebufferCache sharedFramebufferCache] recycleFramebufferToCache:self];
 }
 @end

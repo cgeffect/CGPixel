@@ -6,11 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGPaintTargetOutput.h"
+#import "CGPixelTargetOutput.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintRawDataOutput : CGPaintTargetOutput
+@interface CGPixelRawDataOutput : CGPixelTargetOutput
 //仅支持RGBA格式
 @property(nonatomic, copy)void(^outputCallback)(NSData *data);
 

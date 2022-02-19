@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGPaintFramebuffer.h"
+#import "CGPixelFramebuffer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,10 +18,10 @@ typedef struct _CGRenderTexture {
     CGTextureOptions option;
 } CGRenderTexture;
 
-@interface CGPaintPipelineOutput : NSObject
+@interface CGPixelPipelineOutput : NSObject
 {
 @protected
-    CGPaintFramebuffer *_outputFramebuffer;
+    CGPixelFramebuffer *_outputFramebuffer;
 }
 
 - (void)glDrawToTexture;

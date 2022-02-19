@@ -5,9 +5,9 @@
 //  Created by Jason on 2021/5/22.
 //
 
-#import "CGPaintTargetOutput.h"
+#import "CGPixelTargetOutput.h"
 
-@implementation CGPaintTargetOutput
+@implementation CGPixelTargetOutput
 
 #pragma mark -
 #pragma mark CGPaintInput
@@ -15,7 +15,7 @@
     [self captureFramebufferToOutput];
 }
 
-- (void)setInputFramebuffer:(CGPaintFramebuffer *)framebuffer {
+- (void)setInputFramebuffer:(CGPixelFramebuffer *)framebuffer {
     _finallyFramebuffer = framebuffer;
 }
 

@@ -5,10 +5,10 @@
 //  Created by Jason on 21/3/1.
 //
 
-#import "CGPaintProgram.h"
+#import "CGPixelProgram.h"
 #import "CGPixelUtils.h"
 
-@implementation CGPaintProgram {
+@implementation CGPixelProgram {
     NSMutableArray  *attributes;
     NSMutableArray  *uniforms;
     GLuint          program;

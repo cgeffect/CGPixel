@@ -9,7 +9,7 @@
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
 
-@interface CGPaintProgram : NSObject
+@interface CGPixelProgram : NSObject
 
 - (instancetype) initWithVertexShaderString:(NSString *)vShaderString fragmentShaderString:(NSString *)fShaderString;
 

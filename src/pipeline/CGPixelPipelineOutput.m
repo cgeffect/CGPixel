@@ -6,9 +6,9 @@
 //  Copyright © 2021 CGPixel. All rights reserved.
 //
 
-#import "CGPaintPipelineOutput.h"
+#import "CGPixelPipelineOutput.h"
 
-@implementation CGPaintPipelineOutput
+@implementation CGPixelPipelineOutput
 
 - (void)glDrawToTexture {
     

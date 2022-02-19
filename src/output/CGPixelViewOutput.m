@@ -5,14 +5,14 @@
 //  Created by Jason on 21/3/3.
 //
 
-#import "CGPaintViewOutput.h"
-#import "CGPaintRenderPipeline.h"
+#import "CGPixelViewOutput.h"
+#import "CGPixelRenderPipeline.h"
 #import "CGPixelOutput.h"
 
-@implementation CGPaintViewOutput
+@implementation CGPixelViewOutput
 {
-    CGPaintFramebuffer *_inputFramebuffer;
-    CGPaintRenderPipeline *_renderPipline;
+    CGPixelFramebuffer *_inputFramebuffer;
+    CGPixelRenderPipeline *_renderPipline;
     float bgColor[4];
     GLenum error;
 
@@ -38,7 +38,7 @@
 
         runSyncOnSerialQueue(^{
             [[CGPixelContext sharedRenderContext] useAsCurrentContext];
-            self->_renderPipline = [[CGPaintRenderPipeline alloc] init];
+            self->_renderPipline = [[CGPixelRenderPipeline alloc] init];
             if ([self->_renderPipline glPrepareDrawToGLLayer:(CAEAGLLayer *)self.layer]) {
                 NSLog(@"glPrepareRender success...");
             } else {
@@ -49,7 +49,7 @@
     return self;
 }
 
-- (void)setInputFramebuffer:(CGPaintFramebuffer *)framebuffer {
+- (void)setInputFramebuffer:(CGPixelFramebuffer *)framebuffer {
     _inputFramebuffer = framebuffer;
 }
 

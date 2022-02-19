@@ -5,8 +5,8 @@
 //  Created by Jason on 21/3/1.
 //
 
-#import "CGPaintRenderPipeline.h"
-#import "CGPaintProgram.h"
+#import "CGPixelRenderPipeline.h"
+#import "CGPixelProgram.h"
 #import "CGPixelUtils.h"
 #import "CGPixelContext.h"
 #import <UIKit/UIKit.h>
@@ -51,10 +51,10 @@ GLfloat textureCoordinates[] = {
     1.0f, 1.0f,
 };
 
-@implementation CGPaintRenderPipeline
+@implementation CGPixelRenderPipeline
 {
-    CGPaintProgram*        _program;
-    CGPaintRenderPipeline* _renderPipline;
+    CGPixelProgram*        _program;
+    CGPixelRenderPipeline* _renderPipline;
     GLint                  _aPosition;
     GLint                  _aTexCoord;
     GLuint                 _uTexture;
@@ -82,7 +82,7 @@ GLfloat textureCoordinates[] = {
     BOOL ret = FALSE;
     [self genRenderbuffer];
     [self genFramebuffer];
-    _program = [[CGPaintProgram alloc] initWithVertexShaderString:directPassVertexShaderString fragmentShaderString:directPassFragmentShaderString];
+    _program = [[CGPixelProgram alloc] initWithVertexShaderString:directPassVertexShaderString fragmentShaderString:directPassFragmentShaderString];
     if(_program && [_program link] && [_program validate]) {
 //        [_program addAttribute:@"position"];
 //        [_program addAttribute:@"inputTextureCoordinate"];

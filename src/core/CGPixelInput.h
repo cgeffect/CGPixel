@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreMedia/CoreMedia.h>
-#import "CGPaintFramebuffer.h"
+#import "CGPixelFramebuffer.h"
 #import "CGPixelUtils.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)newFrameReadyAtTime:(CMTime)frameTime timimgInfo:(CMSampleTimingInfo)timimgInfo;
 
 //设置输入纹理对象
-- (void)setInputFramebuffer:(CGPaintFramebuffer *)framebuffer;
+- (void)setInputFramebuffer:(CGPixelFramebuffer *)framebuffer;
 
 @end
 

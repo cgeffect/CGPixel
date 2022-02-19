@@ -5,24 +5,24 @@
 //  Created by CGPixel on 2021/5/13.
 //
 
-#import "CGPaintFramebufferCache.h"
+#import "CGPixelFramebufferCache.h"
 #import "CGPixelOutput.h"
 #import "CGPixelContext.h"
 
-@interface CGPaintFramebufferCache ()
+@interface CGPixelFramebufferCache ()
 {
     id _memoryWarningObserver;
-    NSMutableDictionary <NSString *, NSMutableArray <CGPaintFramebuffer *>*>*_framebufferCache;
+    NSMutableDictionary <NSString *, NSMutableArray <CGPixelFramebuffer *>*>*_framebufferCache;
 //    dispatch_queue_t _framebufferCacheQueue;
 }
 @end
 
-@implementation CGPaintFramebufferCache
+@implementation CGPixelFramebufferCache
 
-+ (CGPaintFramebufferCache *)sharedFramebufferCache;
++ (CGPixelFramebufferCache *)sharedFramebufferCache;
 {
     static dispatch_once_t pred;
-    static CGPaintFramebufferCache *sharedRenderContext = nil;
+    static CGPixelFramebufferCache *sharedRenderContext = nil;
     
     dispatch_once(&pred, ^{
         sharedRenderContext = [[[self class] alloc] init];
@@ -52,11 +52,11 @@
     return self;
 }
 
-- (CGPaintFramebuffer *)fetchFramebufferForSize:(CGSize)framebufferSize
+- (CGPixelFramebuffer *)fetchFramebufferForSize:(CGSize)framebufferSize
                                  textureOptions:(CGTextureOptions)textureOptions
                                     onlyTexture:(BOOL)onlyTexture
 {
-    CGPaintFramebuffer *framebuffer = nil;
+    CGPixelFramebuffer *framebuffer = nil;
     
     NSString *lookupHash = [self hashForSize:framebufferSize textureOptions:textureOptions onlyTexture:onlyTexture];
     NSMutableArray *framebufferList = [self->_framebufferCache objectForKey:lookupHash];
@@ -64,14 +64,14 @@
         NSMutableArray *fbList = [NSMutableArray array];
         [self->_framebufferCache setValue:fbList forKey:lookupHash];
     } else {
-        for (CGPaintFramebuffer *fbCache in framebufferList) {
+        for (CGPixelFramebuffer *fbCache in framebufferList) {
             if (fbCache.isActivite == NO) {
                 framebuffer = fbCache;
             }
         }
     }
     if (framebuffer == nil) {
-        framebuffer = [[CGPaintFramebuffer alloc] initWithSize:framebufferSize textureOptions:textureOptions onlyTexture:onlyTexture];
+        framebuffer = [[CGPixelFramebuffer alloc] initWithSize:framebufferSize textureOptions:textureOptions onlyTexture:onlyTexture];
         framebuffer.hashKey = lookupHash;
         NSLog(@"use framebuffer from create: key: %@, value: %@", lookupHash, framebuffer);
     }
@@ -79,10 +79,10 @@
     return framebuffer;
 }
 
-- (CGPaintFramebuffer *)fetchFramebufferForSize:(CGSize)framebufferSize
+- (CGPixelFramebuffer *)fetchFramebufferForSize:(CGSize)framebufferSize
                                     onlyTexture:(BOOL)onlyTexture
 {
-    CGPaintFramebuffer *framebuffer = [self fetchFramebufferForSize:framebufferSize textureOptions:[CGPaintFramebuffer defaultTextureOption] onlyTexture:onlyTexture];
+    CGPixelFramebuffer *framebuffer = [self fetchFramebufferForSize:framebufferSize textureOptions:[CGPixelFramebuffer defaultTextureOption] onlyTexture:onlyTexture];
     return framebuffer;
 }
 
@@ -99,7 +99,7 @@
     }
 }
 
-- (void)recycleFramebufferToCache:(CGPaintFramebuffer *)framebuffer {
+- (void)recycleFramebufferToCache:(CGPixelFramebuffer *)framebuffer {
     NSMutableArray *framebufferList = [_framebufferCache objectForKey:framebuffer.hashKey];
     [framebufferList addObject:framebuffer];
     framebuffer.isActivite = NO;

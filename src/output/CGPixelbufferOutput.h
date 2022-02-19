@@ -6,11 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGPaintTargetOutput.h"
+#import "CGPixelTargetOutput.h"
 @import CoreVideo;
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintPixelbufferOutput : CGPaintTargetOutput
+@interface CGPixelbufferOutput : CGPixelTargetOutput
 
 @property(nonatomic, copy)void(^outputCallback)(CVPixelBufferRef pixelbuffer);
 

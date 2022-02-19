@@ -8,7 +8,7 @@
 
 #import "CGPixelImageInput.h"
 #import "CGPixelContext.h"
-#import "CGPaintFramebufferCache.h"
+#import "CGPixelFramebufferCache.h"
 
 #define MAX_SIZE UIScreen.mainScreen.bounds.size.width
 
@@ -144,7 +144,7 @@
         [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         
         //申请FBO, 关联TextureGL_BGRA
-        self->_outputFramebuffer = [[CGPaintFramebuffer alloc] initWithSize:fboSize onlyTexture:YES];
+        self->_outputFramebuffer = [[CGPixelFramebuffer alloc] initWithSize:fboSize onlyTexture:YES];
         [self->_outputFramebuffer bindTexture];
 
         if (self->shouldSmoothlyScaleOutput) {

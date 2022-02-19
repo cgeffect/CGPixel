@@ -6,9 +6,9 @@
 //  Copyright © 2021 CGPixel. All rights reserved.
 //
 
-#import "CGPaintTextureOutput.h"
+#import "CGPixelTextureOutput.h"
 
-@implementation CGPaintTextureOutput
+@implementation CGPixelTextureOutput
 {
     GLuint _texture;
     CGSize _textureSize;
@@ -25,7 +25,7 @@
     
 }
 
-- (void)setInputFramebuffer:(CGPaintFramebuffer *)framebuffer {
+- (void)setInputFramebuffer:(CGPixelFramebuffer *)framebuffer {
     _texture = framebuffer.texture;
     _textureSize = framebuffer.fboSize;
 }

@@ -7,14 +7,14 @@
 //
 
 #import "CGPixelTextureInput.h"
-#import "CGPaintFramebufferCache.h"
+#import "CGPixelFramebufferCache.h"
 
 @implementation CGPixelTextureInput
 
 - (instancetype)initWithTexture:(GLuint)newInputTexture size:(CGSize)newTextureSize {
     self = [super init];
     if (self) {
-        _outputFramebuffer = [[CGPaintFramebuffer alloc] initWithSize:newTextureSize texture:newInputTexture];
+        _outputFramebuffer = [[CGPixelFramebuffer alloc] initWithSize:newTextureSize texture:newInputTexture];
     }
 
     return self;

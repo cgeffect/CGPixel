@@ -5,9 +5,9 @@
 //  Created by CGPixel on 2021/5/13.
 //
 
-#import "CGPaintRawDataOutput.h"
+#import "CGPixelRawDataOutput.h"
 
-@implementation CGPaintRawDataOutput
+@implementation CGPixelRawDataOutput
 
 #pragma mark -
 #pragma mark Image capture

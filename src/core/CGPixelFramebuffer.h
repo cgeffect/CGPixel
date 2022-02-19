@@ -26,7 +26,7 @@ typedef struct _CGTextureOptions {
 } CGTextureOptions;
 
 //该类的所有操作都必须在GL环境中执行
-@interface CGPaintFramebuffer : NSObject
+@interface CGPixelFramebuffer : NSObject
 
 @property(nonatomic, assign, readonly)CGSize fboSize;
 @property(nonatomic, assign, readonly)GLuint texture;

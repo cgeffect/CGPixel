@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CGPixelOutput.h"
-#import "CGPaintFramebuffer.h"
+#import "CGPixelFramebuffer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

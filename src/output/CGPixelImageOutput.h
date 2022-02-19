@@ -6,11 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGPaintTargetOutput.h"
+#import "CGPixelTargetOutput.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintImageOutput : CGPaintTargetOutput
+@interface CGPixelImageOutput : CGPixelTargetOutput
 
 @property(nonatomic, copy)void(^outputCallback)(CGImageRef imageRef);
 

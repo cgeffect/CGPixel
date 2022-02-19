@@ -7,7 +7,7 @@
 //
 
 #import "CGPixelFilter.h"
-#import "CGPaintFramebufferCache.h"
+#import "CGPixelFramebufferCache.h"
 #import "CGPixelUtils.h"
 
 /*
@@ -97,7 +97,7 @@ static const GLfloat textureCoordinates[] = {
     GLint _uTexture;
     float _bgColor[4];
     
-    CGPaintFramebuffer *_inputFramebuffer;
+    CGPixelFramebuffer *_inputFramebuffer;
 }
 @end
 
@@ -121,7 +121,7 @@ static const GLfloat textureCoordinates[] = {
     runSyncOnSerialQueue(^{
         [[CGPixelContext sharedRenderContext] useAsCurrentContext];
 
-        self->_shaderProgram = [[CGPaintProgram alloc] initWithVertexShaderString:vertexShader fragmentShaderString:fragmentShader];
+        self->_shaderProgram = [[CGPixelProgram alloc] initWithVertexShaderString:vertexShader fragmentShaderString:fragmentShader];
         
         glCheckError("CGPaintFilter");
         
@@ -153,7 +153,7 @@ static const GLfloat textureCoordinates[] = {
 #pragma mark -
 #pragma mark CGRenderInput
 
-- (void)setInputFramebuffer:(nonnull CGPaintFramebuffer *)framebuffer {
+- (void)setInputFramebuffer:(nonnull CGPixelFramebuffer *)framebuffer {
     _inputFramebuffer = framebuffer;
     [self glReceivedInput:framebuffer];
 }
@@ -173,7 +173,7 @@ static const GLfloat textureCoordinates[] = {
 - (void)renderToTextureWithVertices:(const GLfloat *)vertices textureCoordinates:(const GLfloat *)textureCoordinates {
     
     //创建FBO, 生成纹理
-    self->_outputFramebuffer = [[CGPaintFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:_inputFramebuffer.fboSize onlyTexture:NO];
+    self->_outputFramebuffer = [[CGPixelFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:_inputFramebuffer.fboSize onlyTexture:NO];
     glViewport(0, 0, _inputFramebuffer.fboSize.width, _inputFramebuffer.fboSize.height);
     [self->_outputFramebuffer bindFramebuffer];
     [self->_outputFramebuffer bindTexture];
@@ -244,7 +244,7 @@ static const GLfloat textureCoordinates[] = {
 - (void)glProgramLinked {
     
 }
-- (void)glReceivedInput:(CGPaintFramebuffer *)framebuffer {
+- (void)glReceivedInput:(CGPixelFramebuffer *)framebuffer {
     
 }
 - (void)glProgramUsed {

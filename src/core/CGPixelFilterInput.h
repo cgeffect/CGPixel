@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  * setp2
  * 通过此接口获取纹理, 纹理size, framebuffer
  */
-- (void)glReceivedInput:(CGPaintFramebuffer *)framebuffer;
+- (void)glReceivedInput:(CGPixelFramebuffer *)framebuffer;
 /**
  * setp3
  * program use完成, 可以进行参数传递了

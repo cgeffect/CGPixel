@@ -6,22 +6,22 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGPaintFramebuffer.h"
+#import "CGPixelFramebuffer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintFramebufferCache : NSObject
+@interface CGPixelFramebufferCache : NSObject
 
-+ (CGPaintFramebufferCache *)sharedFramebufferCache;
++ (CGPixelFramebufferCache *)sharedFramebufferCache;
 
-- (CGPaintFramebuffer *)fetchFramebufferForSize:(CGSize)framebufferSize
+- (CGPixelFramebuffer *)fetchFramebufferForSize:(CGSize)framebufferSize
                                     onlyTexture:(BOOL)onlyTexture;
 
-- (CGPaintFramebuffer *)fetchFramebufferForSize:(CGSize)framebufferSize
+- (CGPixelFramebuffer *)fetchFramebufferForSize:(CGSize)framebufferSize
                                  textureOptions:(CGTextureOptions)textureOptions
                                     onlyTexture:(BOOL)onlyTexture;
 
-- (void)recycleFramebufferToCache:(CGPaintFramebuffer *)framebuffer;
+- (void)recycleFramebufferToCache:(CGPixelFramebuffer *)framebuffer;
 
 - (void)deleteAllUnassignedFramebuffers;
 

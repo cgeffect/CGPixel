@@ -5,21 +5,21 @@
 //  Created by Jason on 21/3/3.
 //
 
-#import "CGPaintFramebuffer.h"
+#import "CGPixelFramebuffer.h"
 #import "CGPixelContext.h"
 #import "CGPixelInput.h"
 #import "CGPixelUtils.h"
-#import "CGPaintFramebufferCache.h"
+#import "CGPixelFramebufferCache.h"
 
 @interface CGPixelOutput : NSObject
 {
 @protected
-    CGPaintFramebuffer *_outputFramebuffer;
+    CGPixelFramebuffer *_outputFramebuffer;
 @protected
     NSMutableArray <id<CGPixelInput>>*_targets;
 }
 
-@property(nonatomic, strong, readonly)CGPaintFramebuffer *outFrameBuffer;
+@property(nonatomic, strong, readonly)CGPixelFramebuffer *outFrameBuffer;
 
 - (void)addTarget:(id<CGPixelInput>)newTarget;
 

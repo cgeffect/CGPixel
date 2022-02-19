@@ -6,14 +6,14 @@
 //  Copyright © 2021 CGPixel. All rights reserved.
 //
 
-#import "CGPaintImageOutput.h"
+#import "CGPixelImageOutput.h"
 
-@interface CGPaintImageOutput ()
+@interface CGPixelImageOutput ()
 {
 }
 @end
 
-@implementation CGPaintImageOutput
+@implementation CGPixelImageOutput
 
 #pragma mark -
 #pragma mark Image capture
@@ -23,7 +23,7 @@ void dataProviderReleaseCallbackForImage (void *info, const void *data, size_t s
 }
 void dataProviderCallbackForImage (void *info, const void *data, size_t size)
 {
-//    CGPaintFramebuffer *framebuffer = (__bridge_transfer CGPaintFramebuffer*)info;
+//    CGPixelFramebuffer *framebuffer = (__bridge_transfer CGPixelFramebuffer*)info;
     
 }
 

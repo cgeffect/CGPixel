@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "CGPixelInput.h"
 #import "CGPixelOutput.h"
-#import "CGPaintProgram.h"
+#import "CGPixelProgram.h"
 #import "CGPixelFilterInput.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CGPixelFilter : CGPixelOutput<CGPixelInput, CGPixelFilterInput>
 {
 @protected
-    CGPaintProgram *_shaderProgram;
+    CGPixelProgram *_shaderProgram;
     float _value;
 }
 

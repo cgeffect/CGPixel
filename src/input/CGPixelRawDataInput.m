@@ -106,14 +106,14 @@ static const GLfloat textureCoordinates[] = {
 {
     CGPixelDataFormat _format;
     CGSize _byteSize;
-    CGPaintProgram *_shaderProgram;
+    CGPixelProgram *_shaderProgram;
     //顶点属性,纹理属性
     GLint _position, _aTexCoord;
     
-    CGPaintFramebuffer *_yFramebuffer;
-    CGPaintFramebuffer * _uFramebuffer;
-    CGPaintFramebuffer * _vFramebuffer;
-    CGPaintFramebuffer * _uvFramebuffer;
+    CGPixelFramebuffer *_yFramebuffer;
+    CGPixelFramebuffer * _uFramebuffer;
+    CGPixelFramebuffer * _vFramebuffer;
+    CGPixelFramebuffer * _uvFramebuffer;
 
     GLuint _yTexUniform;
     GLuint _uTexUniform;
@@ -131,17 +131,17 @@ static const GLfloat textureCoordinates[] = {
         runSyncOnSerialQueue(^{
             [[CGPixelContext sharedRenderContext] useAsCurrentContext];
             if (format == CGPixelDataFormatRGBA || format == CGPixelDataFormatBGRA) {
-                self->_outputFramebuffer = [[CGPaintFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
+                self->_outputFramebuffer = [[CGPixelFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
                 [self->_outputFramebuffer bindTexture];
                 [self uploadByte:byte byteSize:byteSize format:format];
                 [self->_outputFramebuffer unbindTexture];
             } else if (format == CGPixelDataFormatNV21 || format == CGPixelDataFormatNV12 || format == CGPixelDataFormatI420) {
                 if (format ==CGPixelDataFormatNV21) {
-                    self->_shaderProgram = [[CGPaintProgram alloc] initWithVertexShaderString:gl_vert fragmentShaderString:gl_frag_nv21];
+                    self->_shaderProgram = [[CGPixelProgram alloc] initWithVertexShaderString:gl_vert fragmentShaderString:gl_frag_nv21];
                 } else if (format == CGPixelDataFormatNV12) {
-                    self->_shaderProgram = [[CGPaintProgram alloc] initWithVertexShaderString:gl_vert fragmentShaderString:gl_frag_nv12];
+                    self->_shaderProgram = [[CGPixelProgram alloc] initWithVertexShaderString:gl_vert fragmentShaderString:gl_frag_nv12];
                 } else if (format == CGPixelDataFormatI420) {
-                    self->_shaderProgram = [[CGPaintProgram alloc] initWithVertexShaderString:gl_vert fragmentShaderString:gl_frag_i420];
+                    self->_shaderProgram = [[CGPixelProgram alloc] initWithVertexShaderString:gl_vert fragmentShaderString:gl_frag_i420];
                 }
                 if (self->_shaderProgram && [self->_shaderProgram link]) {
                     self->_position = [self->_shaderProgram getAttribLocation:ATTR_POSITION];
@@ -149,18 +149,18 @@ static const GLfloat textureCoordinates[] = {
                     self->_yTexUniform = [self->_shaderProgram getUniformLocation:@"y_texture"];
                 }
                 
-                //使用init创建的CGPaintFramebuffer都不会需要进缓存, 自己销毁, fbo的缓存逻辑修改下, 如果是init不需要生成key, 自然也不会进缓存
-                self->_outputFramebuffer = [[CGPaintFramebuffer alloc] initWithSize:byteSize onlyTexture:NO];
-                self->_yFramebuffer = [[CGPaintFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
+                //使用init创建的CGPixelFramebuffer都不会需要进缓存, 自己销毁, fbo的缓存逻辑修改下, 如果是init不需要生成key, 自然也不会进缓存
+                self->_outputFramebuffer = [[CGPixelFramebuffer alloc] initWithSize:byteSize onlyTexture:NO];
+                self->_yFramebuffer = [[CGPixelFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
                 if (format == CGPixelDataFormatNV21 || format == CGPixelDataFormatNV12) {
                     self->_uvTexUniform = [self->_shaderProgram getUniformLocation:@"vu_texture"];
-                    self->_uvFramebuffer = [[CGPaintFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
+                    self->_uvFramebuffer = [[CGPixelFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
                 }else if (format == CGPixelDataFormatI420) {
                     self->_uTexUniform = [self->_shaderProgram getUniformLocation:@"u_texture"];
                     self->_vTexUniform = [self->_shaderProgram getUniformLocation:@"v_texture"];
 
-                    self->_uFramebuffer = [[CGPaintFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
-                    self->_vFramebuffer = [[CGPaintFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
+                    self->_uFramebuffer = [[CGPixelFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
+                    self->_vFramebuffer = [[CGPixelFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
                 }
 
                 [self uploadByte:byte byteSize:byteSize format:format];
@@ -176,7 +176,7 @@ static const GLfloat textureCoordinates[] = {
                 [self->_shaderProgram unuse];
                 /**
                  The FBO cannot be recycle because in the requestRender method output is treated as driving into the next level target, but the FBO is not the raw data, it is the rendered data, so the effect will be overlaid, and each time the effect is applied not to the raw data, but to the rendered data
-                 为什么RGBA的就不会重复绘制, 因为RGBA的是CGPaintFramebuffer是一个纹理类型的, 不进缓存, 但是NV21/NV12是fbo+纹理类型,进缓存会导致这个问题, 所以数据源的所有fbo都不进缓存
+                 为什么RGBA的就不会重复绘制, 因为RGBA的是CGPixelFramebuffer是一个纹理类型的, 不进缓存, 但是NV21/NV12是fbo+纹理类型,进缓存会导致这个问题, 所以数据源的所有fbo都不进缓存
                  */
 //                [self->_outputFramebuffer recycle];
                 

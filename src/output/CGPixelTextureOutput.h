@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintTextureOutput : NSObject<CGPixelInput>
+@interface CGPixelTextureOutput : NSObject<CGPixelInput>
 
 @property(nonatomic, assign, readonly) GLuint texture;
 

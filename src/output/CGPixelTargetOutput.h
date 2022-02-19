@@ -6,16 +6,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGPaintFramebuffer.h"
+#import "CGPixelFramebuffer.h"
 #import "CGPixelInput.h"
 #import "CGPixelContext.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintTargetOutput : NSObject<CGPixelInput>
+@interface CGPixelTargetOutput : NSObject<CGPixelInput>
 {
 @protected
-    CGPaintFramebuffer *_finallyFramebuffer;
+    CGPixelFramebuffer *_finallyFramebuffer;
 }
 
 /**

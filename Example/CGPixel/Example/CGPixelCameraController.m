@@ -11,7 +11,7 @@
 
 @interface CGPixelCameraController ()<CGPixelCaptureDelegate>
 {
-    CGPaintViewOutput *_metalView;
+    CGPixelViewOutput *_metalView;
     CGPixelCameraInput *_cameraInput;
 }
 
@@ -30,7 +30,7 @@
     UIBarButtonItem *end = [[UIBarButtonItem alloc] initWithTitle:@"end" style:(UIBarButtonItemStyleDone) target:self action:@selector(end)];
     self.navigationItem.rightBarButtonItems = @[take, toggle, start, end];
     
-    _metalView = [[CGPaintViewOutput alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height)];
+    _metalView = [[CGPixelViewOutput alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height)];
     _metalView.backgroundColor = UIColor.blackColor;
     [self.view addSubview:_metalView];
     

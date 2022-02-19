@@ -38,9 +38,9 @@ FOUNDATION_EXPORT const unsigned char CGPaintVersionString[];
 
 #pragma mark -
 #pragma mark Output
-#import "CGPaintViewOutput.h"
-#import "CGPaintImageOutput.h"
-#import "CGPaintRawDataOutput.h"
-#import "CGPaintTextureOutput.h"
-#import "CGPaintPixelbufferOutput.h"
+#import "CGPixelViewOutput.h"
+#import "CGPixelImageOutput.h"
+#import "CGPixelRawDataOutput.h"
+#import "CGPixelTextureOutput.h"
+#import "CGPixelbufferOutput.h"
 

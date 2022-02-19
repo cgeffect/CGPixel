@@ -10,7 +10,7 @@
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
-#import "CGPaintProgram.h"
+#import "CGPixelProgram.h"
 
 @class CGPixelContext;
 //往调度队列中提交有一个block,并且与它的调度组关联起来

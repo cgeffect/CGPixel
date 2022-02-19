@@ -48,7 +48,7 @@
     });
 }
 
-- (CGPaintFramebuffer *)outFrameBuffer {
+- (CGPixelFramebuffer *)outFrameBuffer {
     return _outputFramebuffer;
 }
 
@@ -59,7 +59,7 @@
 - (void)dealloc
 {
     [self removeAllTargets];
-    [[CGPaintFramebufferCache sharedFramebufferCache] deleteAllUnassignedFramebuffers];
+    [[CGPixelFramebufferCache sharedFramebufferCache] deleteAllUnassignedFramebuffers];
 }
 
 @end

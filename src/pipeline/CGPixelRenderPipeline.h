@@ -6,13 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGPaintFramebuffer.h"
+#import "CGPixelFramebuffer.h"
 #import "CGPixelUtils.h"
 
 @class CAEAGLLayer;
 
 //绘制到屏幕
-@interface CGPaintRenderPipeline : NSObject
+@interface CGPixelRenderPipeline : NSObject
 
 - (void)glDraw:(int)inputTex width:(int)width height:(int)height;
 

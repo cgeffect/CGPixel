@@ -10,7 +10,7 @@
 
 @interface CGPixelVideoController ()
 {
-    CGPaintViewOutput *_paintview;
+    CGPixelViewOutput *_paintview;
     CGPixelVideoInput *_inputSource;
     CGPixelSoulFilter *_soul;
     CGPixelGlitchFilter *_glitch;
@@ -24,7 +24,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
     
-    _paintview = [[CGPaintViewOutput alloc] initWithFrame:CGRectMake(0, 100, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.width)];
+    _paintview = [[CGPixelViewOutput alloc] initWithFrame:CGRectMake(0, 100, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.width)];
     _paintview.backgroundColor = UIColor.whiteColor;
     [self.view addSubview:_paintview];
     

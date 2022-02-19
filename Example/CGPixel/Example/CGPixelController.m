@@ -13,8 +13,8 @@
 {
     CGPixelOutput *_inputSource;
     CGPixelFilter<CGPixelInput> *filter;
-    CGPaintViewOutput * paintview;
-    CGPaintTargetOutput *_targetOutput;
+    CGPixelViewOutput * paintview;
+    CGPixelTargetOutput *_targetOutput;
     UIImage *_sourceImage;
 }
 @end
@@ -27,7 +27,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save)];;
 
-    paintview = [[CGPaintViewOutput alloc] initWithFrame:CGRectMake(0, 100, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.width)];
+    paintview = [[CGPixelViewOutput alloc] initWithFrame:CGRectMake(0, 100, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.width)];
     paintview.backgroundColor = UIColor.whiteColor;
     [self.view addSubview:paintview];
         
@@ -168,7 +168,7 @@
         default:
             break;
     }
-    _targetOutput = [[CGPaintPixelbufferOutput alloc] init];
+    _targetOutput = [[CGPixelbufferOutput alloc] init];
     [_inputSource addTarget:filter];
     [filter addTarget:paintview];
     [filter addTarget:_targetOutput];
@@ -189,7 +189,7 @@
     }
     [_inputSource requestRender];
 //    _targetOutput.enableOutput = YES;
-    [((CGPaintPixelbufferOutput *)_targetOutput) setOutputCallback:^(CVPixelBufferRef  _Nonnull pixelbuffer) {
+    [((CGPixelbufferOutput *)_targetOutput) setOutputCallback:^(CVPixelBufferRef  _Nonnull pixelbuffer) {
         
     }];
 }
