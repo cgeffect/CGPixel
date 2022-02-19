@@ -5,10 +5,10 @@
 //  Created by CGPixel on 2021/5/14.
 //
 
-#import "CGPixelbufferOutput.h"
+#import "CGPixelPixelbufferOutput.h"
 #import <Accelerate/Accelerate.h>
 
-@implementation CGPixelbufferOutput
+@implementation CGPixelPixelbufferOutput
 
 #pragma mark -
 #pragma mark Image capture

@@ -10,7 +10,7 @@
 @import CoreVideo;
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPixelbufferOutput : CGPixelTargetOutput
+@interface CGPixelPixelbufferOutput : CGPixelTargetOutput
 
 @property(nonatomic, copy)void(^outputCallback)(CVPixelBufferRef pixelbuffer);
 
