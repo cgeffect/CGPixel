@@ -8,7 +8,7 @@
 #import "CGPaintRenderPipeline.h"
 #import "CGPaintProgram.h"
 #import "CGPaintUtils.h"
-#import "CGPaintContext.h"
+#import "CGPixelContext.h"
 #import <UIKit/UIKit.h>
 
 NSString *const directPassVertexShaderString = CG_SHADER_STRING
@@ -99,7 +99,7 @@ GLfloat textureCoordinates[] = {
 - (BOOL)genRenderbuffer {
     glGenRenderbuffers(1, &_renderbuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, _renderbuffer);
-    EAGLContext *context = [[CGPaintContext sharedRenderContext] context];
+    EAGLContext *context = [[CGPixelContext sharedRenderContext] context];
     int ret = [context renderbufferStorage:GL_RENDERBUFFER fromDrawable:_glLayer];
     if (!ret) {
         NSLog(@"gl attach renderbuffer error");
@@ -156,7 +156,7 @@ GLfloat textureCoordinates[] = {
     glDisableVertexAttribArray(self->_aTexCoord);
     glDisableVertexAttribArray(self->_aPosition);
     glBindRenderbuffer(GL_RENDERBUFFER, _renderbuffer);
-    [[[CGPaintContext sharedRenderContext] context] presentRenderbuffer:GL_RENDERBUFFER];
+    [[[CGPixelContext sharedRenderContext] context] presentRenderbuffer:GL_RENDERBUFFER];
     
     glBindFramebuffer(GL_FRAMEBUFFER, GL_NONE);
     glBindTexture(GL_TEXTURE_2D, GL_NONE);

@@ -37,9 +37,9 @@ void dataProviderCallbackForImage (void *info, const void *data, size_t size)
     CGSize size = self->_finallyFramebuffer.fboSize;
     __block CGImageRef cgImageFromBytes;
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         glFinish();
-        if ([CGPaintContext supportsFastTextureUpload]) {
+        if ([CGPixelContext supportsFastTextureUpload]) {
             CVPixelBufferRef renderTarget = self->_finallyFramebuffer.renderTarget;
             NSUInteger paddedWidthOfImage = CVPixelBufferGetBytesPerRow(renderTarget) / 4.0;
             NSUInteger paddedBytesForImage = paddedWidthOfImage * (int)size.height * 4;

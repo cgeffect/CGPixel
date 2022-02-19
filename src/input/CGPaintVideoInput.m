@@ -111,7 +111,7 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
 }
 - (void)_requestRender {
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         for (id<CGPaintInput> currentTarget in self->_targets){
             [currentTarget setInputFramebuffer:self->_input.outFrameBuffer];
             CMSampleTimingInfo info = {0};

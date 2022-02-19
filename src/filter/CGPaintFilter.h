@@ -9,11 +9,11 @@
 #import "CGPaintInput.h"
 #import "CGPaintOutput.h"
 #import "CGPaintProgram.h"
-#import "CGPaintFilterInput.h"
+#import "CGPixelFilterInput.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintFilter : CGPaintOutput<CGPaintInput, CGPaintFilterInput>
+@interface CGPaintFilter : CGPaintOutput<CGPaintInput, CGPixelFilterInput>
 {
 @protected
     CGPaintProgram *_shaderProgram;

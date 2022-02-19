@@ -119,7 +119,7 @@ static const GLfloat textureCoordinates[] = {
     [self setClearColorRed:1 green:0 blue:0 alpha:0];
 
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
 
         self->_shaderProgram = [[CGPaintProgram alloc] initWithVertexShaderString:vertexShader fragmentShaderString:fragmentShader];
         
@@ -274,7 +274,7 @@ void dataProviderReleaseCallback (void *info, const void *data, size_t size)
     
     __block CGImageRef cgImageFromBytes;
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         
         CGSize _size = self->_outputFramebuffer.fboSize;
         NSUInteger totalBytesForImage = (int)_size.width * (int)_size.height * 4;

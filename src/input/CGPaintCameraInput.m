@@ -186,7 +186,7 @@ API_AVAILABLE(ios(10.0))
 
 - (void)notifyNextTarget {
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         for (id<CGPaintInput> currentTarget in self->_targets) {
             [currentTarget setInputFramebuffer:self->_output.outFrameBuffer];
             CMSampleTimingInfo info = {0};

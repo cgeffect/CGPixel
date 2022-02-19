@@ -7,7 +7,7 @@
 
 #import "CGPaintFramebuffer.h"
 #import "CGPaintOutput.h"
-#import "CGPaintContext.h"
+#import "CGPixelContext.h"
 
 @implementation CGPaintFramebuffer
 {
@@ -47,7 +47,7 @@
     _fboSize = framebufferSize;
     _textureOptions = fboTextureOptions;
     _isOnlyGenTexture = onlyTexture;
-    [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+    [[CGPixelContext sharedRenderContext] useAsCurrentContext];
     if (onlyTexture) {
         [self generateTexture];
     } else {
@@ -122,7 +122,7 @@
 
 - (void)dealloc {
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         if (self->_framebuffer) {
             glDeleteFramebuffers(1, &self->_framebuffer);
             self->_framebuffer = GL_NONE;
@@ -134,7 +134,7 @@
                 self->_texture = GL_NONE;
             }
         } else {
-            if ([CGPaintContext supportsFastTextureUpload]) {
+            if ([CGPixelContext supportsFastTextureUpload]) {
                 if (self->_renderTarget) {
                     CFRelease(self->_renderTarget);
                     self->_renderTarget = NULL;
@@ -172,8 +172,8 @@
     glGenFramebuffers(1, &_framebuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, _framebuffer);
     
-    if ([CGPaintContext supportsFastTextureUpload]) {
-        CVOpenGLESTextureCacheRef coreVideoTextureCache = [[CGPaintContext sharedRenderContext] coreVideoTextureCache];
+    if ([CGPixelContext supportsFastTextureUpload]) {
+        CVOpenGLESTextureCacheRef coreVideoTextureCache = [[CGPixelContext sharedRenderContext] coreVideoTextureCache];
         CFDictionaryRef empty; // empty value for attr value.
         CFMutableDictionaryRef attrs;
         empty = CFDictionaryCreate(kCFAllocatorDefault, NULL, NULL, 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks); // our empty IOSurface properties dictionary

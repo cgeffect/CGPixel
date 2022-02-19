@@ -24,7 +24,7 @@
     CGSize _size = self->_finallyFramebuffer.fboSize;
     NSUInteger totalBytesForImage = (int)_size.width * (int)_size.height * 4;
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         [self->_finallyFramebuffer bindFramebuffer];
         rawImagePixels = (GLubyte *)malloc(totalBytesForImage);
         glReadPixels(0, 0, (int)_size.width, (int)_size.height, GL_RGBA, GL_UNSIGNED_BYTE, rawImagePixels);

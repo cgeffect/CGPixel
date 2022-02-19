@@ -4,7 +4,7 @@
 //
 //  Created by Jason on 21/3/3.
 //
-#import "CGPaintContext.h"
+#import "CGPixelContext.h"
 #import <mach/mach.h>
 #import <UIKit/UIKit.h>
 
@@ -33,9 +33,9 @@ void runOnMainQueueWithoutDeadlocking(void (^block)(void))
 
 void runSyncOnSerialQueue(void (^block)(void))
 {
-    dispatch_queue_t videoProcessingQueue = [[CGPaintContext sharedRenderContext] sharedContextQueue];
+    dispatch_queue_t videoProcessingQueue = [[CGPixelContext sharedRenderContext] sharedContextQueue];
 
-    if (dispatch_get_specific([CGPaintContext contextKey]))
+    if (dispatch_get_specific([CGPixelContext contextKey]))
     {
         block();
     } else {
@@ -45,9 +45,9 @@ void runSyncOnSerialQueue(void (^block)(void))
 
 void runAsyncOnSerialQueue(void (^block)(void))
 {
-    dispatch_queue_t videoProcessingQueue = [[CGPaintContext sharedRenderContext]sharedContextQueue];
+    dispatch_queue_t videoProcessingQueue = [[CGPixelContext sharedRenderContext]sharedContextQueue];
     
-    if (dispatch_get_specific([CGPaintContext contextKey]))
+    if (dispatch_get_specific([CGPixelContext contextKey]))
     {
         block();
     }else
@@ -56,10 +56,10 @@ void runAsyncOnSerialQueue(void (^block)(void))
     }
 }
 
-void runSyncOnContextSerialQueue(CGPaintContext *context, void (^block)(void))
+void runSyncOnContextSerialQueue(CGPixelContext *context, void (^block)(void))
 {
     dispatch_queue_t videoProcessingQueue = [context contextQueue];
-    if (dispatch_get_specific([CGPaintContext contextKey]))
+    if (dispatch_get_specific([CGPixelContext contextKey]))
     {
         block();
     }else
@@ -68,11 +68,11 @@ void runSyncOnContextSerialQueue(CGPaintContext *context, void (^block)(void))
     }
 }
 
-void runAsyncOnContextSerialQueue(CGPaintContext *context, void (^block)(void))
+void runAsyncOnContextSerialQueue(CGPixelContext *context, void (^block)(void))
 {
     dispatch_queue_t videoProcessingQueue = [context contextQueue];
  
-    if (dispatch_get_specific([CGPaintContext contextKey]))
+    if (dispatch_get_specific([CGPixelContext contextKey]))
     {
         block();
     }else
@@ -104,14 +104,14 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
     }
 }
 
-@interface CGPaintContext()
+@interface CGPixelContext()
 {
     EAGLSharegroup *_sharegroup;
 }
 
 @end
 
-@implementation CGPaintContext
+@implementation CGPixelContext
 
 @synthesize context = _context;
 @synthesize contextQueue = _contextQueue;
@@ -119,10 +119,10 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
 
 static void *openGLESContextQueueKey;
 
-+ (CGPaintContext *)sharedRenderContext;
++ (CGPixelContext *)sharedRenderContext;
 {
     static dispatch_once_t pred;
-    static CGPaintContext *sharedRenderContext = nil;
+    static CGPixelContext *sharedRenderContext = nil;
     
     dispatch_once(&pred, ^{
         sharedRenderContext = [[[self class] alloc] init];
@@ -152,7 +152,7 @@ static void *openGLESContextQueueKey;
 
 - (dispatch_queue_t)sharedContextQueue
 {
-    return [[CGPaintContext sharedRenderContext] contextQueue];
+    return [[CGPixelContext sharedRenderContext] contextQueue];
 }
 
 - (void)useAsCurrentContext;
@@ -250,7 +250,7 @@ static void *openGLESContextQueueKey;
     static GLint maxTextureSize = 0;
     
     dispatch_once(&pred, ^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         glGetIntegerv(GL_MAX_TEXTURE_SIZE, &maxTextureSize);
     });
 
@@ -263,7 +263,7 @@ static void *openGLESContextQueueKey;
     static GLint maxTextureUnits = 0;
 
     dispatch_once(&pred, ^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         glGetIntegerv(GL_MAX_TEXTURE_IMAGE_UNITS, &maxTextureUnits);
     });
     

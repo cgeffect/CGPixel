@@ -37,7 +37,7 @@
         };
 
         runSyncOnSerialQueue(^{
-            [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+            [[CGPixelContext sharedRenderContext] useAsCurrentContext];
             self->_renderPipline = [[CGPaintRenderPipeline alloc] init];
             if ([self->_renderPipline glPrepareDrawToGLLayer:(CAEAGLLayer *)self.layer]) {
                 NSLog(@"glPrepareRender success...");

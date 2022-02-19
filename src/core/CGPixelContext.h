@@ -12,7 +12,7 @@
 #import <OpenGLES/ES2/glext.h>
 #import "CGPaintProgram.h"
 
-@class CGPaintContext;
+@class CGPixelContext;
 //往调度队列中提交有一个block,并且与它的调度组关联起来
 dispatch_queue_attr_t CGPaintDefaultQueueAttribute(void);
 //在主线程执行,并且不死锁
@@ -21,8 +21,8 @@ void runOnMainQueueWithoutDeadlocking(void (^block)(void));
 void runSyncOnSerialQueue(void (^block)(void));
 void runAsyncOnSerialQueue(void (^block)(void));
 //在指定的CGRenderContext中执行
-void runSyncOnContextSerialQueue(CGPaintContext *context, void (^block)(void));
-void runAsyncOnContextSerialQueue(CGPaintContext *context, void (^block)(void));
+void runSyncOnContextSerialQueue(CGPixelContext *context, void (^block)(void));
+void runAsyncOnContextSerialQueue(CGPixelContext *context, void (^block)(void));
 //
 void reportAvailableMemoryForGPUImage(NSString *tag);
 
@@ -40,7 +40,7 @@ typedef NS_ENUM(NSUInteger, CGImageRotationMode) {
 };
 
 //给OpenGL ES基本环境
-@interface CGPaintContext : NSObject
+@interface CGPixelContext : NSObject
 
 @property(readonly, nonatomic) dispatch_queue_t contextQueue;
 @property(readonly, strong, nonatomic) EAGLContext *context;
@@ -48,7 +48,7 @@ typedef NS_ENUM(NSUInteger, CGImageRotationMode) {
 
 + (void *)contextKey;
 
-+ (CGPaintContext *)sharedRenderContext;
++ (CGPixelContext *)sharedRenderContext;
 
 + (BOOL)supportsFastTextureUpload;
 

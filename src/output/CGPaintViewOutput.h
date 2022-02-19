@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CGPaintContext.h"
+#import "CGPixelContext.h"
 #import "CGPaintInput.h"
 
 //凡是需要输入纹理对象的节点都是Input类型。

@@ -129,7 +129,7 @@ static const GLfloat textureCoordinates[] = {
         _format = format;
         _byteSize = byteSize;
         runSyncOnSerialQueue(^{
-            [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+            [[CGPixelContext sharedRenderContext] useAsCurrentContext];
             if (format == CGDataFormatRGBA || format == CGDataFormatBGRA) {
                 self->_outputFramebuffer = [[CGPaintFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
                 [self->_outputFramebuffer bindTexture];
@@ -288,7 +288,7 @@ static const GLfloat textureCoordinates[] = {
 - (void)requestRender {
     [super requestRender];
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         for (id<CGPaintInput> currentTarget in self->_targets){
             [currentTarget setInputFramebuffer:self->_outputFramebuffer];
             CMSampleTimingInfo info = {0};
@@ -300,7 +300,7 @@ static const GLfloat textureCoordinates[] = {
 - (void)dealloc
 {
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         self->_outputFramebuffer = nil;
     });
 }

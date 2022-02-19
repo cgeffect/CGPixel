@@ -82,7 +82,7 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
         _bufferWidth = (int) CVPixelBufferGetWidth(pixelBuffer);
         _bufferHeight = (int) CVPixelBufferGetHeight(pixelBuffer);
         runSyncOnSerialQueue(^{
-            [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+            [[CGPixelContext sharedRenderContext] useAsCurrentContext];
             EAGLContext *_oglContext = [EAGLContext currentContext];
             CVReturn err = CVOpenGLESTextureCacheCreate(kCFAllocatorDefault, NULL, _oglContext, NULL, &self->_renderTextureCache);
             if (err) {
@@ -119,7 +119,7 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
     _bufferWidth = (int) CVPixelBufferGetWidth(pixelBuffer);
     _bufferHeight = (int) CVPixelBufferGetHeight(pixelBuffer);
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         if (format == CGPixelFormatBGRA) {
             GLuint _texId = [self glGenTexIdWithPixelBufferBGRA:pixelBuffer];
             [self->_outputFramebuffer updateWithSize:CGSizeMake(self->_bufferWidth, self->_bufferHeight) texture:_texId];
@@ -261,7 +261,7 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
 
 - (void)requestRender {
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         for (id<CGPaintInput> currentTarget in self->_targets){
             [currentTarget setInputFramebuffer:self->_outputFramebuffer];
             CMSampleTimingInfo info = {0};
@@ -272,7 +272,7 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
 - (void)dealloc
 {
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         if (self->_renderTextureCache) {
             CFRelease(self->_renderTextureCache);
             self->_renderTextureCache = 0;

@@ -7,7 +7,7 @@
 
 #import "CGPaintFramebufferCache.h"
 #import "CGPaintOutput.h"
-#import "CGPaintContext.h"
+#import "CGPixelContext.h"
 
 @interface CGPaintFramebufferCache ()
 {
@@ -88,7 +88,7 @@
 
 - (void)deleteAllUnassignedFramebuffers {
     [self->_framebufferCache removeAllObjects];
-    CVOpenGLESTextureCacheFlush([[CGPaintContext sharedRenderContext] coreVideoTextureCache], 0);
+    CVOpenGLESTextureCacheFlush([[CGPixelContext sharedRenderContext] coreVideoTextureCache], 0);
 }
 
 - (NSString *)hashForSize:(CGSize)size textureOptions:(CGTextureOptions)textureOptions onlyTexture:(BOOL)onlyTexture {

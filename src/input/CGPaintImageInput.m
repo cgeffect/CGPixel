@@ -7,7 +7,7 @@
 //
 
 #import "CGPaintImageInput.h"
-#import "CGPaintContext.h"
+#import "CGPixelContext.h"
 #import "CGPaintFramebufferCache.h"
 
 #define MAX_SIZE UIScreen.mainScreen.bounds.size.width
@@ -40,7 +40,7 @@
         
         //是否重画
         BOOL shouldRedrawUsingCoreGraphics = NO;
-        CGSize scaledImageSizeToFitOnGPU = [CGPaintContext sizeThatFitsWithinATextureForSize:pixelSizeOfImage];
+        CGSize scaledImageSizeToFitOnGPU = [CGPixelContext sizeThatFitsWithinATextureForSize:pixelSizeOfImage];
         if (!CGSizeEqualToSize(scaledImageSizeToFitOnGPU, pixelSizeOfImage)) {
             pixelSizeOfImage = scaledImageSizeToFitOnGPU;
             pixelSizeToUseForTexture = pixelSizeOfImage;
@@ -141,7 +141,7 @@
 
 - (void)genTexture:(GLenum)format gl_format:(GLenum)gl_foramt fboSize:(CGSize)fboSize imageData:(GLubyte *)imageData {
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         
         //申请FBO, 关联TextureGL_BGRA
         self->_outputFramebuffer = [[CGPaintFramebuffer alloc] initWithSize:fboSize onlyTexture:YES];
@@ -167,7 +167,7 @@
 - (void)requestRender {
     [super requestRender];
     runSyncOnSerialQueue(^{
-        [[CGPaintContext sharedRenderContext] useAsCurrentContext];
+        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         for (id<CGPaintInput> currentTarget in self->_targets){
             [currentTarget setInputFramebuffer:self->_outputFramebuffer];
             CMSampleTimingInfo info = {0};

@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol CGPaintFilterInput <NSObject>
+@protocol CGPixelFilterInput <NSObject>
 @optional
 #pragma mark -
 #pragma mark 子类实现, 处理自己的数据
