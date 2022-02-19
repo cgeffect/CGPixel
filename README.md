@@ -1,5 +1,7 @@
 # CGPixel
-<img width="945" alt="截屏2021-11-27 上午12 08 45" src="https://user-images.githubusercontent.com/15692322/143607523-5e14a01f-6fd7-4e67-a086-87e363b08486.png">
+
+<img width="500" alt="截屏2021-11-27 上午12 08 45" src="https://user-images.githubusercontent.com/15692322/154796866-ff3657f1-9154-4b5d-b7d6-b33b44098353.png">
+
 CGPixel 是一个适用于 iOS 的GPU加速OpenGL处理库<br>
 
 SDK 的 Github 地址：https://github.com/cgeffect/CGPaint
