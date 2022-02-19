@@ -1,13 +1,14 @@
 //
-//  CGPixelVortexFilter.m
+//  CGPixelRadialRotateBlurFilter.m
 //  CGPixel
 //
-//  Created by CGPixel on 2021/5/24.
+//  Created by CGPixel on 2021/5/19.
 //
 
-#import "CGPaintVortexFilter.h"
+#import "CGPixelRadialRotateBlurFilter.h"
 
-@implementation CGPaintVortexFilter
+@implementation CGPixelRadialRotateBlurFilter
+
 - (instancetype)init {
 #ifdef TARGET_IPHONE_POD
     NSBundle *bunle = [NSBundle bundleForClass:[self class]];
@@ -20,10 +21,14 @@
     if (self) {
 
     }
+    
     return self;
 }
+
 - (void)glProgramUsed {
-    int index = [_shaderProgram getUniformLocation:@"uD"];
-    [_shaderProgram setUniform1f:index x:_value];
+    [_shaderProgram setUniform2f:[_shaderProgram getUniformLocation:@"uSize"] x:self.size.width y:self.size.height];
+    [_shaderProgram setUniform2f:[_shaderProgram getUniformLocation:@"uCenter"] x:self.size.width * 0.5 y:self.size.height * 0.5];
+    [_shaderProgram setUniform1f:[_shaderProgram getUniformLocation:@"uCount"] x:_value];
 }
+
 @end

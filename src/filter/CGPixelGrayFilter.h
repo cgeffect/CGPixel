@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintGrayFilter : CGPixelFilter
+@interface CGPixelGrayFilter : CGPixelFilter
 
 @end
 

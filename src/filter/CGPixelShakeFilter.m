@@ -6,9 +6,9 @@
 //  Copyright © 2021 CGPixel. All rights reserved.
 //
 
-#import "CGPaintShakeFilter.h"
+#import "CGPixelShakeFilter.h"
 
-@implementation CGPaintShakeFilter
+@implementation CGPixelShakeFilter
 
 - (instancetype)init {
 #ifdef TARGET_IPHONE_POD

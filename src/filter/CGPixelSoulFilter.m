@@ -1,13 +1,15 @@
 //
-//  CGPixelGrayFilter.m
+//  CGPixelSoulFilter.m
 //  CGPixel
 //
-//  Created by Jason on 2021/5/30.
+//  Created by CGPixel on 2021/5/14.
+//  Copyright © 2021 CGPixel. All rights reserved.
 //
 
-#import "CGPaintGrayFilter.h"
+#import "CGPixelSoulFilter.h"
 
-@implementation CGPaintGrayFilter
+@implementation CGPixelSoulFilter
+
 - (instancetype)init {
 #ifdef TARGET_IPHONE_POD
     NSBundle *bunle = [NSBundle bundleForClass:[self class]];
@@ -21,6 +23,11 @@
 
     }
     return self;
+}
+
+- (void)glProgramUsed {
+    int index = [_shaderProgram getUniformLocation:@"Time"];
+    [_shaderProgram setUniform1f:index x:_value];
 }
 
 @end

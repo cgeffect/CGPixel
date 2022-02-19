@@ -5,9 +5,9 @@
 //  Created by CGPixel on 2021/5/19.
 //
 
-#import "CGPaintRadialScaleBlurFilter.h"
+#import "CGPixelRadialScaleBlurFilter.h"
 
-@interface CGPaintRadialScaleBlurFilter ()
+@interface CGPixelRadialScaleBlurFilter ()
 {
     int uSize;
     int uCenter;
@@ -15,7 +15,7 @@
 }
 @end
 
-@implementation CGPaintRadialScaleBlurFilter
+@implementation CGPixelRadialScaleBlurFilter
 - (instancetype)init {
 #ifdef TARGET_IPHONE_POD
     NSBundle *bunle = [NSBundle bundleForClass:[self class]];

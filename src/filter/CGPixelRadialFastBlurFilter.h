@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintRadialFastBlurFilter : CGPixelFilter
+@interface CGPixelRadialFastBlurFilter : CGPixelFilter
 
 @end
 

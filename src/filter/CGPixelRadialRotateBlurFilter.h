@@ -1,5 +1,5 @@
 //
-//  CGPixelRadialScaleBlurFilter.h
+//  CGPixelRadialRotateBlurFilter.h
 //  CGPixel
 //
 //  Created by CGPixel on 2021/5/19.
@@ -9,7 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintRadialScaleBlurFilter : CGPixelFilter
+@interface CGPixelRadialRotateBlurFilter : CGPixelFilter
+
 @end
 
 NS_ASSUME_NONNULL_END

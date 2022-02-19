@@ -139,15 +139,15 @@
         }break;;
         case CG_SOUL:
         {
-            filter = [[CGPaintSoulFilter alloc] init];
+            filter = [[CGPixelSoulFilter alloc] init];
         }break;
         case CG_RADIAL_FAST_BLUR:
         {
-            filter = [[CGPaintRadialFastBlurFilter alloc] init];
+            filter = [[CGPixelRadialFastBlurFilter alloc] init];
         }break;
         case CG_SHAKE:
         {
-            filter = [[CGPaintShakeFilter alloc] init];
+            filter = [[CGPixelShakeFilter alloc] init];
         }break;
         case CG_GLITCH:
         {
@@ -155,15 +155,15 @@
         }break;
         case CG_RADIAL_SCALE_BLUR:
         {
-            filter = [[CGPaintRadialScaleBlurFilter alloc] init];
+            filter = [[CGPixelRadialScaleBlurFilter alloc] init];
         }break;
         case CG_RADIAL_ROTATE_BLUR:
         {
-            filter = [[CGPaintRadialRotateBlurFilter alloc] init];
+            filter = [[CGPixelRadialRotateBlurFilter alloc] init];
         }break;
         case CG_VORTEX:
         {
-            filter = [[CGPaintVortexFilter alloc] init];
+            filter = [[CGPixelVortexFilter alloc] init];
         }break;
         default:
             break;

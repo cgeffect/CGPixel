@@ -1,14 +1,13 @@
 //
-//  CGPixelRadialRotateBlurFilter.m
+//  CGPixelGrayFilter.m
 //  CGPixel
 //
-//  Created by CGPixel on 2021/5/19.
+//  Created by Jason on 2021/5/30.
 //
 
-#import "CGPaintRadialRotateBlurFilter.h"
+#import "CGPixelGrayFilter.h"
 
-@implementation CGPaintRadialRotateBlurFilter
-
+@implementation CGPixelGrayFilter
 - (instancetype)init {
 #ifdef TARGET_IPHONE_POD
     NSBundle *bunle = [NSBundle bundleForClass:[self class]];
@@ -21,14 +20,7 @@
     if (self) {
 
     }
-    
     return self;
-}
-
-- (void)glProgramUsed {
-    [_shaderProgram setUniform2f:[_shaderProgram getUniformLocation:@"uSize"] x:self.size.width y:self.size.height];
-    [_shaderProgram setUniform2f:[_shaderProgram getUniformLocation:@"uCenter"] x:self.size.width * 0.5 y:self.size.height * 0.5];
-    [_shaderProgram setUniform1f:[_shaderProgram getUniformLocation:@"uCount"] x:_value];
 }
 
 @end

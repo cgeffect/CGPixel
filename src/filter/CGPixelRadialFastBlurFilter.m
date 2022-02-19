@@ -1,14 +1,13 @@
 //
-//  CGPixelSoulFilter.m
+//  CGPixelRadialFastBlurFilter.m
 //  CGPixel
 //
-//  Created by CGPixel on 2021/5/14.
-//  Copyright © 2021 CGPixel. All rights reserved.
+//  Created by CGPixel on 2021/5/18.
 //
 
-#import "CGPaintSoulFilter.h"
+#import "CGPixelRadialFastBlurFilter.h"
 
-@implementation CGPaintSoulFilter
+@implementation CGPixelRadialFastBlurFilter
 
 - (instancetype)init {
 #ifdef TARGET_IPHONE_POD
@@ -22,12 +21,12 @@
     if (self) {
 
     }
+    
     return self;
 }
-
 - (void)glProgramUsed {
-    int index = [_shaderProgram getUniformLocation:@"Time"];
-    [_shaderProgram setUniform1f:index x:_value];
+    GLuint loc = [_shaderProgram getUniformLocation:@"ratio"];
+    [_shaderProgram setUniform1f:loc x:_value];
 }
 
 @end

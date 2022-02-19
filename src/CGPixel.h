@@ -18,14 +18,14 @@ FOUNDATION_EXPORT const unsigned char CGPaintVersionString[];
 #pragma mark -
 #pragma mark Filter
 #import "CGPixelFilter.h"
-#import "CGPaintSoulFilter.h"
-#import "CGPaintRadialFastBlurFilter.h"
-#import "CGPaintShakeFilter.h"
-#import "CGPaintGlitchFilter.h"
-#import "CGPaintRadialRotateBlurFilter.h"
-#import "CGPaintRadialScaleBlurFilter.h"
-#import "CGPaintVortexFilter.h"
-#import "CGPaintGrayFilter.h"
+#import "CGPixelSoulFilter.h"
+#import "CGPixelRadialFastBlurFilter.h"
+#import "CGPixelShakeFilter.h"
+#import "CGPixelGlitchFilter.h"
+#import "CGPixelRadialRotateBlurFilter.h"
+#import "CGPixelRadialScaleBlurFilter.h"
+#import "CGPixelVortexFilter.h"
+#import "CGPixelGrayFilter.h"
 
 #pragma mark -
 #pragma mark Input
