@@ -9,14 +9,14 @@
 #import <AVFoundation/AVFoundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@class CGPaintVideoInput;
+@class CGPixelVideoInput;
 @protocol CGPaintVideoInputDelegate <NSObject>
 
-- (void)output:(CGPaintVideoInput *)output pixelbuffer:(CVPixelBufferRef)pixelbuffer;
+- (void)output:(CGPixelVideoInput *)output pixelbuffer:(CVPixelBufferRef)pixelbuffer;
 
 @end
 
-@interface CGPaintVideoInput : CGPixelOutput
+@interface CGPixelVideoInput : CGPixelOutput
 @property (readonly, strong) AVAsset *asset;
 @property (readonly, strong) AVPlayerItem *playerItem;
 @property (readonly, strong) AVPlayer *player;

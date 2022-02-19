@@ -6,20 +6,20 @@
 //  Copyright © 2021 CGPixel. All rights reserved.
 //
 
-#import "CGPaintImageInput.h"
+#import "CGPixelImageInput.h"
 #import "CGPixelContext.h"
 #import "CGPaintFramebufferCache.h"
 
 #define MAX_SIZE UIScreen.mainScreen.bounds.size.width
 
-@interface CGPaintImageInput ()
+@interface CGPixelImageInput ()
 {
     BOOL removePremultiplication;
     BOOL shouldSmoothlyScaleOutput;
 }
 @end
 
-@implementation CGPaintImageInput
+@implementation CGPixelImageInput
 
 - (instancetype)initWithImage:(UIImage *)newImageSource {
     self = [super init];

@@ -9,10 +9,10 @@
 #import "CGPreviewController.h"
 #import "CGPixel.h"
 
-@interface CGPixelCameraController ()<CGPaintCaptureDelegate>
+@interface CGPixelCameraController ()<CGPixelCaptureDelegate>
 {
     CGPaintViewOutput *_metalView;
-    CGPaintCameraInput *_cameraInput;
+    CGPixelCameraInput *_cameraInput;
 }
 
 @end
@@ -34,9 +34,9 @@
     _metalView.backgroundColor = UIColor.blackColor;
     [self.view addSubview:_metalView];
     
-    [CGPaintCameraInput checkCameraAuthor];
-    [CGPaintCameraInput checkMicrophoneAuthor];
-    _cameraInput = [[CGPaintCameraInput alloc] initWithType:(CGMetalCaptureTypeVideo)];
+    [CGPixelCameraInput checkCameraAuthor];
+    [CGPixelCameraInput checkMicrophoneAuthor];
+    _cameraInput = [[CGPixelCameraInput alloc] initWithType:(CGMetalCaptureTypeVideo)];
     _cameraInput.delegate = self;
     CGPixelFilter *filter = [[CGPixelGlitchFilter alloc] init];
     [filter setValue:2];

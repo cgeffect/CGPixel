@@ -6,7 +6,7 @@
 //  Copyright © 2021 CGPixel. All rights reserved.
 //
 
-#import "CGPaintRawDataInput.h"
+#import "CGPixelRawDataInput.h"
 
 NSString *const gl_vert = CG_SHADER_STRING (
     attribute vec4 position;
@@ -102,9 +102,9 @@ static const GLfloat textureCoordinates[] = {
     1.0f, 1.0f,
 };
 
-@implementation CGPaintRawDataInput
+@implementation CGPixelRawDataInput
 {
-    CGDataFormat _format;
+    CGPixelDataFormat _format;
     CGSize _byteSize;
     CGPaintProgram *_shaderProgram;
     //顶点属性,纹理属性
@@ -122,7 +122,7 @@ static const GLfloat textureCoordinates[] = {
     
     BOOL _isOverride;
 }
-- (instancetype)initWithByte:(UInt8 *)byte byteSize:(CGSize)byteSize format:(CGDataFormat)format {
+- (instancetype)initWithByte:(UInt8 *)byte byteSize:(CGSize)byteSize format:(CGPixelDataFormat)format {
     self = [super init];
     if (self) {
         _isOverride = NO;
@@ -130,17 +130,17 @@ static const GLfloat textureCoordinates[] = {
         _byteSize = byteSize;
         runSyncOnSerialQueue(^{
             [[CGPixelContext sharedRenderContext] useAsCurrentContext];
-            if (format == CGDataFormatRGBA || format == CGDataFormatBGRA) {
+            if (format == CGPixelDataFormatRGBA || format == CGPixelDataFormatBGRA) {
                 self->_outputFramebuffer = [[CGPaintFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
                 [self->_outputFramebuffer bindTexture];
                 [self uploadByte:byte byteSize:byteSize format:format];
                 [self->_outputFramebuffer unbindTexture];
-            } else if (format == CGDataFormatNV21 || format == CGDataFormatNV12 || format == CGDataFormatI420) {
-                if (format ==CGDataFormatNV21) {
+            } else if (format == CGPixelDataFormatNV21 || format == CGPixelDataFormatNV12 || format == CGPixelDataFormatI420) {
+                if (format ==CGPixelDataFormatNV21) {
                     self->_shaderProgram = [[CGPaintProgram alloc] initWithVertexShaderString:gl_vert fragmentShaderString:gl_frag_nv21];
-                } else if (format == CGDataFormatNV12) {
+                } else if (format == CGPixelDataFormatNV12) {
                     self->_shaderProgram = [[CGPaintProgram alloc] initWithVertexShaderString:gl_vert fragmentShaderString:gl_frag_nv12];
-                } else if (format == CGDataFormatI420) {
+                } else if (format == CGPixelDataFormatI420) {
                     self->_shaderProgram = [[CGPaintProgram alloc] initWithVertexShaderString:gl_vert fragmentShaderString:gl_frag_i420];
                 }
                 if (self->_shaderProgram && [self->_shaderProgram link]) {
@@ -152,10 +152,10 @@ static const GLfloat textureCoordinates[] = {
                 //使用init创建的CGPaintFramebuffer都不会需要进缓存, 自己销毁, fbo的缓存逻辑修改下, 如果是init不需要生成key, 自然也不会进缓存
                 self->_outputFramebuffer = [[CGPaintFramebuffer alloc] initWithSize:byteSize onlyTexture:NO];
                 self->_yFramebuffer = [[CGPaintFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
-                if (format == CGDataFormatNV21 || format == CGDataFormatNV12) {
+                if (format == CGPixelDataFormatNV21 || format == CGPixelDataFormatNV12) {
                     self->_uvTexUniform = [self->_shaderProgram getUniformLocation:@"vu_texture"];
                     self->_uvFramebuffer = [[CGPaintFramebufferCache sharedFramebufferCache] fetchFramebufferForSize:byteSize onlyTexture:YES];
-                }else if (format == CGDataFormatI420) {
+                }else if (format == CGPixelDataFormatI420) {
                     self->_uTexUniform = [self->_shaderProgram getUniformLocation:@"u_texture"];
                     self->_vTexUniform = [self->_shaderProgram getUniformLocation:@"v_texture"];
 
@@ -167,9 +167,9 @@ static const GLfloat textureCoordinates[] = {
                 
                 [self->_shaderProgram use];
                 [self->_outputFramebuffer bindFramebuffer];
-                if (format == CGDataFormatNV21 ||format == CGDataFormatNV12) {
+                if (format == CGPixelDataFormatNV21 ||format == CGPixelDataFormatNV12) {
                     [self drawNV21NV12ToFBO];
-                } else if (format == CGDataFormatI420) {
+                } else if (format == CGPixelDataFormatI420) {
                     [self drawI420ToFBO];
                 }
                 [self->_outputFramebuffer bindFramebuffer];
@@ -187,12 +187,12 @@ static const GLfloat textureCoordinates[] = {
     return self;
 }
 
-- (void)uploadByte:(UInt8 *)byte byteSize:(CGSize)byteSize format:(CGDataFormat)format {
-    if (format == CGDataFormatRGBA) {
+- (void)uploadByte:(UInt8 *)byte byteSize:(CGSize)byteSize format:(CGPixelDataFormat)format {
+    if (format == CGPixelDataFormatRGBA) {
         [self->_outputFramebuffer upload:byte size:byteSize internalformat:GL_RGBA format:GL_RGBA isOverride:_isOverride];
-    } else if (format == CGDataFormatBGRA) {
+    } else if (format == CGPixelDataFormatBGRA) {
         [self->_outputFramebuffer upload:byte size:byteSize internalformat:GL_RGBA format:GL_BGRA isOverride:_isOverride];
-    } else if (format == CGDataFormatNV21 || format == CGDataFormatNV12) {
+    } else if (format == CGPixelDataFormatNV21 || format == CGPixelDataFormatNV12) {
         int width = byteSize.width;
         int height = byteSize.height;
         int uvOffset = width * height;
@@ -204,7 +204,7 @@ static const GLfloat textureCoordinates[] = {
         [self->_uvFramebuffer bindTexture];
         [self->_uvFramebuffer upload:byte + uvOffset size:uvSize internalformat:GL_LUMINANCE_ALPHA format:GL_LUMINANCE_ALPHA isOverride:_isOverride];
         [self->_uvFramebuffer unbindTexture];
-    } else if (format == CGDataFormatI420) {
+    } else if (format == CGPixelDataFormatI420) {
         int width = byteSize.width;
         int height = byteSize.height;
         int uOffset = width * height;
@@ -225,9 +225,9 @@ static const GLfloat textureCoordinates[] = {
     
     [self->_shaderProgram use];
     [self->_outputFramebuffer bindFramebuffer];
-    if (format == CGDataFormatNV21 ||format == CGDataFormatNV12) {
+    if (format == CGPixelDataFormatNV21 ||format == CGPixelDataFormatNV12) {
         [self drawNV21NV12ToFBO];
-    } else if (format == CGDataFormatI420) {
+    } else if (format == CGPixelDataFormatI420) {
         [self drawI420ToFBO];
     }
     [self->_outputFramebuffer bindFramebuffer];

@@ -1,5 +1,5 @@
 //
-//  CGPixelImageInput.h
+//  CGPixelTextureInput.h
 //  CGPixel
 //
 //  Created by CGPixel on 2021/5/13.
@@ -8,13 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "CGPixelOutput.h"
-#import "CGPaintFramebuffer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintImageInput : CGPixelOutput
+@interface CGPixelTextureInput : CGPixelOutput
 
-- (instancetype)initWithImage:(UIImage *)newImageSource;
+- (instancetype)initWithTexture:(GLuint)newInputTexture size:(CGSize)newTextureSize;
 
 @end
 

@@ -5,9 +5,9 @@
 //  Created by Jason on 2021/5/31.
 //
 
-#import "CGPaintVideoInput.h"
-#import "CGPaintPixelBufferInput.h"
-#import "CGPaintRawDataInput.h"
+#import "CGPixelVideoInput.h"
+#import "CGPixelPixelBufferInput.h"
+#import "CGPixelRawDataInput.h"
 
 # define ONE_FRAME_DURATION 0.03
 # define LUMA_SLIDER_TAG 0
@@ -15,7 +15,7 @@
 
 static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
 
-@interface CGPaintVideoInput ()<AVPlayerItemOutputPullDelegate>
+@interface CGPixelVideoInput ()<AVPlayerItemOutputPullDelegate>
 {
     AVPlayer *_player;
     AVPlayerItem *_playerItem;
@@ -29,7 +29,7 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
 
 @end
 
-@implementation CGPaintVideoInput
+@implementation CGPixelVideoInput
 
 - (instancetype)initWithURL:(NSURL *)url {
     self = [super init];
@@ -85,19 +85,19 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
 //
 //        if (pixelBuffer != NULL) {
 //            if (_input == nil) {
-//                _input = [[CGPaintRawDataInput alloc] initWithByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
+//                _input = [[CGPaintRawDataInput alloc] initWithByte:_dstData byteSize:CGSizeMake(w, h) format:CGPixelDataFormatNV12];
 //            } else {
 //                runSyncOnSerialQueue(^{
-//                    [(CGPaintRawDataInput *)_input uploadByte:_dstData byteSize:CGSizeMake(w, h) format:CGDataFormatNV12];
+//                    [(CGPaintRawDataInput *)_input uploadByte:_dstData byteSize:CGSizeMake(w, h) format:CGPixelDataFormatNV12];
 //                });
 //            }
 //            [self _requestRender];
 //        }
         if (pixelBuffer != NULL) {
             if (_input == nil) {
-                _input = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatNV12];
+                _input = [[CGPixelPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatNV12];
             } else {
-                [(CGPaintPixelBufferInput *)_input updatePixelBuffer:pixelBuffer format:CGPixelFormatNV12];
+                [(CGPixelPixelBufferInput *)_input updatePixelBuffer:pixelBuffer format:CGPixelFormatNV12];
             }
             [self _requestRender];
         }

@@ -5,7 +5,7 @@
 //  Created by CGPixel on 2021/5/14.
 //
 
-#import "CGPaintPixelBufferInput.h"
+#import "CGPixelPixelBufferInput.h"
 
 static const GLfloat imageVertices[] = {
     -1.0f, -1.0f,
@@ -53,7 +53,7 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
     }
 );
 
-@interface CGPaintPixelBufferInput ()
+@interface CGPixelPixelBufferInput ()
 {
     CGPaintProgram *_shaderProgram;
     //顶点属性,纹理属性
@@ -71,7 +71,7 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
 }
 @end
 
-@implementation CGPaintPixelBufferInput
+@implementation CGPixelPixelBufferInput
 
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)pixelBuffer format:(CGPixelFormat)format {
     self = [super init];

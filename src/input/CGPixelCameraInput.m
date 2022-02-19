@@ -5,11 +5,11 @@
 //  Created by Jason on 2021/12/23.
 //
 
-#import "CGPaintCameraInput.h"
-#import "CGPaintPixelBufferInput.h"
+#import "CGPixelCameraInput.h"
+#import "CGPixelPixelBufferInput.h"
 
 API_AVAILABLE(ios(10.0))
-@interface CGPaintCameraInput ()<AVCaptureAudioDataOutputSampleBufferDelegate,AVCaptureVideoDataOutputSampleBufferDelegate, AVCapturePhotoCaptureDelegate>
+@interface CGPixelCameraInput ()<AVCaptureAudioDataOutputSampleBufferDelegate,AVCaptureVideoDataOutputSampleBufferDelegate, AVCapturePhotoCaptureDelegate>
 @property (nonatomic, assign) BOOL isRunning;
 @property (nonatomic, strong) AVCaptureSession *captureSession;
 @property (nonatomic, strong) dispatch_queue_t captureQueue;
@@ -32,7 +32,7 @@ API_AVAILABLE(ios(10.0))
 
 @end
 
-@implementation CGPaintCameraInput {
+@implementation CGPixelCameraInput {
     CGMetalCaptureType _captureType;
 }
 
@@ -172,9 +172,9 @@ API_AVAILABLE(ios(10.0))
         CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
         if (pixelBuffer != NULL) {
             if (self->_output == nil) {
-                self->_output = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatNV12];
+                self->_output = [[CGPixelPixelBufferInput alloc] initWithPixelBuffer:pixelBuffer format:CGPixelFormatNV12];
             } else {
-                [(CGPaintPixelBufferInput *)self->_output updatePixelBuffer:pixelBuffer format:CGPixelFormatNV12];
+                [(CGPixelPixelBufferInput *)self->_output updatePixelBuffer:pixelBuffer format:CGPixelFormatNV12];
             }
             [self notifyNextTarget];
         } else {

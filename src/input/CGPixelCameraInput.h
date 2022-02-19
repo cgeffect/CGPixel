@@ -15,7 +15,7 @@ typedef NS_ENUM (int, CGMetalCaptureType) {
     CGMetalCaptureTypePhoto,
 };
 
-@protocol CGPaintCaptureDelegate <NSObject>
+@protocol CGPixelCaptureDelegate <NSObject>
 @optional
 - (void)captureVideoSampleBuffer:(CMSampleBufferRef _Nullable)sampleBuffer;
 
@@ -27,11 +27,11 @@ typedef NS_ENUM (int, CGMetalCaptureType) {
 
 @end
 
-@interface CGPaintCameraInput : CGPixelOutput
+@interface CGPixelCameraInput : CGPixelOutput
 
 @property(nonatomic) AVCaptureVideoOrientation videoOrientation;
 
-@property (nonatomic, weak) id<CGPaintCaptureDelegate> delegate;
+@property (nonatomic, weak) id<CGPixelCaptureDelegate> delegate;
 
 @property (nonatomic, assign, readonly) NSUInteger width;
 

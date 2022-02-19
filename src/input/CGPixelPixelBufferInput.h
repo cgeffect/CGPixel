@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, CGPixelFormat) {
     CGPixelFormatNV12
 };
 
-@interface CGPaintPixelBufferInput : CGPixelOutput
+@interface CGPixelPixelBufferInput : CGPixelOutput
 
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)pixelBuffer format:(CGPixelFormat)format;
 

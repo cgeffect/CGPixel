@@ -11,7 +11,7 @@
 @interface CGPixelVideoController ()
 {
     CGPaintViewOutput *_paintview;
-    CGPaintVideoInput *_inputSource;
+    CGPixelVideoInput *_inputSource;
     CGPixelSoulFilter *_soul;
     CGPixelGlitchFilter *_glitch;
 
@@ -30,7 +30,7 @@
     
     self.navigationItem.title = @"CG_VIDEO";
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Test" ofType:@"mp4"];
-    _inputSource = [[CGPaintVideoInput alloc] initWithURL:[NSURL fileURLWithPath:path]];
+    _inputSource = [[CGPixelVideoInput alloc] initWithURL:[NSURL fileURLWithPath:path]];
         
     UISlider *slide = [[UISlider alloc] initWithFrame:CGRectMake(30, UIScreen.mainScreen.bounds.size.height - 100, UIScreen.mainScreen.bounds.size.width - 60, 50)];
     slide.minimumValue = 0;

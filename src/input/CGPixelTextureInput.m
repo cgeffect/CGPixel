@@ -6,10 +6,10 @@
 //  Copyright © 2021 CGPixel. All rights reserved.
 //
 
-#import "CGPaintTextureInput.h"
+#import "CGPixelTextureInput.h"
 #import "CGPaintFramebufferCache.h"
 
-@implementation CGPaintTextureInput
+@implementation CGPixelTextureInput
 
 - (instancetype)initWithTexture:(GLuint)newInputTexture size:(CGSize)newTextureSize {
     self = [super init];
