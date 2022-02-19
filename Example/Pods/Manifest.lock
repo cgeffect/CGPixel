@@ -1,18 +1,18 @@
 PODS:
-  - CGPaint (1.0.0):
-    - CGPaint/shader (= 1.0.0)
-  - CGPaint/shader (1.0.0)
+  - CGRImage (1.0.0):
+    - CGRImage/shader (= 1.0.0)
+  - CGRImage/shader (1.0.0)
 
 DEPENDENCIES:
-  - CGPaint (from `../`)
+  - CGRImage (from `../`)
 
 EXTERNAL SOURCES:
-  CGPaint:
+  CGRImage:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CGPaint: a9d53166d45dd0bdb8b04e1e49a90d1d06e83abd
+  CGRImage: 75e82f28321d6b143ba292840c2b2e85a3954e6c
 
-PODFILE CHECKSUM: bd314935fa826fbfc8236d69e7f783e88b9f61e1
+PODFILE CHECKSUM: 2d2ad0835f57bc8d6cc265921703ad566f735496
 
 COCOAPODS: 1.11.2

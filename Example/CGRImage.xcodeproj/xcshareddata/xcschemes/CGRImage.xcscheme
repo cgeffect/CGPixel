@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E5E981642658D256008ED21D"
-               BuildableName = "CGPaint.app"
-               BlueprintName = "CGPaint"
-               ReferencedContainer = "container:CGPaint.xcodeproj">
+               BuildableName = "CGRImage.app"
+               BlueprintName = "CGRImage"
+               ReferencedContainer = "container:CGRImage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E5E981642658D256008ED21D"
-            BuildableName = "CGPaint.app"
-            BlueprintName = "CGPaint"
-            ReferencedContainer = "container:CGPaint.xcodeproj">
+            BuildableName = "CGRImage.app"
+            BlueprintName = "CGRImage"
+            ReferencedContainer = "container:CGRImage.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E5E981642658D256008ED21D"
-            BuildableName = "CGPaint.app"
-            BlueprintName = "CGPaint"
-            ReferencedContainer = "container:CGPaint.xcodeproj">
+            BuildableName = "CGRImage.app"
+            BlueprintName = "CGRImage"
+            ReferencedContainer = "container:CGRImage.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

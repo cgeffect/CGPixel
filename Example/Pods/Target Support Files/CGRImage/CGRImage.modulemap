@@ -1,0 +1,6 @@
+framework module CGRImage {
+  umbrella header "CGRImage-umbrella.h"
+
+  export *
+  module * { export * }
+}

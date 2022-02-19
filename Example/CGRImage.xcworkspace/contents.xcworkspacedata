@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:CGPaint.xcodeproj">
+      location = "group:/Users/jason/Jason/project/CGPaint/Example/CGRImage.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CGRImage.xcodeproj">
    </FileRef>
 </Workspace>
