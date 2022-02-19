@@ -2,7 +2,7 @@
 //  CGPixelRawDataInput.h
 //  CGPixel
 //
-//  Created by CGPaint on 2021/5/13.
+//  Created by CGPixel on 2021/5/13.
 //
 
 #import <UIKit/UIKit.h>

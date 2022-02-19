@@ -2,7 +2,7 @@
 //  CGPixelFilter.h
 //  CGPixel
 //
-//  Created by CGPaint on 2021/5/13.
+//  Created by CGPixel on 2021/5/13.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintFilter : CGPixelOutput<CGPixelInput, CGPixelFilterInput>
+@interface CGPixelFilter : CGPixelOutput<CGPixelInput, CGPixelFilterInput>
 {
 @protected
     CGPaintProgram *_shaderProgram;

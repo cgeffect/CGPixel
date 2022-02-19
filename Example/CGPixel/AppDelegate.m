@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  CGPixel
 //
-//  Created by CGPaint on 2021/5/22.
+//  Created by CGPixel on 2021/5/22.
 //
 
 #import "AppDelegate.h"

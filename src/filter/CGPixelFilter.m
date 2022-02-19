@@ -2,11 +2,11 @@
 //  CGPixelFilter.m
 //  CGPixel
 //
-//  Created by CGPaint on 2021/5/13.
-//  Copyright © 2021 CGPaint. All rights reserved.
+//  Created by CGPixel on 2021/5/13.
+//  Copyright © 2021 CGPixel. All rights reserved.
 //
 
-#import "CGPaintFilter.h"
+#import "CGPixelFilter.h"
 #import "CGPaintFramebufferCache.h"
 #import "CGPixelUtils.h"
 
@@ -87,7 +87,7 @@ static const GLfloat textureCoordinates[] = {
     1.0f, 1.0f,
 };
 
-@interface CGPaintFilter ()
+@interface CGPixelFilter ()
 {
     //Uniform状态Blocks字典
     NSMutableDictionary *uniformStateRestorationBlocks;
@@ -101,7 +101,7 @@ static const GLfloat textureCoordinates[] = {
 }
 @end
 
-@implementation CGPaintFilter
+@implementation CGPixelFilter
 
 - (instancetype)init
 {

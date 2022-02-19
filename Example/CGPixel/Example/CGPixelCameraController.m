@@ -38,7 +38,7 @@
     [CGPaintCameraInput checkMicrophoneAuthor];
     _cameraInput = [[CGPaintCameraInput alloc] initWithType:(CGMetalCaptureTypeVideo)];
     _cameraInput.delegate = self;
-    CGPaintFilter *filter = [[CGPaintGlitchFilter alloc] init];
+    CGPixelFilter *filter = [[CGPixelGlitchFilter alloc] init];
     [filter setValue:2];
     [_cameraInput addTarget:filter];
     [filter addTarget:_metalView];

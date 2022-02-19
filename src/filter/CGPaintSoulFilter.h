@@ -2,15 +2,15 @@
 //  CGPixelSoulFilter.h
 //  CGPixel
 //
-//  Created by CGPaint on 2021/5/14.
-//  Copyright © 2021 CGPaint. All rights reserved.
+//  Created by CGPixel on 2021/5/14.
+//  Copyright © 2021 CGPixel. All rights reserved.
 //
 
-#import "CGPaintFilter.h"
+#import "CGPixelFilter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintSoulFilter : CGPaintFilter
+@interface CGPaintSoulFilter : CGPixelFilter
 
 @end
 

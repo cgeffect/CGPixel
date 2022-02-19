@@ -2,15 +2,15 @@
 //  CGPixelRadialFastBlurFilter.h
 //  CGPixel
 //
-//  Created by CGPaint on 2021/5/18.
+//  Created by CGPixel on 2021/5/18.
 //
 
 #import <UIKit/UIKit.h>
-#import "CGPaintFilter.h"
+#import "CGPixelFilter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintRadialFastBlurFilter : CGPaintFilter
+@interface CGPaintRadialFastBlurFilter : CGPixelFilter
 
 @end
 

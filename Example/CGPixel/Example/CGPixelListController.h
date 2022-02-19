@@ -2,7 +2,7 @@
 //  CGPixelListController.h
 //  CGPixel
 //
-//  Created by CGPaint on 2021/5/19.
+//  Created by CGPixel on 2021/5/19.
 //
 
 #import <UIKit/UIKit.h>

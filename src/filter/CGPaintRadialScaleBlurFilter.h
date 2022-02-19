@@ -2,14 +2,14 @@
 //  CGPixelRadialScaleBlurFilter.h
 //  CGPixel
 //
-//  Created by CGPaint on 2021/5/19.
+//  Created by CGPixel on 2021/5/19.
 //
 
-#import "CGPaintFilter.h"
+#import "CGPixelFilter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintRadialScaleBlurFilter : CGPaintFilter
+@interface CGPaintRadialScaleBlurFilter : CGPixelFilter
 @end
 
 NS_ASSUME_NONNULL_END

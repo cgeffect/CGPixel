@@ -13,7 +13,7 @@
     CGPaintViewOutput *_paintview;
     CGPaintVideoInput *_inputSource;
     CGPaintSoulFilter *_soul;
-    CGPaintGlitchFilter *_glitch;
+    CGPixelGlitchFilter *_glitch;
 
 }
 @end
@@ -43,7 +43,7 @@
 
 - (void)setupFilter {
     _soul = [[CGPaintSoulFilter alloc] init];
-    _glitch = [[CGPaintGlitchFilter alloc] init];
+    _glitch = [[CGPixelGlitchFilter alloc] init];
     [_inputSource addTarget:_glitch];
     [_glitch addTarget:_soul];
     [_soul addTarget:_paintview];

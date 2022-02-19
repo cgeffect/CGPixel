@@ -2,7 +2,7 @@
 //  CGPixelVortexFilter.m
 //  CGPixel
 //
-//  Created by CGPaint on 2021/5/24.
+//  Created by CGPixel on 2021/5/24.
 //
 
 #import "CGPaintVortexFilter.h"

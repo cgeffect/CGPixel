@@ -2,7 +2,7 @@
 //  CGPixelPixelbufferOutput.m
 //  CGPixel
 //
-//  Created by CGPaint on 2021/5/14.
+//  Created by CGPixel on 2021/5/14.
 //
 
 #import "CGPaintPixelbufferOutput.h"

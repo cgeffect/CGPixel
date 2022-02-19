@@ -2,7 +2,7 @@
 //  CGPixel.h
 //  CGPixel
 //
-//  Created by CGPaint on 2021/5/12.
+//  Created by CGPixel on 2021/5/12.
 //
 
 #import <Foundation/Foundation.h>
@@ -17,7 +17,7 @@ FOUNDATION_EXPORT const unsigned char CGPaintVersionString[];
 
 #pragma mark -
 #pragma mark Filter
-#import "CGPaintFilter.h"
+#import "CGPixelFilter.h"
 #import "CGPaintSoulFilter.h"
 #import "CGPaintRadialFastBlurFilter.h"
 #import "CGPaintShakeFilter.h"

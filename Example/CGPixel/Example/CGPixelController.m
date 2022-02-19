@@ -12,7 +12,7 @@
 @interface CGPixelController ()
 {
     CGPixelOutput *_inputSource;
-    CGPaintFilter<CGPixelInput> *filter;
+    CGPixelFilter<CGPixelInput> *filter;
     CGPaintViewOutput * paintview;
     CGPaintTargetOutput *_targetOutput;
     UIImage *_sourceImage;
@@ -135,7 +135,7 @@
     switch (_filterType) {
         case CG_FILTER:
         {
-            filter = [[CGPaintFilter alloc] init];
+            filter = [[CGPixelFilter alloc] init];
         }break;;
         case CG_SOUL:
         {
@@ -151,7 +151,7 @@
         }break;
         case CG_GLITCH:
         {
-            filter = [[CGPaintGlitchFilter alloc] init];
+            filter = [[CGPixelGlitchFilter alloc] init];
         }break;
         case CG_RADIAL_SCALE_BLUR:
         {

@@ -2,12 +2,12 @@
 //  CGPixelGlitchFilter.m
 //  CGPixel
 //
-//  Created by CGPaint on 2021/5/19.
+//  Created by CGPixel on 2021/5/19.
 //
 
-#import "CGPaintGlitchFilter.h"
+#import "CGPixelGlitchFilter.h"
 
-@implementation CGPaintGlitchFilter
+@implementation CGPixelGlitchFilter
 
 - (instancetype)init {
 #ifdef TARGET_IPHONE_POD

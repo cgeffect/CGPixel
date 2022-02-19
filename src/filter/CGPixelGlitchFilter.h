@@ -1,5 +1,5 @@
 //
-//  CGPixelShakeFilter.h
+//  CGPixelGlitchFilter.h
 //  CGPixel
 //
 //  Created by CGPixel on 2021/5/19.
@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CGPixelFilter.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintShakeFilter : CGPixelFilter
+@interface CGPixelGlitchFilter : CGPixelFilter
 
 @end
 
