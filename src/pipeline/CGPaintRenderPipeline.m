@@ -7,7 +7,7 @@
 
 #import "CGPaintRenderPipeline.h"
 #import "CGPaintProgram.h"
-#import "CGPaintUtils.h"
+#import "CGPixelUtils.h"
 #import "CGPixelContext.h"
 #import <UIKit/UIKit.h>
 

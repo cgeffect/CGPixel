@@ -25,7 +25,7 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
 }
 @property(nonatomic, strong)AVPlayerItemVideoOutput *videoOutput;
 @property(nonatomic, strong)CADisplayLink *displayLink;
-@property(nonatomic, strong)CGPaintOutput *input;
+@property(nonatomic, strong)CGPixelOutput *input;
 
 @end
 
@@ -112,7 +112,7 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
 - (void)_requestRender {
     runSyncOnSerialQueue(^{
         [[CGPixelContext sharedRenderContext] useAsCurrentContext];
-        for (id<CGPaintInput> currentTarget in self->_targets){
+        for (id<CGPixelInput> currentTarget in self->_targets){
             [currentTarget setInputFramebuffer:self->_input.outFrameBuffer];
             CMSampleTimingInfo info = {0};
             [currentTarget newFrameReadyAtTime:kCMTimeZero timimgInfo:info];

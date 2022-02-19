@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGPaintOutput.h"
+#import "CGPixelOutput.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintTextureInput : CGPaintOutput
+@interface CGPaintTextureInput : CGPixelOutput
 
 - (instancetype)initWithTexture:(GLuint)newInputTexture size:(CGSize)newTextureSize;
 

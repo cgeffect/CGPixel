@@ -55,7 +55,7 @@ void glCheckError(char *flag);
 
 #define GLTex GLuint
 
-@interface CGPaintUtils : NSObject
+@interface CGPixelUtils : NSObject
 
 
 @end

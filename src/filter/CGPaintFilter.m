@@ -8,7 +8,7 @@
 
 #import "CGPaintFilter.h"
 #import "CGPaintFramebufferCache.h"
-#import "CGPaintUtils.h"
+#import "CGPixelUtils.h"
 
 /*
  旋转Z
@@ -217,7 +217,7 @@ static const GLfloat textureCoordinates[] = {
 }
 
 - (void)notifyNextTargetsAboutNewFrameAtTime:(CMTime)frameTime {
-    for (id<CGPaintInput> currentTarget in _targets)
+    for (id<CGPixelInput> currentTarget in _targets)
     {
         [currentTarget setInputFramebuffer:self->_outputFramebuffer];
         CMSampleTimingInfo info = {0};

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGPaintOutput.h"
+#import "CGPixelOutput.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, CGPixelFormat) {
     CGPixelFormatNV12
 };
 
-@interface CGPaintPixelBufferInput : CGPaintOutput
+@interface CGPaintPixelBufferInput : CGPixelOutput
 
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)pixelBuffer format:(CGPixelFormat)format;
 

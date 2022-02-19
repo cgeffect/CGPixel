@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGPaintInput.h"
+#import "CGPixelInput.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintTextureOutput : NSObject<CGPaintInput>
+@interface CGPaintTextureOutput : NSObject<CGPixelInput>
 
 @property(nonatomic, assign, readonly) GLuint texture;
 

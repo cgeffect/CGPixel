@@ -10,15 +10,15 @@
 #endif
 #endif
 
-#import "CGPaintUtils.h"
 #import "CGPixel.h"
+#import "CGPixelUtils.h"
 #import "CGPaintFramebuffer.h"
 #import "CGPaintFramebufferCache.h"
-#import "CGPaintInput.h"
-#import "CGPaintOutput.h"
 #import "CGPaintProgram.h"
 #import "CGPixelContext.h"
 #import "CGPixelFilterInput.h"
+#import "CGPixelInput.h"
+#import "CGPixelOutput.h"
 #import "CGPaintFilter.h"
 #import "CGPaintGlitchFilter.h"
 #import "CGPaintGrayFilter.h"

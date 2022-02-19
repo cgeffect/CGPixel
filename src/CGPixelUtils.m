@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/5/15.
 //
 
-#import "CGPaintUtils.h"
+#import "CGPixelUtils.h"
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
 
@@ -43,6 +43,6 @@ void glCheckError(char *flag) {
     }
 }
 
-@implementation CGPaintUtils
+@implementation CGPixelUtils
 
 @end

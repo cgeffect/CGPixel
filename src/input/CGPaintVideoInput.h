@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/5/31.
 //
 
-#import "CGPaintOutput.h"
+#import "CGPixelOutput.h"
 #import <AVFoundation/AVFoundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface CGPaintVideoInput : CGPaintOutput
+@interface CGPaintVideoInput : CGPixelOutput
 @property (readonly, strong) AVAsset *asset;
 @property (readonly, strong) AVPlayerItem *playerItem;
 @property (readonly, strong) AVPlayer *player;

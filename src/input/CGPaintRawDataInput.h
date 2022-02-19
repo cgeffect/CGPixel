@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CGPaintOutput.h"
+#import "CGPixelOutput.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, CGDataFormat) {
     CGDataFormatI420,
 };
 
-@interface CGPaintRawDataInput : CGPaintOutput
+@interface CGPaintRawDataInput : CGPixelOutput
 
 - (instancetype)initWithByte:(UInt8 *)byte byteSize:(CGSize)byteSize format:(CGDataFormat)format;
 

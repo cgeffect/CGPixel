@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGPaintOutput.h"
+#import "CGPixelOutput.h"
 #import "CGPaintFramebuffer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintImageInput : CGPaintOutput
+@interface CGPaintImageInput : CGPixelOutput
 
 - (instancetype)initWithImage:(UIImage *)newImageSource;
 

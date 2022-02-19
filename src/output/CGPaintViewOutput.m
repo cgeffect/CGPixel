@@ -7,7 +7,7 @@
 
 #import "CGPaintViewOutput.h"
 #import "CGPaintRenderPipeline.h"
-#import "CGPaintOutput.h"
+#import "CGPixelOutput.h"
 
 @implementation CGPaintViewOutput
 {

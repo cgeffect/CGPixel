@@ -6,14 +6,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGPaintInput.h"
-#import "CGPaintOutput.h"
+#import "CGPixelInput.h"
+#import "CGPixelOutput.h"
 #import "CGPaintProgram.h"
 #import "CGPixelFilterInput.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintFilter : CGPaintOutput<CGPaintInput, CGPixelFilterInput>
+@interface CGPaintFilter : CGPixelOutput<CGPixelInput, CGPixelFilterInput>
 {
 @protected
     CGPaintProgram *_shaderProgram;

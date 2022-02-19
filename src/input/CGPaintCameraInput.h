@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/12/23.
 //
 
-#import "CGPaintOutput.h"
+#import "CGPixelOutput.h"
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
 NS_ASSUME_NONNULL_BEGIN
@@ -27,7 +27,7 @@ typedef NS_ENUM (int, CGMetalCaptureType) {
 
 @end
 
-@interface CGPaintCameraInput : CGPaintOutput
+@interface CGPaintCameraInput : CGPixelOutput
 
 @property(nonatomic) AVCaptureVideoOrientation videoOrientation;
 

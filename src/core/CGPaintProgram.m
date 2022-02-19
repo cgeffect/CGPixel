@@ -6,7 +6,7 @@
 //
 
 #import "CGPaintProgram.h"
-#import "CGPaintUtils.h"
+#import "CGPixelUtils.h"
 
 @implementation CGPaintProgram {
     NSMutableArray  *attributes;

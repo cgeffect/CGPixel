@@ -262,7 +262,7 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
 - (void)requestRender {
     runSyncOnSerialQueue(^{
         [[CGPixelContext sharedRenderContext] useAsCurrentContext];
-        for (id<CGPaintInput> currentTarget in self->_targets){
+        for (id<CGPixelInput> currentTarget in self->_targets){
             [currentTarget setInputFramebuffer:self->_outputFramebuffer];
             CMSampleTimingInfo info = {0};
             [currentTarget newFrameReadyAtTime:kCMTimeZero timimgInfo:info];

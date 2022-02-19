@@ -7,10 +7,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CGPixelContext.h"
-#import "CGPaintInput.h"
+#import "CGPixelInput.h"
 
 //凡是需要输入纹理对象的节点都是Input类型。
-@interface CGPaintViewOutput : UIView<CGPaintInput>
+@interface CGPaintViewOutput : UIView<CGPixelInput>
 
 - (void)setClearColorRed:(GLfloat)red green:(GLfloat)green blue:(GLfloat)blue alpha:(GLfloat)alpha;
 

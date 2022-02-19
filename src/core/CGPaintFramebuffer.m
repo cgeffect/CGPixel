@@ -6,7 +6,7 @@
 //
 
 #import "CGPaintFramebuffer.h"
-#import "CGPaintOutput.h"
+#import "CGPixelOutput.h"
 #import "CGPixelContext.h"
 
 @implementation CGPaintFramebuffer

@@ -7,23 +7,23 @@
 
 #import "CGPaintFramebuffer.h"
 #import "CGPixelContext.h"
-#import "CGPaintInput.h"
-#import "CGPaintUtils.h"
+#import "CGPixelInput.h"
+#import "CGPixelUtils.h"
 #import "CGPaintFramebufferCache.h"
 
-@interface CGPaintOutput : NSObject
+@interface CGPixelOutput : NSObject
 {
 @protected
     CGPaintFramebuffer *_outputFramebuffer;
 @protected
-    NSMutableArray <id<CGPaintInput>>*_targets;
+    NSMutableArray <id<CGPixelInput>>*_targets;
 }
 
 @property(nonatomic, strong, readonly)CGPaintFramebuffer *outFrameBuffer;
 
-- (void)addTarget:(id<CGPaintInput>)newTarget;
+- (void)addTarget:(id<CGPixelInput>)newTarget;
 
-- (void)removeTarget:(id<CGPaintInput>)targetToRemove;
+- (void)removeTarget:(id<CGPixelInput>)targetToRemove;
 
 - (void)removeAllTargets;
 

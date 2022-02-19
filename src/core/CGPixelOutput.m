@@ -5,9 +5,9 @@
 //  Created by Jason on 21/3/3.
 //
 
-#import "CGPaintOutput.h"
+#import "CGPixelOutput.h"
 
-@implementation CGPaintOutput
+@implementation CGPixelOutput
 
 - (id)init;
 {
@@ -24,12 +24,12 @@
     return [NSArray arrayWithArray:_targets];
 }
 
-- (void)addTarget:(id<CGPaintInput>)newTarget;
+- (void)addTarget:(id<CGPixelInput>)newTarget;
 {
     [_targets addObject:newTarget];
 }
 
-- (void)removeTarget:(id<CGPaintInput>)targetToRemove;
+- (void)removeTarget:(id<CGPixelInput>)targetToRemove;
 {
     if(![_targets containsObject:targetToRemove])
     {

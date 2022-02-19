@@ -11,8 +11,8 @@
 #import "CGPixelSource.h"
 @interface CGPixelController ()
 {
-    CGPaintOutput *_inputSource;
-    CGPaintFilter<CGPaintInput> *filter;
+    CGPixelOutput *_inputSource;
+    CGPaintFilter<CGPixelInput> *filter;
     CGPaintViewOutput * paintview;
     CGPaintTargetOutput *_targetOutput;
     UIImage *_sourceImage;

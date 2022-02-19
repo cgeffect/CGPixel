@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CGPaintFramebuffer.h"
-#import "CGPaintUtils.h"
+#import "CGPixelUtils.h"
 
 @class CAEAGLLayer;
 
