@@ -168,7 +168,7 @@
         default:
             break;
     }
-    _targetOutput = [[CGPixelbufferOutput alloc] init];
+    _targetOutput = [[CGPixelPixelbufferOutput alloc] init];
     [_inputSource addTarget:filter];
     [filter addTarget:paintview];
     [filter addTarget:_targetOutput];
@@ -189,7 +189,7 @@
     }
     [_inputSource requestRender];
 //    _targetOutput.enableOutput = YES;
-    [((CGPixelbufferOutput *)_targetOutput) setOutputCallback:^(CVPixelBufferRef  _Nonnull pixelbuffer) {
+    [((CGPixelPixelbufferOutput *)_targetOutput) setOutputCallback:^(CVPixelBufferRef  _Nonnull pixelbuffer) {
         
     }];
 }

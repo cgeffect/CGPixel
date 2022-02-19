@@ -42,5 +42,5 @@ FOUNDATION_EXPORT const unsigned char CGPaintVersionString[];
 #import "CGPixelImageOutput.h"
 #import "CGPixelRawDataOutput.h"
 #import "CGPixelTextureOutput.h"
-#import "CGPixelbufferOutput.h"
+#import "CGPixelPixelbufferOutput.h"
 
