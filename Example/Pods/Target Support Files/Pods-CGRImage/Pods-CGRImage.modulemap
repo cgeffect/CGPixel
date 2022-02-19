@@ -1,6 +1,0 @@
-framework module Pods_CGRImage {
-  umbrella header "Pods-CGRImage-umbrella.h"
-
-  export *
-  module * { export * }
-}

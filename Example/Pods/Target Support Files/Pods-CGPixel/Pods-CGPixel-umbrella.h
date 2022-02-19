@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_CGRImageVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_CGRImageVersionString[];
+FOUNDATION_EXPORT double Pods_CGPixelVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_CGPixelVersionString[];
 

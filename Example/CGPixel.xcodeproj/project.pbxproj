@@ -14,7 +14,7 @@
 		96B1D75026652E71003C29D0 /* CGPaintSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D74F26652E71003C29D0 /* CGPaintSourceController.m */; };
 		96C028C82659511A0009C77D /* CGPaintListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C028C12659511A0009C77D /* CGPaintListController.m */; };
 		96C028C92659511A0009C77D /* CGPaintController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C028C32659511A0009C77D /* CGPaintController.m */; };
-		BBD4AB168BB94D3C1D09586A /* Pods_CGRImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACA98F1DB460C461FF4FFBD /* Pods_CGRImage.framework */; };
+		E3898E1D6EC4580B5D30980C /* Pods_CGPixel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748D40AA499A7EC3348C2F32 /* Pods_CGPixel.framework */; };
 		E5E9816A2658D257008ED21D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E981692658D257008ED21D /* AppDelegate.m */; };
 		E5E981752658D259008ED21D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E981742658D259008ED21D /* Assets.xcassets */; };
 		E5E981782658D259008ED21D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5E981762658D259008ED21D /* LaunchScreen.storyboard */; };
@@ -30,7 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1ACA98F1DB460C461FF4FFBD /* Pods_CGRImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGRImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02A12414E844F676F7CAC7CE /* Pods-CGPixel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGPixel.release.xcconfig"; path = "Target Support Files/Pods-CGPixel/Pods-CGPixel.release.xcconfig"; sourceTree = "<group>"; };
+		333C159742C0EBCC1433B48C /* Pods-CGPixel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGPixel.debug.xcconfig"; path = "Target Support Files/Pods-CGPixel/Pods-CGPixel.debug.xcconfig"; sourceTree = "<group>"; };
+		748D40AA499A7EC3348C2F32 /* Pods_CGPixel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGPixel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9646E526278556FD00BFE83C /* CGPaintCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintCameraController.m; sourceTree = "<group>"; };
 		9646E527278556FD00BFE83C /* CGPaintCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintCameraController.h; sourceTree = "<group>"; };
 		9655B32F273582B900491380 /* CGPaintSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPaintSource.h; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 		96C028C52659511A0009C77D /* CGPaintListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintListController.h; sourceTree = "<group>"; };
 		98A558B9CEFCC69B7031A1EB /* Pods-CGRImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGRImage.debug.xcconfig"; path = "Target Support Files/Pods-CGRImage/Pods-CGRImage.debug.xcconfig"; sourceTree = "<group>"; };
 		CA02DD8EC87AFF29345AB2F8 /* Pods-CGRImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGRImage.release.xcconfig"; path = "Target Support Files/Pods-CGRImage/Pods-CGRImage.release.xcconfig"; sourceTree = "<group>"; };
-		E5E981652658D256008ED21D /* CGRImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGRImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E981652658D256008ED21D /* CGPixel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGPixel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E981682658D257008ED21D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5E981692658D257008ED21D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E5E981742658D259008ED21D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBD4AB168BB94D3C1D09586A /* Pods_CGRImage.framework in Frameworks */,
+				E3898E1D6EC4580B5D30980C /* Pods_CGPixel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +83,8 @@
 			children = (
 				98A558B9CEFCC69B7031A1EB /* Pods-CGRImage.debug.xcconfig */,
 				CA02DD8EC87AFF29345AB2F8 /* Pods-CGRImage.release.xcconfig */,
+				333C159742C0EBCC1433B48C /* Pods-CGPixel.debug.xcconfig */,
+				02A12414E844F676F7CAC7CE /* Pods-CGPixel.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -88,7 +92,7 @@
 		C3557C5F71716B5E1D7BA1EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1ACA98F1DB460C461FF4FFBD /* Pods_CGRImage.framework */,
+				748D40AA499A7EC3348C2F32 /* Pods_CGPixel.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -96,7 +100,7 @@
 		E5E9815C2658D256008ED21D = {
 			isa = PBXGroup;
 			children = (
-				E5E981672658D257008ED21D /* CGRImage */,
+				E5E981672658D257008ED21D /* CGPixel */,
 				E5E981662658D256008ED21D /* Products */,
 				30F37C3CBD6CB3D0F49043F8 /* Pods */,
 				C3557C5F71716B5E1D7BA1EA /* Frameworks */,
@@ -106,12 +110,12 @@
 		E5E981662658D256008ED21D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E5E981652658D256008ED21D /* CGRImage.app */,
+				E5E981652658D256008ED21D /* CGPixel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E5E981672658D257008ED21D /* CGRImage */ = {
+		E5E981672658D257008ED21D /* CGPixel */ = {
 			isa = PBXGroup;
 			children = (
 				E5E982252658D756008ED21D /* Resource */,
@@ -123,7 +127,7 @@
 				E5E981792658D259008ED21D /* Info.plist */,
 				E5E9817A2658D259008ED21D /* main.m */,
 			);
-			path = CGRImage;
+			path = CGPixel;
 			sourceTree = "<group>";
 		};
 		E5E9820C2658D756008ED21D /* Example */ = {
@@ -165,9 +169,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E5E981642658D256008ED21D /* CGRImage */ = {
+		E5E981642658D256008ED21D /* CGPixel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5E9817E2658D259008ED21D /* Build configuration list for PBXNativeTarget "CGRImage" */;
+			buildConfigurationList = E5E9817E2658D259008ED21D /* Build configuration list for PBXNativeTarget "CGPixel" */;
 			buildPhases = (
 				A84C7DF53180C03BE4019D23 /* [CP] Check Pods Manifest.lock */,
 				E5E981612658D256008ED21D /* Sources */,
@@ -179,9 +183,9 @@
 			);
 			dependencies = (
 			);
-			name = CGRImage;
+			name = CGPixel;
 			productName = CGPaint;
-			productReference = E5E981652658D256008ED21D /* CGRImage.app */;
+			productReference = E5E981652658D256008ED21D /* CGPixel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -197,7 +201,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E5E981602658D256008ED21D /* Build configuration list for PBXProject "CGRImage" */;
+			buildConfigurationList = E5E981602658D256008ED21D /* Build configuration list for PBXProject "CGPixel" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -210,7 +214,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E5E981642658D256008ED21D /* CGRImage */,
+				E5E981642658D256008ED21D /* CGPixel */,
 			);
 		};
 /* End PBXProject section */
@@ -251,7 +255,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CGRImage-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CGPixel-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -264,15 +268,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CGRImage/Pods-CGRImage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CGPixel/Pods-CGPixel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CGRImage/Pods-CGRImage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CGPixel/Pods-CGPixel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CGRImage/Pods-CGRImage-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CGPixel/Pods-CGPixel-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -422,13 +426,13 @@
 		};
 		E5E9817F2658D259008ED21D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98A558B9CEFCC69B7031A1EB /* Pods-CGRImage.debug.xcconfig */;
+			baseConfigurationReference = 333C159742C0EBCC1433B48C /* Pods-CGPixel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZSR9Q37TC;
-				INFOPLIST_FILE = "$(SRCROOT)/CGRImage/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CGPixel/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -442,14 +446,14 @@
 		};
 		E5E981802658D259008ED21D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA02DD8EC87AFF29345AB2F8 /* Pods-CGRImage.release.xcconfig */;
+			baseConfigurationReference = 02A12414E844F676F7CAC7CE /* Pods-CGPixel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZSR9Q37TC;
-				INFOPLIST_FILE = "$(SRCROOT)/CGRImage/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CGPixel/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -465,7 +469,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E5E981602658D256008ED21D /* Build configuration list for PBXProject "CGRImage" */ = {
+		E5E981602658D256008ED21D /* Build configuration list for PBXProject "CGPixel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5E9817C2658D259008ED21D /* Debug */,
@@ -474,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5E9817E2658D259008ED21D /* Build configuration list for PBXNativeTarget "CGRImage" */ = {
+		E5E9817E2658D259008ED21D /* Build configuration list for PBXNativeTarget "CGPixel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5E9817F2658D259008ED21D /* Debug */,

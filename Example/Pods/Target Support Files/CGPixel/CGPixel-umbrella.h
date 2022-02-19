@@ -43,6 +43,6 @@
 #import "CGPaintPipelineOutput.h"
 #import "CGPaintRenderPipeline.h"
 
-FOUNDATION_EXPORT double CGRImageVersionNumber;
-FOUNDATION_EXPORT const unsigned char CGRImageVersionString[];
+FOUNDATION_EXPORT double CGPixelVersionNumber;
+FOUNDATION_EXPORT const unsigned char CGPixelVersionString[];
 

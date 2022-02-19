@@ -1,0 +1,6 @@
+framework module CGPixel {
+  umbrella header "CGPixel-umbrella.h"
+
+  export *
+  module * { export * }
+}

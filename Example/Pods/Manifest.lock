@@ -1,18 +1,18 @@
 PODS:
-  - CGRImage (1.0.0):
-    - CGRImage/shader (= 1.0.0)
-  - CGRImage/shader (1.0.0)
+  - CGPixel (1.0.0):
+    - CGPixel/shader (= 1.0.0)
+  - CGPixel/shader (1.0.0)
 
 DEPENDENCIES:
-  - CGRImage (from `../`)
+  - CGPixel (from `../`)
 
 EXTERNAL SOURCES:
-  CGRImage:
+  CGPixel:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CGRImage: 75e82f28321d6b143ba292840c2b2e85a3954e6c
+  CGPixel: be6c1d43c50d7777406db13657ed4480e88449d8
 
-PODFILE CHECKSUM: 4e33cb868f35390932bf905cadd4c8203be94f23
+PODFILE CHECKSUM: dce269fc29f7e4a648d4e722fd2f1956f674cb06
 
 COCOAPODS: 1.11.2
