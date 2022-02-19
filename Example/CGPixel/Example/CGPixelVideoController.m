@@ -6,7 +6,7 @@
 //
 
 #import "CGPixelVideoController.h"
-#import "CGPaint.h"
+#import "CGPixel.h"
 
 @interface CGPixelVideoController ()
 {

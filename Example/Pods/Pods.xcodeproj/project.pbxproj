@@ -7,85 +7,85 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01784FC9075AC5B40A5AE973654E14A9 /* CGPaintImageInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 39D10C30BA3035AD65D50ED5D4868A66 /* CGPaintImageInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		02BEE2D9EADADF2793789BF709207329 /* CGPaintRadialFastBlurFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A116A1187B8CABFDDB1969A597DCAFB2 /* CGPaintRadialFastBlurFilter.fsh */; };
-		02C6558544696D0366082708FB2AA197 /* CGPaintPixelbufferOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 52206F317AF929184FCACBEF16C7A924 /* CGPaintPixelbufferOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0708DF542A8C342F9247E48DD813754F /* CGPaintTextureOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = F1E22F2E13D06E3F5277A75DD37EE3E0 /* CGPaintTextureOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		115C5EAD0D64908B793910A2367F2B01 /* CGPaintOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 22128A2D73FF2EBB071781B049F99363 /* CGPaintOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12669145AD4C208E161232F6A09BE1E0 /* CGPaintViewOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2AC0A53489F9F6F77103B181C8FB18 /* CGPaintViewOutput.m */; };
-		12D2BE7D5B00357B6F6348BEACB59C15 /* CGPixelContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F749A1EDF385BAB9B1C1C64EE2486192 /* CGPixelContext.m */; };
+		0013DF7750326D814F1CC49856B545F6 /* CGPixel.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0667B1185BB4EA115C8A95258350F3 /* CGPixel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0265D68AD1AEB43994A58FE9ABDB2A02 /* CGPaintImageOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7551907DD785917822AE9416DB726E /* CGPaintImageOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02BEE2D9EADADF2793789BF709207329 /* CGPaintRadialFastBlurFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2D851E2765D8F4F610782E316837759E /* CGPaintRadialFastBlurFilter.fsh */; };
+		0C045C9FF9876C6E84185ADE1B01E3B3 /* CGPaintRadialFastBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4079E1158FECA1CF9266CE0C1E3274 /* CGPaintRadialFastBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12669145AD4C208E161232F6A09BE1E0 /* CGPaintViewOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C4315963200978E3FDFC0F2842F279 /* CGPaintViewOutput.m */; };
+		12D2BE7D5B00357B6F6348BEACB59C15 /* CGPixelContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A69D4A7582877A5527A49F9B31F5D34 /* CGPixelContext.m */; };
+		13E639E71992453370A580E477CA71CA /* CGPixelFilterInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C1A144206119E1A0F002DF82292C1E /* CGPixelFilterInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15A734A5BA66A12460CF4F7C42BC9A5D /* CGPaintPipelineOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 4870FB578700BE553A6F7DAF8B501538 /* CGPaintPipelineOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AC74D2AF06BED1852CD33B4B8D6E41C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFA5B0A8B5F017CF4E9A3F5E2BDCDC0 /* AVFoundation.framework */; };
-		1B039EE8A8C850D37FF201F4BFB8402F /* CGPaintVortexFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFD3191E653E77E5A3E196D2AC0DFD7 /* CGPaintVortexFilter.m */; };
+		1B039EE8A8C850D37FF201F4BFB8402F /* CGPaintVortexFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 644D4AAF3E0A68FF53AE13DD1B9FE123 /* CGPaintVortexFilter.m */; };
 		1B6AC0340C15FDBD859225164D95B22A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89810B13AEB0DECCBB6FA4E18270315D /* Foundation.framework */; };
-		1C3A80C56D1AF0BF01C7123A49675849 /* CGPaintRawDataInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A914093F5513FA92CA60806BD6CCBF /* CGPaintRawDataInput.m */; };
-		1D2FCA36B9BC2CD233FFD529F65FC046 /* CGPaintSoulFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3A62CC1887392C5CE07B3CC0681DF5 /* CGPaintSoulFilter.m */; };
+		1C3A80C56D1AF0BF01C7123A49675849 /* CGPaintRawDataInput.m in Sources */ = {isa = PBXBuildFile; fileRef = A17FC88EA98A9E1ACEC93AB63C21BA66 /* CGPaintRawDataInput.m */; };
+		1D2FCA36B9BC2CD233FFD529F65FC046 /* CGPaintSoulFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A70F1E71F7EEE4AD96798FEAA36FC2 /* CGPaintSoulFilter.m */; };
 		210D7FDB103CC0CC5963A938CA630DE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F694D8D23EF4482EEE8BE2557E9BA8 /* UIKit.framework */; };
-		2277D96764CB484AEFEE0F8FAF360A84 /* CGPaintTextureInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 845685875E56DB0EA93F99120D60782D /* CGPaintTextureInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27A73EA5CBDB5D455EC13357FA98DD3D /* CGPaintRadialScaleBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D710A11B4D710FB0EC3814D3C3CB810 /* CGPaintRadialScaleBlurFilter.m */; };
-		2831118F81DFA8173E96444A8E9F8CB3 /* CGPaintGlitchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C55036E281A3F91B93E9511DB6DE87D /* CGPaintGlitchFilter.m */; };
-		2911F96728EDAFEB7D71C7D23E254086 /* CGPaintPixelbufferOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 921D393A46CD95E319680DDA8C4B81FD /* CGPaintPixelbufferOutput.m */; };
-		293FD811552DBE98F125F4CF1CC7C2E9 /* CGPixelContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AF3930BE15F00D7723C0F4E8732137E /* CGPixelContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		334E26667A6F2A468D7EEFB5650EED27 /* CGPixel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4D8AF5013415370AD661AB1710F02 /* CGPixel-dummy.m */; };
-		33E3A6A30199D6DAFCDC6E885BDE583C /* CGPaintUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 48591C25B8E62A876C413DA6E028CCD2 /* CGPaintUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		372F670EFC38337A5A4C19E26024ECD9 /* CGPaintImageInput.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B32D9463EC9F71C1B9660FAD3353BD /* CGPaintImageInput.m */; };
-		3BFD535BFFB0995B5C5783C8C4B8327C /* CGPixelFilterInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CD2BBB6E679DE817389E63DCEF4FEA7 /* CGPixelFilterInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DD1DFA5EDC39C975DF69CE624C98D4E /* CGPaintTargetOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A044747A71C2C8AD457C8FB4640FDB7 /* CGPaintTargetOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E43D7283E4A7017FC146B0A4E9987F6 /* CGPaintGrayFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = F61BBA79EF04FFC8CB3E7FE9875DD5C4 /* CGPaintGrayFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E968B0B9BB03CE505B0362322ECFCD7 /* CGPaintRawDataInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0625CC8E0B743A2D00985EE90AED74 /* CGPaintRawDataInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40B00DF8279B28F7ABD7BA5C7720CC07 /* CGPaintRadialRotateBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B8CBAF88BB31FEF2D0F43B9E37F7C4F7 /* CGPaintRadialRotateBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		427B54585403DB6FFF49AE9CB855073A /* CGPaintVortexFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8B149A453E02B87268790B2F77BA0CB3 /* CGPaintVortexFilter.fsh */; };
-		532DA1576695162E2CCBCB6BF955FC14 /* CGPaintPixelBufferInput.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F139DE89A3A766D0E74225B1BA5980 /* CGPaintPixelBufferInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		557F67AB4C13985B75B7B7BA8EAB25D7 /* CGPaintRadialRotateBlurFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2FE483364F0C9E40DED2ED867C07B22B /* CGPaintRadialRotateBlurFilter.fsh */; };
-		55AC62A1C0B9F13F4239695D64F158AC /* CGPixel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92379B04BD6762AD973A373A226B5463 /* CGPixel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57159C47EED44EAF5206CBE00BFA9F10 /* CGPaintVideoInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CCFF427F55F104F0DC6570E872E3FB3 /* CGPaintVideoInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A6836582989C0276B22CE0DD56E4999 /* CGPaintRadialScaleBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7912FCD7C561797407B41A4439DD97F5 /* CGPaintRadialScaleBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B30BEC1FA7F22E8770F076710927C9C /* CGPaintRadialScaleBlurFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = AE72F8CDC448D2DBC16A53448F313849 /* CGPaintRadialScaleBlurFilter.fsh */; };
-		660CE4C97269C693600B01822ACAD745 /* CGPaintRadialFastBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE820C9378472E4080DA3C820291DD5 /* CGPaintRadialFastBlurFilter.m */; };
-		69916757E184819020A292E9632FF6FA /* CGPaintRawDataOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AF5D0BD95E8C6B7E5341C5DE19385E /* CGPaintRawDataOutput.m */; };
-		6A4E9A8E5AF415DAF3821BEC4B7332DA /* CGPaintFramebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9288347412264CA5C38F287AF5F5CAE2 /* CGPaintFramebuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6AD42879B85F6939304E89B38E133624 /* CGPaintTextureInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 761EA732A519AC6E0FCC7231AFB4EADD /* CGPaintTextureInput.m */; };
+		27A73EA5CBDB5D455EC13357FA98DD3D /* CGPaintRadialScaleBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F67CAFCC7802BA908FEEBA3952E97716 /* CGPaintRadialScaleBlurFilter.m */; };
+		27F2B70CF79D46D1DC7F8FEDA01D1934 /* CGPaintTargetOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A99CF4188A8047A862D010E2E31E0D5 /* CGPaintTargetOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2831118F81DFA8173E96444A8E9F8CB3 /* CGPaintGlitchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39A348934C33F0BA993E79E37F5285 /* CGPaintGlitchFilter.m */; };
+		2911F96728EDAFEB7D71C7D23E254086 /* CGPaintPixelbufferOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = AF626AE953EBC7E0A4FC09BB02461BD3 /* CGPaintPixelbufferOutput.m */; };
+		2C106977DE654FB25EBF03230DCBB841 /* CGPaintInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AE80729289978ECDA63177C002D8CAB1 /* CGPaintInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2ECE73DCDC0D1C57E89CDBADDAF691F2 /* CGPaintFramebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7867BA65D30C717A2914AD7B44D78C3A /* CGPaintFramebuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		334E26667A6F2A468D7EEFB5650EED27 /* CGPixel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF1FE73EA1B6CF1273B575A205E1CF /* CGPixel-dummy.m */; };
+		372F670EFC38337A5A4C19E26024ECD9 /* CGPaintImageInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 10001915F6D873ECE78F1296B3760931 /* CGPaintImageInput.m */; };
+		38AA2AB4CF605634D69EFC2C2C421A4F /* CGPixelContext.h in Headers */ = {isa = PBXBuildFile; fileRef = A0EC8AC284AE1B62B1210D4E784E5845 /* CGPixelContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F26B7254E98509AF1726287AEA576BB /* CGPaintVortexFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D9EE5DA8C0FAE5FA027DC05083AF666 /* CGPaintVortexFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41B9224D931F64F9339089A2B5B9BBF8 /* CGPaintSoulFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = E769C29964A0E0F168433C34F40D4954 /* CGPaintSoulFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		427B54585403DB6FFF49AE9CB855073A /* CGPaintVortexFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 886A32DD5C9504D2A084D388586F2809 /* CGPaintVortexFilter.fsh */; };
+		552E15695C3CE656E7EBF4F8E4A8F4CB /* CGPaintProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = EC857E49663B81FF4EE22611CE3CA2D8 /* CGPaintProgram.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		557F67AB4C13985B75B7B7BA8EAB25D7 /* CGPaintRadialRotateBlurFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = C355A53EE76F2369099536C5BF788ABA /* CGPaintRadialRotateBlurFilter.fsh */; };
+		5B30BEC1FA7F22E8770F076710927C9C /* CGPaintRadialScaleBlurFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = E589BD4D3122BC175EA888C2D7402DF6 /* CGPaintRadialScaleBlurFilter.fsh */; };
+		5FB3ABDD59B376736CCAD84FA0BB9F3A /* CGPaintPixelBufferInput.h in Headers */ = {isa = PBXBuildFile; fileRef = B247D374A2D65B7518233F7970C2D338 /* CGPaintPixelBufferInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		660CE4C97269C693600B01822ACAD745 /* CGPaintRadialFastBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2745289A224B9DD4A88EDC5491A366 /* CGPaintRadialFastBlurFilter.m */; };
+		69916757E184819020A292E9632FF6FA /* CGPaintRawDataOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2CD493AA8F17EC6A6E4D148F0D3414 /* CGPaintRawDataOutput.m */; };
+		6AD42879B85F6939304E89B38E133624 /* CGPaintTextureInput.m in Sources */ = {isa = PBXBuildFile; fileRef = F72AC39D5CE72DE5B0624112D6085793 /* CGPaintTextureInput.m */; };
 		6C7992E0C882833F001F6C1898115D5A /* Pods-CGPixel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 817719C065A7EE694E8DC7D693CEB1C2 /* Pods-CGPixel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7126A53F2C395C2012AA366AEB471F02 /* CGPaintGlitchFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = C987A22C043CB9823FD70A73B4DC5871 /* CGPaintGlitchFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		748E32A670ACF10E0608B36620F0C818 /* CGPaintPixelBufferInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 2084EE5CDAC4404DA0318651387A94A9 /* CGPaintPixelBufferInput.m */; };
-		749796A9A51EE6612F8E5310077D34AE /* CGPaintImageOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 207327C30E1A3B39EF3C1673E8F47968 /* CGPaintImageOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		748E32A670ACF10E0608B36620F0C818 /* CGPaintPixelBufferInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D45B747DA975CFB744F6FD4ECC78299 /* CGPaintPixelBufferInput.m */; };
 		761847F8BC7DDDA5F4F3BA12F55E9BCC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 610F342F4181D3F8F971D187F7E4A6AC /* CoreGraphics.framework */; };
-		78C5C7CED9E2CAF06EDB87E88C096998 /* CGPaintProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A50A994C447CE92BD60F85B7E28BB /* CGPaintProgram.m */; };
-		7BBAB2496027D200A9A5FDBFCD6FAC9B /* CGPaintTextureOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 65406C085DB60CBA6BB7BE613433F7D1 /* CGPaintTextureOutput.m */; };
-		7C4643A41B387F66E0ADA72DCAAC8EAC /* CGPaintRenderPipeline.h in Headers */ = {isa = PBXBuildFile; fileRef = 53A589EB1A5389B124BC9497035A3B9B /* CGPaintRenderPipeline.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D63A960FF6C0CDD51EF29C6E27774A7 /* CGPaintCameraInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E4954142DD3FF74EE3EB0CB91A524B /* CGPaintCameraInput.m */; };
-		7D68B0D82BA4B9BFFEAE229D2C1F34FE /* CGPaintTargetOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = B2136C5A49CF5860F2D2A096BDE3A6C5 /* CGPaintTargetOutput.m */; };
-		7E95345FD7EC99467C60A60CFCC44848 /* CGPaintSoulFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F8D6BD1BE233B77516185254397031 /* CGPaintSoulFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8404B05804EAB62675FB8854995F28E1 /* CGPaintShakeFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FEA706A6136411FAD44F94AA7B98200B /* CGPaintShakeFilter.fsh */; };
-		8CD10CD865B4C1D8F903486CB7404C7A /* CGPaintPipelineOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 4152F2CDE406DA035E96374C48C085DD /* CGPaintPipelineOutput.m */; };
-		8E48D9869B161E503699DD782EB106C6 /* CGPaintFramebufferCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D254CC31333F64B92B783EE005443401 /* CGPaintFramebufferCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E9845D9B23238D53C1530964716F1E6 /* CGPaintInput.h in Headers */ = {isa = PBXBuildFile; fileRef = FA57B74EF41A972120CD17C8A49F86C7 /* CGPaintInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EBA718DFEE2D5123ED34A036A448185 /* CGPaintRenderPipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = B09AC6A759D04F4EEBC9A7FF6C875F12 /* CGPaintRenderPipeline.m */; };
+		78C5C7CED9E2CAF06EDB87E88C096998 /* CGPaintProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8464CDC17BB4764E49442BADC7DAE5 /* CGPaintProgram.m */; };
+		7AAE22176C1E76E5D1DEEF588C84AFED /* CGPaintFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8E7A5B7E41B5B73A7044DD5B1A5D36 /* CGPaintFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BBAB2496027D200A9A5FDBFCD6FAC9B /* CGPaintTextureOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1E59FF597EE08B928A6CF1C47943BD /* CGPaintTextureOutput.m */; };
+		7D63A960FF6C0CDD51EF29C6E27774A7 /* CGPaintCameraInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C43E24ADAE2DB009E19B79BC8CB63B /* CGPaintCameraInput.m */; };
+		7D68B0D82BA4B9BFFEAE229D2C1F34FE /* CGPaintTargetOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FB5E4F4690F4FF5DD75C3ECD3E6273 /* CGPaintTargetOutput.m */; };
+		7FBAE60D4266519FB21424684179C27F /* CGPaintVideoInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 32ACCB921B28F9A614DF6218406B6347 /* CGPaintVideoInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8315F6C16B8F9CC31697128E93A02072 /* CGPaintTextureOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A4EE4E19CACFDE5B650AFBA0C1A580 /* CGPaintTextureOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8404B05804EAB62675FB8854995F28E1 /* CGPaintShakeFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = EFF12E0D8FA1E8F1FC84413E6CBF200D /* CGPaintShakeFilter.fsh */; };
+		859D5F941B07FD8831D86AFCD0BAAE91 /* CGPaintCameraInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E3F46CADECAB7E439C783B5876736DE8 /* CGPaintCameraInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CD10CD865B4C1D8F903486CB7404C7A /* CGPaintPipelineOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = E101A815CD57CAD7F09FF01D3D526B63 /* CGPaintPipelineOutput.m */; };
+		8EBA718DFEE2D5123ED34A036A448185 /* CGPaintRenderPipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9BFA863D9C7AFD00E9082D1BFBF796 /* CGPaintRenderPipeline.m */; };
+		95267D66F98A5FEFCECBE86F74C52323 /* CGPaintGlitchFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = D9631EDD8EAC3DEDC13E04F1DF9B6DB1 /* CGPaintGlitchFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9962D0A43413F0D9362C07CB70F2C768 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F560E4EA55AE7C412C1818A9A94F9A3 /* CoreVideo.framework */; };
-		9C051A54381E54FB5847EACE5CFD4BE4 /* CGPaintSoulFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2575CE23E67ECC7946477BF7B0826749 /* CGPaintSoulFilter.fsh */; };
-		9D9A6B6EA86D99A746C0298B86A74758 /* CGPaintCameraInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF59C5A00A619A4204B9D67534FC7F2 /* CGPaintCameraInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A37708216C47496DC4D75D97677FF003 /* CGPaintFramebufferCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDB0A3720613E5D6C07032D3D96114C /* CGPaintFramebufferCache.m */; };
-		B03D4B6F556716619CCFC653CD5FECE4 /* CGPaintProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CFDBAA14638004832627B9EBB42489 /* CGPaintProgram.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0F1ED11FC1B68C871BC26CDBE07ED85 /* CGPaintShakeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 506DDD237632E79D86D8F67C2538BB60 /* CGPaintShakeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4F58B6A9D19B8630506F0CCA7DD1903 /* CGPaintVortexFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC8A2B6C88C76DB2667F27414312132 /* CGPaintVortexFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C54111791B27F95C45AC56C02D07AF1E /* CGPaintShakeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2DDD2C1876040FDD1494293CDDCFB3 /* CGPaintShakeFilter.m */; };
-		CE3F55F9095D02B081B7DA05EB380201 /* CGPaintRadialRotateBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0F23A953E6559E21871196CA8D9BB /* CGPaintRadialRotateBlurFilter.m */; };
-		CF49E6CE4CB5A08B87950A519457D813 /* CGPaintRadialFastBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 407DDECAFCFCCB7154FFB0147C34647C /* CGPaintRadialFastBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AA81FD6D0AFAB5235E7421634082D5B /* CGPaintTextureInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E25A0EFC09262D707810D5A3B060051 /* CGPaintTextureInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C051A54381E54FB5847EACE5CFD4BE4 /* CGPaintSoulFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = AB398BF10960062BE31138D57439322E /* CGPaintSoulFilter.fsh */; };
+		9D38E87B3799449EF95024400CDE5558 /* CGPaintGrayFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 91E466BAF5AF317745DD33150B02534E /* CGPaintGrayFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A37708216C47496DC4D75D97677FF003 /* CGPaintFramebufferCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 066254D2C1A0D176C650099ED99B2EFC /* CGPaintFramebufferCache.m */; };
+		A3D6C181E53360FDA57F0820B179822A /* CGPaintFramebufferCache.h in Headers */ = {isa = PBXBuildFile; fileRef = BE59B25426D481DC0DC4230BA1B921CD /* CGPaintFramebufferCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B45FB3C066FAAAD04AA3F73C4B5545E0 /* CGPaintUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BC758D0632F7A6562FBB3055D2DF391 /* CGPaintUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4E62B5775A6421D2D1C2EEF37E01FCE /* CGPaintRawDataOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = E32575BD2D91FE3A49B7B954693CCC4B /* CGPaintRawDataOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C54111791B27F95C45AC56C02D07AF1E /* CGPaintShakeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 556312125F47F4FD53B4D0A4A250E9D0 /* CGPaintShakeFilter.m */; };
+		C8FC2C6E8CA3952EA083EABC2B206CA5 /* CGPaintImageInput.h in Headers */ = {isa = PBXBuildFile; fileRef = DA4356FDAD4267628702C7F390A2A103 /* CGPaintImageInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCFC7569136207BCC991A1D555492E54 /* CGPaintPixelbufferOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = A299677F839937CF825F376F3B3C2DF7 /* CGPaintPixelbufferOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE3F55F9095D02B081B7DA05EB380201 /* CGPaintRadialRotateBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A3AC63140705325A815FA849F0D86 /* CGPaintRadialRotateBlurFilter.m */; };
+		CE7A3970D09E439C678F066BEAC02A0F /* CGPaintRadialScaleBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7EE24A1B488E40FA618645B11C0163 /* CGPaintRadialScaleBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8565074B8EF9B3CEE4C6806BB6391AB /* Pods-CGPixel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD68D34E8DF126096AB358E3E3CF8EC2 /* Pods-CGPixel-dummy.m */; };
-		DA2794BAF1EE90FF6A6D12C2FE30E68A /* CGPaintImageOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = EF027942289AE6C4128E068017E7C66E /* CGPaintImageOutput.m */; };
-		DD76F35E34076E70F6249A9418CA0296 /* CGPaintGrayFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 679ACDA134E433765E0CBD1422963A31 /* CGPaintGrayFilter.m */; };
-		DE6957F39C5D1A5DFA3CB176F191181E /* CGPaintFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EF979748E649C9FF24429FB924EE70 /* CGPaintFilter.m */; };
-		E0211665FDFAB9AF4C24F991FAA871FE /* CGPaintVideoInput.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D3F993278461188BBACF1CF7590BD9 /* CGPaintVideoInput.m */; };
-		E157FB2D4452E7D2359C4CD5579B6C52 /* CGPaintGlitchFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8E57A02CD8489AB49F5F5B0231770A3B /* CGPaintGlitchFilter.fsh */; };
+		DA2794BAF1EE90FF6A6D12C2FE30E68A /* CGPaintImageOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 575588B0B21562D25901B7AD59E211A3 /* CGPaintImageOutput.m */; };
+		DD76F35E34076E70F6249A9418CA0296 /* CGPaintGrayFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5117EFF694E0311C8C035A15FA0D252B /* CGPaintGrayFilter.m */; };
+		DE6957F39C5D1A5DFA3CB176F191181E /* CGPaintFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE82CE3B9CE0ECD3EABF4A6DB280368 /* CGPaintFilter.m */; };
+		DFD0115D8550E5888AE327723B5BF2A8 /* CGPaintOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B9DC6B12B502F542D76882CAF153F96 /* CGPaintOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0211665FDFAB9AF4C24F991FAA871FE /* CGPaintVideoInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7B74F066C4A048D9F8F4D9269E6B89 /* CGPaintVideoInput.m */; };
+		E157FB2D4452E7D2359C4CD5579B6C52 /* CGPaintGlitchFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 03E95361FB82D58E82FE11EBDF947219 /* CGPaintGlitchFilter.fsh */; };
 		E455D615679A0560CCF355EC117A1FDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89810B13AEB0DECCBB6FA4E18270315D /* Foundation.framework */; };
-		EA5BCF639D018DDE4DC61678AB301B1D /* CGPaintUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C43A81F593E77648C3CB542EC32E9 /* CGPaintUtils.m */; };
-		ECB1FB3066DA458C27F9D9884BE19C6D /* CGPaintOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = F5668B9001A25F044F8F4E4ABE20BDEA /* CGPaintOutput.m */; };
-		EDB24A0F54081FDAE780208932A29EEA /* CGPaintPipelineOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D2B0F10CEF5FBACF20B5CD1826925A1 /* CGPaintPipelineOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F415BAB2804D81246D256986F14C3F48 /* CGPaintViewOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 1035D61CFFE84B13A7E7CEC8097CB913 /* CGPaintViewOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F634465D2418BB4B50E161551C5F7E56 /* CGPaint.h in Headers */ = {isa = PBXBuildFile; fileRef = 449C6A834EB52C85357375E341464093 /* CGPaint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F69975AE44E8331E478879366E87519C /* CGPaintGrayFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 97B4E74DAF12917E764BDC8C71CD4036 /* CGPaintGrayFilter.fsh */; };
-		FAD5B1046E7BFDD2167D7ECFE5A3176D /* CGPaintRawDataOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 724B78F376B7895AE158E2E023300606 /* CGPaintRawDataOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE0801B19F7D7C9FE598D6F61A1AE713 /* CGPaintFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 37ACD35CD02E5AD3112023616EA16A07 /* CGPaintFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FEBFC90113C3F2DD045EA61D8E4B303A /* CGPaintFramebuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC7112B89764D48471A1DAA6790514E /* CGPaintFramebuffer.m */; };
+		E5AAA961662DB0B42DF0AF54042DFF9B /* CGPaintRadialRotateBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 76F0923B2D4F3244597C1943E6E8FF84 /* CGPaintRadialRotateBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7E8D9B0F9D3C9246C3590A2404CC0C3 /* CGPaintViewOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = F3C172646FA704367AF25E0E21ACFD08 /* CGPaintViewOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA5BCF639D018DDE4DC61678AB301B1D /* CGPaintUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BB8378B2822E92D84B1CBEE64AE4D2 /* CGPaintUtils.m */; };
+		ECB1FB3066DA458C27F9D9884BE19C6D /* CGPaintOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = B303F917196A6A21ED36A7318D877ECB /* CGPaintOutput.m */; };
+		ECF8C2DA62489C743D8D8233D60BCF39 /* CGPaintRenderPipeline.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DAC9DEAD8B3BC540C107DBACE90A4EC /* CGPaintRenderPipeline.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF82B2930F106060104A209BF7D57EC1 /* CGPaintRawDataInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BDD2A4A85BC11EBB2BA5298832A8E52 /* CGPaintRawDataInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F69975AE44E8331E478879366E87519C /* CGPaintGrayFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 0379CE967632DFC51F8E877E570B5416 /* CGPaintGrayFilter.fsh */; };
+		F9996338A7E7DD6852F3187AD95490D9 /* CGPixel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6546F7A89BB7C2095451ABB78AB3282D /* CGPixel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC10F56B8540BD538F470D1602B1183A /* CGPaintShakeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 03EAC1982AD1CAB23B2584B6FCD98C8D /* CGPaintShakeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEBFC90113C3F2DD045EA61D8E4B303A /* CGPaintFramebuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = D59478470872D46EF9A6CA8DD37A6CF5 /* CGPaintFramebuffer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,102 +99,102 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D2B0F10CEF5FBACF20B5CD1826925A1 /* CGPaintPipelineOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintPipelineOutput.h; sourceTree = "<group>"; };
-		1035D61CFFE84B13A7E7CEC8097CB913 /* CGPaintViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintViewOutput.h; sourceTree = "<group>"; };
-		1CD2BBB6E679DE817389E63DCEF4FEA7 /* CGPixelFilterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPixelFilterInput.h; sourceTree = "<group>"; };
-		207327C30E1A3B39EF3C1673E8F47968 /* CGPaintImageOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintImageOutput.h; sourceTree = "<group>"; };
-		2084EE5CDAC4404DA0318651387A94A9 /* CGPaintPixelBufferInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintPixelBufferInput.m; sourceTree = "<group>"; };
-		21E4954142DD3FF74EE3EB0CB91A524B /* CGPaintCameraInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintCameraInput.m; sourceTree = "<group>"; };
-		22128A2D73FF2EBB071781B049F99363 /* CGPaintOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintOutput.h; sourceTree = "<group>"; };
-		2575CE23E67ECC7946477BF7B0826749 /* CGPaintSoulFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintSoulFilter.fsh; path = src/filter/CGPaintSoulFilter.fsh; sourceTree = "<group>"; };
-		2CCFF427F55F104F0DC6570E872E3FB3 /* CGPaintVideoInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintVideoInput.h; sourceTree = "<group>"; };
-		2DFD3191E653E77E5A3E196D2AC0DFD7 /* CGPaintVortexFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintVortexFilter.m; sourceTree = "<group>"; };
-		2FE483364F0C9E40DED2ED867C07B22B /* CGPaintRadialRotateBlurFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintRadialRotateBlurFilter.fsh; path = src/filter/CGPaintRadialRotateBlurFilter.fsh; sourceTree = "<group>"; };
-		37ACD35CD02E5AD3112023616EA16A07 /* CGPaintFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintFilter.h; sourceTree = "<group>"; };
-		39D10C30BA3035AD65D50ED5D4868A66 /* CGPaintImageInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintImageInput.h; sourceTree = "<group>"; };
-		407DDECAFCFCCB7154FFB0147C34647C /* CGPaintRadialFastBlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintRadialFastBlurFilter.h; sourceTree = "<group>"; };
-		4152F2CDE406DA035E96374C48C085DD /* CGPaintPipelineOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintPipelineOutput.m; sourceTree = "<group>"; };
-		449C6A834EB52C85357375E341464093 /* CGPaint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGPaint.h; path = src/CGPaint.h; sourceTree = "<group>"; };
-		48591C25B8E62A876C413DA6E028CCD2 /* CGPaintUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGPaintUtils.h; path = src/CGPaintUtils.h; sourceTree = "<group>"; };
+		00C43E24ADAE2DB009E19B79BC8CB63B /* CGPaintCameraInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintCameraInput.m; sourceTree = "<group>"; };
+		0379CE967632DFC51F8E877E570B5416 /* CGPaintGrayFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintGrayFilter.fsh; path = src/filter/CGPaintGrayFilter.fsh; sourceTree = "<group>"; };
+		03E95361FB82D58E82FE11EBDF947219 /* CGPaintGlitchFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintGlitchFilter.fsh; path = src/filter/CGPaintGlitchFilter.fsh; sourceTree = "<group>"; };
+		03EAC1982AD1CAB23B2584B6FCD98C8D /* CGPaintShakeFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintShakeFilter.h; sourceTree = "<group>"; };
+		056730AE9828587D971661C1FB2993C1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		066254D2C1A0D176C650099ED99B2EFC /* CGPaintFramebufferCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintFramebufferCache.m; sourceTree = "<group>"; };
+		0C8E7A5B7E41B5B73A7044DD5B1A5D36 /* CGPaintFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintFilter.h; sourceTree = "<group>"; };
+		10001915F6D873ECE78F1296B3760931 /* CGPaintImageInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintImageInput.m; sourceTree = "<group>"; };
+		15A4EE4E19CACFDE5B650AFBA0C1A580 /* CGPaintTextureOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintTextureOutput.h; sourceTree = "<group>"; };
+		23CC33571D4E6C9E97A03655D96E3665 /* CGPixel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CGPixel.modulemap; sourceTree = "<group>"; };
+		2D851E2765D8F4F610782E316837759E /* CGPaintRadialFastBlurFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintRadialFastBlurFilter.fsh; path = src/filter/CGPaintRadialFastBlurFilter.fsh; sourceTree = "<group>"; };
+		31BB8378B2822E92D84B1CBEE64AE4D2 /* CGPaintUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGPaintUtils.m; path = src/CGPaintUtils.m; sourceTree = "<group>"; };
+		32ACCB921B28F9A614DF6218406B6347 /* CGPaintVideoInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintVideoInput.h; sourceTree = "<group>"; };
+		3B8464CDC17BB4764E49442BADC7DAE5 /* CGPaintProgram.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintProgram.m; sourceTree = "<group>"; };
+		4870FB578700BE553A6F7DAF8B501538 /* CGPaintPipelineOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintPipelineOutput.h; sourceTree = "<group>"; };
 		48E2E9448A0194F67EF17548D18CB0A1 /* CGPixel */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CGPixel; path = CGPixel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C0625CC8E0B743A2D00985EE90AED74 /* CGPaintRawDataInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintRawDataInput.h; sourceTree = "<group>"; };
-		4F2DDD2C1876040FDD1494293CDDCFB3 /* CGPaintShakeFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintShakeFilter.m; sourceTree = "<group>"; };
+		4B1E59FF597EE08B928A6CF1C47943BD /* CGPaintTextureOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintTextureOutput.m; sourceTree = "<group>"; };
+		4B9DC6B12B502F542D76882CAF153F96 /* CGPaintOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintOutput.h; sourceTree = "<group>"; };
+		4BDD2A4A85BC11EBB2BA5298832A8E52 /* CGPaintRawDataInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintRawDataInput.h; sourceTree = "<group>"; };
+		4E7551907DD785917822AE9416DB726E /* CGPaintImageOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintImageOutput.h; sourceTree = "<group>"; };
 		4F560E4EA55AE7C412C1818A9A94F9A3 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
-		4FC8A2B6C88C76DB2667F27414312132 /* CGPaintVortexFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintVortexFilter.h; sourceTree = "<group>"; };
-		506DDD237632E79D86D8F67C2538BB60 /* CGPaintShakeFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintShakeFilter.h; sourceTree = "<group>"; };
-		52206F317AF929184FCACBEF16C7A924 /* CGPaintPixelbufferOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintPixelbufferOutput.h; sourceTree = "<group>"; };
-		53A589EB1A5389B124BC9497035A3B9B /* CGPaintRenderPipeline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintRenderPipeline.h; sourceTree = "<group>"; };
-		54EF979748E649C9FF24429FB924EE70 /* CGPaintFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintFilter.m; sourceTree = "<group>"; };
-		5B51D01F78E3DAFC2C45B4A328276E55 /* CGPixel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CGPixel.modulemap; sourceTree = "<group>"; };
+		5117EFF694E0311C8C035A15FA0D252B /* CGPaintGrayFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintGrayFilter.m; sourceTree = "<group>"; };
+		556312125F47F4FD53B4D0A4A250E9D0 /* CGPaintShakeFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintShakeFilter.m; sourceTree = "<group>"; };
+		575588B0B21562D25901B7AD59E211A3 /* CGPaintImageOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintImageOutput.m; sourceTree = "<group>"; };
+		5CAF1FE73EA1B6CF1273B575A205E1CF /* CGPixel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CGPixel-dummy.m"; sourceTree = "<group>"; };
+		5E25A0EFC09262D707810D5A3B060051 /* CGPaintTextureInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintTextureInput.h; sourceTree = "<group>"; };
+		5E7B74F066C4A048D9F8F4D9269E6B89 /* CGPaintVideoInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintVideoInput.m; sourceTree = "<group>"; };
 		610F342F4181D3F8F971D187F7E4A6AC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		61CFDBAA14638004832627B9EBB42489 /* CGPaintProgram.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintProgram.h; sourceTree = "<group>"; };
-		65406C085DB60CBA6BB7BE613433F7D1 /* CGPaintTextureOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintTextureOutput.m; sourceTree = "<group>"; };
-		679ACDA134E433765E0CBD1422963A31 /* CGPaintGrayFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintGrayFilter.m; sourceTree = "<group>"; };
-		697617ED473DBE71496E48602369D0D6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		6A044747A71C2C8AD457C8FB4640FDB7 /* CGPaintTargetOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintTargetOutput.h; sourceTree = "<group>"; };
-		6BC7112B89764D48471A1DAA6790514E /* CGPaintFramebuffer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintFramebuffer.m; sourceTree = "<group>"; };
-		724B78F376B7895AE158E2E023300606 /* CGPaintRawDataOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintRawDataOutput.h; sourceTree = "<group>"; };
-		742C43A81F593E77648C3CB542EC32E9 /* CGPaintUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGPaintUtils.m; path = src/CGPaintUtils.m; sourceTree = "<group>"; };
-		74AF5D0BD95E8C6B7E5341C5DE19385E /* CGPaintRawDataOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintRawDataOutput.m; sourceTree = "<group>"; };
-		761EA732A519AC6E0FCC7231AFB4EADD /* CGPaintTextureInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintTextureInput.m; sourceTree = "<group>"; };
-		78A914093F5513FA92CA60806BD6CCBF /* CGPaintRawDataInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintRawDataInput.m; sourceTree = "<group>"; };
-		7912FCD7C561797407B41A4439DD97F5 /* CGPaintRadialScaleBlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintRadialScaleBlurFilter.h; sourceTree = "<group>"; };
-		791939DE02ED6606AAF2D9DD1AB72E1B /* CGPixel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CGPixel-Info.plist"; sourceTree = "<group>"; };
-		7C2AC0A53489F9F6F77103B181C8FB18 /* CGPaintViewOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintViewOutput.m; sourceTree = "<group>"; };
-		7C3A62CC1887392C5CE07B3CC0681DF5 /* CGPaintSoulFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintSoulFilter.m; sourceTree = "<group>"; };
+		644D4AAF3E0A68FF53AE13DD1B9FE123 /* CGPaintVortexFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintVortexFilter.m; sourceTree = "<group>"; };
+		6546F7A89BB7C2095451ABB78AB3282D /* CGPixel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CGPixel-umbrella.h"; sourceTree = "<group>"; };
+		660F0AD59488A24427A309673636F7A1 /* CGPixel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CGPixel-Info.plist"; sourceTree = "<group>"; };
+		68A70F1E71F7EEE4AD96798FEAA36FC2 /* CGPaintSoulFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintSoulFilter.m; sourceTree = "<group>"; };
+		6A69D4A7582877A5527A49F9B31F5D34 /* CGPixelContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPixelContext.m; sourceTree = "<group>"; };
+		6A8E9D7445751F9DB5F319B5018B53CF /* CGPixel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CGPixel-prefix.pch"; sourceTree = "<group>"; };
+		6A99CF4188A8047A862D010E2E31E0D5 /* CGPaintTargetOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintTargetOutput.h; sourceTree = "<group>"; };
+		6C2CD493AA8F17EC6A6E4D148F0D3414 /* CGPaintRawDataOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintRawDataOutput.m; sourceTree = "<group>"; };
+		76BA2C70250BD717365E0842751E1263 /* CGPixel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CGPixel.release.xcconfig; sourceTree = "<group>"; };
+		76C1A144206119E1A0F002DF82292C1E /* CGPixelFilterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPixelFilterInput.h; sourceTree = "<group>"; };
+		76F0923B2D4F3244597C1943E6E8FF84 /* CGPaintRadialRotateBlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintRadialRotateBlurFilter.h; sourceTree = "<group>"; };
+		7867BA65D30C717A2914AD7B44D78C3A /* CGPaintFramebuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintFramebuffer.h; sourceTree = "<group>"; };
+		7E9BFA863D9C7AFD00E9082D1BFBF796 /* CGPaintRenderPipeline.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintRenderPipeline.m; sourceTree = "<group>"; };
 		817719C065A7EE694E8DC7D693CEB1C2 /* Pods-CGPixel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CGPixel-umbrella.h"; sourceTree = "<group>"; };
-		845685875E56DB0EA93F99120D60782D /* CGPaintTextureInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintTextureInput.h; sourceTree = "<group>"; };
+		886A32DD5C9504D2A084D388586F2809 /* CGPaintVortexFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintVortexFilter.fsh; path = src/filter/CGPaintVortexFilter.fsh; sourceTree = "<group>"; };
 		89810B13AEB0DECCBB6FA4E18270315D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		8AF3930BE15F00D7723C0F4E8732137E /* CGPixelContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPixelContext.h; sourceTree = "<group>"; };
-		8B149A453E02B87268790B2F77BA0CB3 /* CGPaintVortexFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintVortexFilter.fsh; path = src/filter/CGPaintVortexFilter.fsh; sourceTree = "<group>"; };
-		8C55036E281A3F91B93E9511DB6DE87D /* CGPaintGlitchFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintGlitchFilter.m; sourceTree = "<group>"; };
-		8D710A11B4D710FB0EC3814D3C3CB810 /* CGPaintRadialScaleBlurFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintRadialScaleBlurFilter.m; sourceTree = "<group>"; };
-		8E57A02CD8489AB49F5F5B0231770A3B /* CGPaintGlitchFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintGlitchFilter.fsh; path = src/filter/CGPaintGlitchFilter.fsh; sourceTree = "<group>"; };
-		8F3A50A994C447CE92BD60F85B7E28BB /* CGPaintProgram.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintProgram.m; sourceTree = "<group>"; };
-		8FC0F23A953E6559E21871196CA8D9BB /* CGPaintRadialRotateBlurFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintRadialRotateBlurFilter.m; sourceTree = "<group>"; };
-		921D393A46CD95E319680DDA8C4B81FD /* CGPaintPixelbufferOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintPixelbufferOutput.m; sourceTree = "<group>"; };
-		92379B04BD6762AD973A373A226B5463 /* CGPixel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CGPixel-umbrella.h"; sourceTree = "<group>"; };
-		9288347412264CA5C38F287AF5F5CAE2 /* CGPaintFramebuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintFramebuffer.h; sourceTree = "<group>"; };
-		97B4E74DAF12917E764BDC8C71CD4036 /* CGPaintGrayFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintGrayFilter.fsh; path = src/filter/CGPaintGrayFilter.fsh; sourceTree = "<group>"; };
-		99F8D6BD1BE233B77516185254397031 /* CGPaintSoulFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintSoulFilter.h; sourceTree = "<group>"; };
-		9BB4D8AF5013415370AD661AB1710F02 /* CGPixel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CGPixel-dummy.m"; sourceTree = "<group>"; };
+		8D45B747DA975CFB744F6FD4ECC78299 /* CGPaintPixelBufferInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintPixelBufferInput.m; sourceTree = "<group>"; };
+		8D9EE5DA8C0FAE5FA027DC05083AF666 /* CGPaintVortexFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintVortexFilter.h; sourceTree = "<group>"; };
+		8F3A3AC63140705325A815FA849F0D86 /* CGPaintRadialRotateBlurFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintRadialRotateBlurFilter.m; sourceTree = "<group>"; };
+		91E466BAF5AF317745DD33150B02534E /* CGPaintGrayFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintGrayFilter.h; sourceTree = "<group>"; };
+		93C094824CFB22038CF7911112132780 /* CGPixel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CGPixel.debug.xcconfig; sourceTree = "<group>"; };
+		99B78AB068738E1DD9D8A8A43F58FC17 /* CGPixel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CGPixel.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9BC758D0632F7A6562FBB3055D2DF391 /* CGPaintUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGPaintUtils.h; path = src/CGPaintUtils.h; sourceTree = "<group>"; };
 		9C7A4BF8F20E4D10F473126EB1D12DAD /* Pods-CGPixel-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CGPixel-frameworks.sh"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A116A1187B8CABFDDB1969A597DCAFB2 /* CGPaintRadialFastBlurFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintRadialFastBlurFilter.fsh; path = src/filter/CGPaintRadialFastBlurFilter.fsh; sourceTree = "<group>"; };
+		9DAC9DEAD8B3BC540C107DBACE90A4EC /* CGPaintRenderPipeline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintRenderPipeline.h; sourceTree = "<group>"; };
+		A0EC8AC284AE1B62B1210D4E784E5845 /* CGPixelContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPixelContext.h; sourceTree = "<group>"; };
+		A17FC88EA98A9E1ACEC93AB63C21BA66 /* CGPaintRawDataInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintRawDataInput.m; sourceTree = "<group>"; };
+		A299677F839937CF825F376F3B3C2DF7 /* CGPaintPixelbufferOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintPixelbufferOutput.h; sourceTree = "<group>"; };
 		A57012B8466B31B911A82878E3DE9F33 /* Pods-CGPixel */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CGPixel"; path = Pods_CGPixel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB2745289A224B9DD4A88EDC5491A366 /* CGPaintRadialFastBlurFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintRadialFastBlurFilter.m; sourceTree = "<group>"; };
+		AB398BF10960062BE31138D57439322E /* CGPaintSoulFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintSoulFilter.fsh; path = src/filter/CGPaintSoulFilter.fsh; sourceTree = "<group>"; };
 		AD68D34E8DF126096AB358E3E3CF8EC2 /* Pods-CGPixel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CGPixel-dummy.m"; sourceTree = "<group>"; };
-		AE72F8CDC448D2DBC16A53448F313849 /* CGPaintRadialScaleBlurFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintRadialScaleBlurFilter.fsh; path = src/filter/CGPaintRadialScaleBlurFilter.fsh; sourceTree = "<group>"; };
-		AEF59C5A00A619A4204B9D67534FC7F2 /* CGPaintCameraInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintCameraInput.h; sourceTree = "<group>"; };
-		B09AC6A759D04F4EEBC9A7FF6C875F12 /* CGPaintRenderPipeline.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintRenderPipeline.m; sourceTree = "<group>"; };
-		B2136C5A49CF5860F2D2A096BDE3A6C5 /* CGPaintTargetOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintTargetOutput.m; sourceTree = "<group>"; };
-		B40E0E315592464190D093A854AEB0B6 /* CGPixel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CGPixel.debug.xcconfig; sourceTree = "<group>"; };
+		AE80729289978ECDA63177C002D8CAB1 /* CGPaintInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintInput.h; sourceTree = "<group>"; };
+		AF626AE953EBC7E0A4FC09BB02461BD3 /* CGPaintPixelbufferOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintPixelbufferOutput.m; sourceTree = "<group>"; };
+		B247D374A2D65B7518233F7970C2D338 /* CGPaintPixelBufferInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintPixelBufferInput.h; sourceTree = "<group>"; };
+		B303F917196A6A21ED36A7318D877ECB /* CGPaintOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintOutput.m; sourceTree = "<group>"; };
 		B64ACB1C886314FB69C20778D44DA76C /* Pods-CGPixel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CGPixel.release.xcconfig"; sourceTree = "<group>"; };
-		B8CBAF88BB31FEF2D0F43B9E37F7C4F7 /* CGPaintRadialRotateBlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintRadialRotateBlurFilter.h; sourceTree = "<group>"; };
-		C0F139DE89A3A766D0E74225B1BA5980 /* CGPaintPixelBufferInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintPixelBufferInput.h; sourceTree = "<group>"; };
+		BE59B25426D481DC0DC4230BA1B921CD /* CGPaintFramebufferCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintFramebufferCache.h; sourceTree = "<group>"; };
+		BF39A348934C33F0BA993E79E37F5285 /* CGPaintGlitchFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintGlitchFilter.m; sourceTree = "<group>"; };
 		C2F694D8D23EF4482EEE8BE2557E9BA8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C398839F16EA676B0AA95362AFF018A7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		C7D3F993278461188BBACF1CF7590BD9 /* CGPaintVideoInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintVideoInput.m; sourceTree = "<group>"; };
+		C355A53EE76F2369099536C5BF788ABA /* CGPaintRadialRotateBlurFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintRadialRotateBlurFilter.fsh; path = src/filter/CGPaintRadialRotateBlurFilter.fsh; sourceTree = "<group>"; };
 		C7F4EAFF0DCBE225F3CBC537085B136D /* Pods-CGPixel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CGPixel.debug.xcconfig"; sourceTree = "<group>"; };
-		C987A22C043CB9823FD70A73B4DC5871 /* CGPaintGlitchFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintGlitchFilter.h; sourceTree = "<group>"; };
 		CA2823C3D1997D4B9B61AB1D630333D8 /* Pods-CGPixel-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CGPixel-acknowledgements.plist"; sourceTree = "<group>"; };
-		CEDB0A3720613E5D6C07032D3D96114C /* CGPaintFramebufferCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintFramebufferCache.m; sourceTree = "<group>"; };
-		D254CC31333F64B92B783EE005443401 /* CGPaintFramebufferCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintFramebufferCache.h; sourceTree = "<group>"; };
+		D4C4315963200978E3FDFC0F2842F279 /* CGPaintViewOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintViewOutput.m; sourceTree = "<group>"; };
+		D59478470872D46EF9A6CA8DD37A6CF5 /* CGPaintFramebuffer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintFramebuffer.m; sourceTree = "<group>"; };
 		D8F8A9920AC172691E076EEEFA697030 /* Pods-CGPixel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CGPixel.modulemap"; sourceTree = "<group>"; };
+		D9631EDD8EAC3DEDC13E04F1DF9B6DB1 /* CGPaintGlitchFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintGlitchFilter.h; sourceTree = "<group>"; };
+		D9FB5E4F4690F4FF5DD75C3ECD3E6273 /* CGPaintTargetOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintTargetOutput.m; sourceTree = "<group>"; };
+		DA4356FDAD4267628702C7F390A2A103 /* CGPaintImageInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintImageInput.h; sourceTree = "<group>"; };
+		DC7EE24A1B488E40FA618645B11C0163 /* CGPaintRadialScaleBlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintRadialScaleBlurFilter.h; sourceTree = "<group>"; };
 		DE9775D72CFB503461B70EE8FE3D6211 /* Pods-CGPixel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CGPixel-Info.plist"; sourceTree = "<group>"; };
-		E1B32D9463EC9F71C1B9660FAD3353BD /* CGPaintImageInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintImageInput.m; sourceTree = "<group>"; };
+		DEE82CE3B9CE0ECD3EABF4A6DB280368 /* CGPaintFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintFilter.m; sourceTree = "<group>"; };
+		E101A815CD57CAD7F09FF01D3D526B63 /* CGPaintPipelineOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintPipelineOutput.m; sourceTree = "<group>"; };
 		E1E0EC0A148123B5E772FB23B320EB8D /* Pods-CGPixel-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CGPixel-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E562B344989DDF48D787A3B1C2E97329 /* CGPixel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CGPixel-prefix.pch"; sourceTree = "<group>"; };
-		E759751657B78CF36D2BB77763B7970E /* CGPixel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CGPixel.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		ECE820C9378472E4080DA3C820291DD5 /* CGPaintRadialFastBlurFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintRadialFastBlurFilter.m; sourceTree = "<group>"; };
-		EF027942289AE6C4128E068017E7C66E /* CGPaintImageOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintImageOutput.m; sourceTree = "<group>"; };
-		F1E22F2E13D06E3F5277A75DD37EE3E0 /* CGPaintTextureOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintTextureOutput.h; sourceTree = "<group>"; };
-		F5668B9001A25F044F8F4E4ABE20BDEA /* CGPaintOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintOutput.m; sourceTree = "<group>"; };
-		F61BBA79EF04FFC8CB3E7FE9875DD5C4 /* CGPaintGrayFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintGrayFilter.h; sourceTree = "<group>"; };
-		F734519299A969EEC39B4B7EF1654B88 /* CGPixel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CGPixel.release.xcconfig; sourceTree = "<group>"; };
-		F749A1EDF385BAB9B1C1C64EE2486192 /* CGPixelContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPixelContext.m; sourceTree = "<group>"; };
-		FA57B74EF41A972120CD17C8A49F86C7 /* CGPaintInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintInput.h; sourceTree = "<group>"; };
+		E32575BD2D91FE3A49B7B954693CCC4B /* CGPaintRawDataOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintRawDataOutput.h; sourceTree = "<group>"; };
+		E3F46CADECAB7E439C783B5876736DE8 /* CGPaintCameraInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintCameraInput.h; sourceTree = "<group>"; };
+		E589BD4D3122BC175EA888C2D7402DF6 /* CGPaintRadialScaleBlurFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintRadialScaleBlurFilter.fsh; path = src/filter/CGPaintRadialScaleBlurFilter.fsh; sourceTree = "<group>"; };
+		E769C29964A0E0F168433C34F40D4954 /* CGPaintSoulFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintSoulFilter.h; sourceTree = "<group>"; };
+		EC857E49663B81FF4EE22611CE3CA2D8 /* CGPaintProgram.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintProgram.h; sourceTree = "<group>"; };
+		EF0667B1185BB4EA115C8A95258350F3 /* CGPixel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGPixel.h; path = src/CGPixel.h; sourceTree = "<group>"; };
+		EFF12E0D8FA1E8F1FC84413E6CBF200D /* CGPaintShakeFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintShakeFilter.fsh; path = src/filter/CGPaintShakeFilter.fsh; sourceTree = "<group>"; };
+		F3C172646FA704367AF25E0E21ACFD08 /* CGPaintViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintViewOutput.h; sourceTree = "<group>"; };
+		F67CAFCC7802BA908FEEBA3952E97716 /* CGPaintRadialScaleBlurFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintRadialScaleBlurFilter.m; sourceTree = "<group>"; };
+		F72AC39D5CE72DE5B0624112D6085793 /* CGPaintTextureInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CGPaintTextureInput.m; sourceTree = "<group>"; };
+		FAA0BED036290FBCE46B48E8349FA5E9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		FCFA5B0A8B5F017CF4E9A3F5E2BDCDC0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		FEA706A6136411FAD44F94AA7B98200B /* CGPaintShakeFilter.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = CGPaintShakeFilter.fsh; path = src/filter/CGPaintShakeFilter.fsh; sourceTree = "<group>"; };
+		FE4079E1158FECA1CF9266CE0C1E3274 /* CGPaintRadialFastBlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGPaintRadialFastBlurFilter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,44 +221,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11B2823B9C5B49213539BC310713F9AE /* output */ = {
+		18B4B1C6FB68DE8351DF1599457867AC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				207327C30E1A3B39EF3C1673E8F47968 /* CGPaintImageOutput.h */,
-				EF027942289AE6C4128E068017E7C66E /* CGPaintImageOutput.m */,
-				52206F317AF929184FCACBEF16C7A924 /* CGPaintPixelbufferOutput.h */,
-				921D393A46CD95E319680DDA8C4B81FD /* CGPaintPixelbufferOutput.m */,
-				724B78F376B7895AE158E2E023300606 /* CGPaintRawDataOutput.h */,
-				74AF5D0BD95E8C6B7E5341C5DE19385E /* CGPaintRawDataOutput.m */,
-				6A044747A71C2C8AD457C8FB4640FDB7 /* CGPaintTargetOutput.h */,
-				B2136C5A49CF5860F2D2A096BDE3A6C5 /* CGPaintTargetOutput.m */,
-				F1E22F2E13D06E3F5277A75DD37EE3E0 /* CGPaintTextureOutput.h */,
-				65406C085DB60CBA6BB7BE613433F7D1 /* CGPaintTextureOutput.m */,
-				1035D61CFFE84B13A7E7CEC8097CB913 /* CGPaintViewOutput.h */,
-				7C2AC0A53489F9F6F77103B181C8FB18 /* CGPaintViewOutput.m */,
+				23CC33571D4E6C9E97A03655D96E3665 /* CGPixel.modulemap */,
+				5CAF1FE73EA1B6CF1273B575A205E1CF /* CGPixel-dummy.m */,
+				660F0AD59488A24427A309673636F7A1 /* CGPixel-Info.plist */,
+				6A8E9D7445751F9DB5F319B5018B53CF /* CGPixel-prefix.pch */,
+				6546F7A89BB7C2095451ABB78AB3282D /* CGPixel-umbrella.h */,
+				93C094824CFB22038CF7911112132780 /* CGPixel.debug.xcconfig */,
+				76BA2C70250BD717365E0842751E1263 /* CGPixel.release.xcconfig */,
 			);
-			name = output;
-			path = src/output;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CGPixel";
 			sourceTree = "<group>";
 		};
-		2603A114A7DD8E5724F76AA8E9369EFB /* core */ = {
+		2CD35537396245A56328408C404712FF /* pipeline */ = {
 			isa = PBXGroup;
 			children = (
-				9288347412264CA5C38F287AF5F5CAE2 /* CGPaintFramebuffer.h */,
-				6BC7112B89764D48471A1DAA6790514E /* CGPaintFramebuffer.m */,
-				D254CC31333F64B92B783EE005443401 /* CGPaintFramebufferCache.h */,
-				CEDB0A3720613E5D6C07032D3D96114C /* CGPaintFramebufferCache.m */,
-				FA57B74EF41A972120CD17C8A49F86C7 /* CGPaintInput.h */,
-				22128A2D73FF2EBB071781B049F99363 /* CGPaintOutput.h */,
-				F5668B9001A25F044F8F4E4ABE20BDEA /* CGPaintOutput.m */,
-				61CFDBAA14638004832627B9EBB42489 /* CGPaintProgram.h */,
-				8F3A50A994C447CE92BD60F85B7E28BB /* CGPaintProgram.m */,
-				8AF3930BE15F00D7723C0F4E8732137E /* CGPixelContext.h */,
-				F749A1EDF385BAB9B1C1C64EE2486192 /* CGPixelContext.m */,
-				1CD2BBB6E679DE817389E63DCEF4FEA7 /* CGPixelFilterInput.h */,
+				4870FB578700BE553A6F7DAF8B501538 /* CGPaintPipelineOutput.h */,
+				E101A815CD57CAD7F09FF01D3D526B63 /* CGPaintPipelineOutput.m */,
+				9DAC9DEAD8B3BC540C107DBACE90A4EC /* CGPaintRenderPipeline.h */,
+				7E9BFA863D9C7AFD00E9082D1BFBF796 /* CGPaintRenderPipeline.m */,
 			);
-			name = core;
-			path = src/core;
+			name = pipeline;
+			path = src/pipeline;
 			sourceTree = "<group>";
 		};
 		344B4BA5D4988A0AEE8E74D2C4CF8B8E /* Pods-CGPixel */ = {
@@ -278,34 +265,45 @@
 			path = "Target Support Files/Pods-CGPixel";
 			sourceTree = "<group>";
 		};
-		4A2765B622FB2A76F93AD135172CD51E /* shader */ = {
+		4B607EC581507F2DE5175169706771E4 /* filter */ = {
 			isa = PBXGroup;
 			children = (
-				8E57A02CD8489AB49F5F5B0231770A3B /* CGPaintGlitchFilter.fsh */,
-				97B4E74DAF12917E764BDC8C71CD4036 /* CGPaintGrayFilter.fsh */,
-				A116A1187B8CABFDDB1969A597DCAFB2 /* CGPaintRadialFastBlurFilter.fsh */,
-				2FE483364F0C9E40DED2ED867C07B22B /* CGPaintRadialRotateBlurFilter.fsh */,
-				AE72F8CDC448D2DBC16A53448F313849 /* CGPaintRadialScaleBlurFilter.fsh */,
-				FEA706A6136411FAD44F94AA7B98200B /* CGPaintShakeFilter.fsh */,
-				2575CE23E67ECC7946477BF7B0826749 /* CGPaintSoulFilter.fsh */,
-				8B149A453E02B87268790B2F77BA0CB3 /* CGPaintVortexFilter.fsh */,
+				0C8E7A5B7E41B5B73A7044DD5B1A5D36 /* CGPaintFilter.h */,
+				DEE82CE3B9CE0ECD3EABF4A6DB280368 /* CGPaintFilter.m */,
+				D9631EDD8EAC3DEDC13E04F1DF9B6DB1 /* CGPaintGlitchFilter.h */,
+				BF39A348934C33F0BA993E79E37F5285 /* CGPaintGlitchFilter.m */,
+				91E466BAF5AF317745DD33150B02534E /* CGPaintGrayFilter.h */,
+				5117EFF694E0311C8C035A15FA0D252B /* CGPaintGrayFilter.m */,
+				FE4079E1158FECA1CF9266CE0C1E3274 /* CGPaintRadialFastBlurFilter.h */,
+				AB2745289A224B9DD4A88EDC5491A366 /* CGPaintRadialFastBlurFilter.m */,
+				76F0923B2D4F3244597C1943E6E8FF84 /* CGPaintRadialRotateBlurFilter.h */,
+				8F3A3AC63140705325A815FA849F0D86 /* CGPaintRadialRotateBlurFilter.m */,
+				DC7EE24A1B488E40FA618645B11C0163 /* CGPaintRadialScaleBlurFilter.h */,
+				F67CAFCC7802BA908FEEBA3952E97716 /* CGPaintRadialScaleBlurFilter.m */,
+				03EAC1982AD1CAB23B2584B6FCD98C8D /* CGPaintShakeFilter.h */,
+				556312125F47F4FD53B4D0A4A250E9D0 /* CGPaintShakeFilter.m */,
+				E769C29964A0E0F168433C34F40D4954 /* CGPaintSoulFilter.h */,
+				68A70F1E71F7EEE4AD96798FEAA36FC2 /* CGPaintSoulFilter.m */,
+				8D9EE5DA8C0FAE5FA027DC05083AF666 /* CGPaintVortexFilter.h */,
+				644D4AAF3E0A68FF53AE13DD1B9FE123 /* CGPaintVortexFilter.m */,
 			);
-			name = shader;
+			name = filter;
+			path = src/filter;
 			sourceTree = "<group>";
 		};
-		782194896108FBE5EAB038C78F35E55A /* Support Files */ = {
+		78FF0AB594A499A9B963D2BA756C68DB /* shader */ = {
 			isa = PBXGroup;
 			children = (
-				5B51D01F78E3DAFC2C45B4A328276E55 /* CGPixel.modulemap */,
-				9BB4D8AF5013415370AD661AB1710F02 /* CGPixel-dummy.m */,
-				791939DE02ED6606AAF2D9DD1AB72E1B /* CGPixel-Info.plist */,
-				E562B344989DDF48D787A3B1C2E97329 /* CGPixel-prefix.pch */,
-				92379B04BD6762AD973A373A226B5463 /* CGPixel-umbrella.h */,
-				B40E0E315592464190D093A854AEB0B6 /* CGPixel.debug.xcconfig */,
-				F734519299A969EEC39B4B7EF1654B88 /* CGPixel.release.xcconfig */,
+				03E95361FB82D58E82FE11EBDF947219 /* CGPaintGlitchFilter.fsh */,
+				0379CE967632DFC51F8E877E570B5416 /* CGPaintGrayFilter.fsh */,
+				2D851E2765D8F4F610782E316837759E /* CGPaintRadialFastBlurFilter.fsh */,
+				C355A53EE76F2369099536C5BF788ABA /* CGPaintRadialRotateBlurFilter.fsh */,
+				E589BD4D3122BC175EA888C2D7402DF6 /* CGPaintRadialScaleBlurFilter.fsh */,
+				EFF12E0D8FA1E8F1FC84413E6CBF200D /* CGPaintShakeFilter.fsh */,
+				AB398BF10960062BE31138D57439322E /* CGPaintSoulFilter.fsh */,
+				886A32DD5C9504D2A084D388586F2809 /* CGPaintVortexFilter.fsh */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CGPixel";
+			name = shader;
 			sourceTree = "<group>";
 		};
 		86279343FC2BE899760C285FB7315E55 /* iOS */ = {
@@ -320,16 +318,73 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		891D3DA21620F39B884FE1E44BB09CEA /* pipeline */ = {
+		884C733ED6452CE15BE9F669CA901391 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				0D2B0F10CEF5FBACF20B5CD1826925A1 /* CGPaintPipelineOutput.h */,
-				4152F2CDE406DA035E96374C48C085DD /* CGPaintPipelineOutput.m */,
-				53A589EB1A5389B124BC9497035A3B9B /* CGPaintRenderPipeline.h */,
-				B09AC6A759D04F4EEBC9A7FF6C875F12 /* CGPaintRenderPipeline.m */,
+				99B78AB068738E1DD9D8A8A43F58FC17 /* CGPixel.podspec */,
+				FAA0BED036290FBCE46B48E8349FA5E9 /* LICENSE */,
+				056730AE9828587D971661C1FB2993C1 /* README.md */,
 			);
-			name = pipeline;
-			path = src/pipeline;
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		A02290603A81AD8C07A8FC336FB6A928 /* output */ = {
+			isa = PBXGroup;
+			children = (
+				4E7551907DD785917822AE9416DB726E /* CGPaintImageOutput.h */,
+				575588B0B21562D25901B7AD59E211A3 /* CGPaintImageOutput.m */,
+				A299677F839937CF825F376F3B3C2DF7 /* CGPaintPixelbufferOutput.h */,
+				AF626AE953EBC7E0A4FC09BB02461BD3 /* CGPaintPixelbufferOutput.m */,
+				E32575BD2D91FE3A49B7B954693CCC4B /* CGPaintRawDataOutput.h */,
+				6C2CD493AA8F17EC6A6E4D148F0D3414 /* CGPaintRawDataOutput.m */,
+				6A99CF4188A8047A862D010E2E31E0D5 /* CGPaintTargetOutput.h */,
+				D9FB5E4F4690F4FF5DD75C3ECD3E6273 /* CGPaintTargetOutput.m */,
+				15A4EE4E19CACFDE5B650AFBA0C1A580 /* CGPaintTextureOutput.h */,
+				4B1E59FF597EE08B928A6CF1C47943BD /* CGPaintTextureOutput.m */,
+				F3C172646FA704367AF25E0E21ACFD08 /* CGPaintViewOutput.h */,
+				D4C4315963200978E3FDFC0F2842F279 /* CGPaintViewOutput.m */,
+			);
+			name = output;
+			path = src/output;
+			sourceTree = "<group>";
+		};
+		AAF3D1C120AF18A16BD6F4A38C4B0FB7 /* input */ = {
+			isa = PBXGroup;
+			children = (
+				E3F46CADECAB7E439C783B5876736DE8 /* CGPaintCameraInput.h */,
+				00C43E24ADAE2DB009E19B79BC8CB63B /* CGPaintCameraInput.m */,
+				DA4356FDAD4267628702C7F390A2A103 /* CGPaintImageInput.h */,
+				10001915F6D873ECE78F1296B3760931 /* CGPaintImageInput.m */,
+				B247D374A2D65B7518233F7970C2D338 /* CGPaintPixelBufferInput.h */,
+				8D45B747DA975CFB744F6FD4ECC78299 /* CGPaintPixelBufferInput.m */,
+				4BDD2A4A85BC11EBB2BA5298832A8E52 /* CGPaintRawDataInput.h */,
+				A17FC88EA98A9E1ACEC93AB63C21BA66 /* CGPaintRawDataInput.m */,
+				5E25A0EFC09262D707810D5A3B060051 /* CGPaintTextureInput.h */,
+				F72AC39D5CE72DE5B0624112D6085793 /* CGPaintTextureInput.m */,
+				32ACCB921B28F9A614DF6218406B6347 /* CGPaintVideoInput.h */,
+				5E7B74F066C4A048D9F8F4D9269E6B89 /* CGPaintVideoInput.m */,
+			);
+			name = input;
+			path = src/input;
+			sourceTree = "<group>";
+		};
+		B279756D8BEB49C934342E9006C49432 /* CGPixel */ = {
+			isa = PBXGroup;
+			children = (
+				9BC758D0632F7A6562FBB3055D2DF391 /* CGPaintUtils.h */,
+				31BB8378B2822E92D84B1CBEE64AE4D2 /* CGPaintUtils.m */,
+				EF0667B1185BB4EA115C8A95258350F3 /* CGPixel.h */,
+				F08AB6C7A431991C48498EC8EA2C1B5B /* core */,
+				4B607EC581507F2DE5175169706771E4 /* filter */,
+				AAF3D1C120AF18A16BD6F4A38C4B0FB7 /* input */,
+				A02290603A81AD8C07A8FC336FB6A928 /* output */,
+				2CD35537396245A56328408C404712FF /* pipeline */,
+				884C733ED6452CE15BE9F669CA901391 /* Pod */,
+				78FF0AB594A499A9B963D2BA756C68DB /* shader */,
+				18B4B1C6FB68DE8351DF1599457867AC /* Support Files */,
+			);
+			name = CGPixel;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		B94D7768568A9992200DB461E8CF687F /* Frameworks */ = {
@@ -360,42 +415,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		CFBA1B0F8A650DA0630FB2B488FF4397 /* filter */ = {
-			isa = PBXGroup;
-			children = (
-				37ACD35CD02E5AD3112023616EA16A07 /* CGPaintFilter.h */,
-				54EF979748E649C9FF24429FB924EE70 /* CGPaintFilter.m */,
-				C987A22C043CB9823FD70A73B4DC5871 /* CGPaintGlitchFilter.h */,
-				8C55036E281A3F91B93E9511DB6DE87D /* CGPaintGlitchFilter.m */,
-				F61BBA79EF04FFC8CB3E7FE9875DD5C4 /* CGPaintGrayFilter.h */,
-				679ACDA134E433765E0CBD1422963A31 /* CGPaintGrayFilter.m */,
-				407DDECAFCFCCB7154FFB0147C34647C /* CGPaintRadialFastBlurFilter.h */,
-				ECE820C9378472E4080DA3C820291DD5 /* CGPaintRadialFastBlurFilter.m */,
-				B8CBAF88BB31FEF2D0F43B9E37F7C4F7 /* CGPaintRadialRotateBlurFilter.h */,
-				8FC0F23A953E6559E21871196CA8D9BB /* CGPaintRadialRotateBlurFilter.m */,
-				7912FCD7C561797407B41A4439DD97F5 /* CGPaintRadialScaleBlurFilter.h */,
-				8D710A11B4D710FB0EC3814D3C3CB810 /* CGPaintRadialScaleBlurFilter.m */,
-				506DDD237632E79D86D8F67C2538BB60 /* CGPaintShakeFilter.h */,
-				4F2DDD2C1876040FDD1494293CDDCFB3 /* CGPaintShakeFilter.m */,
-				99F8D6BD1BE233B77516185254397031 /* CGPaintSoulFilter.h */,
-				7C3A62CC1887392C5CE07B3CC0681DF5 /* CGPaintSoulFilter.m */,
-				4FC8A2B6C88C76DB2667F27414312132 /* CGPaintVortexFilter.h */,
-				2DFD3191E653E77E5A3E196D2AC0DFD7 /* CGPaintVortexFilter.m */,
-			);
-			name = filter;
-			path = src/filter;
-			sourceTree = "<group>";
-		};
-		D5EA56FFD01D71B1291E200033050977 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				E759751657B78CF36D2BB77763B7970E /* CGPixel.podspec */,
-				697617ED473DBE71496E48602369D0D6 /* LICENSE */,
-				C398839F16EA676B0AA95362AFF018A7 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		DFBB173742CDDA125D4E2ACDACA1237C /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,48 +426,29 @@
 		E8C31408CFCF0D4B5A363FC6B4DEC1D6 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F4DE7A4EDBF85218B7F58EECD45AABB6 /* CGPixel */,
+				B279756D8BEB49C934342E9006C49432 /* CGPixel */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		F4DE7A4EDBF85218B7F58EECD45AABB6 /* CGPixel */ = {
+		F08AB6C7A431991C48498EC8EA2C1B5B /* core */ = {
 			isa = PBXGroup;
 			children = (
-				449C6A834EB52C85357375E341464093 /* CGPaint.h */,
-				48591C25B8E62A876C413DA6E028CCD2 /* CGPaintUtils.h */,
-				742C43A81F593E77648C3CB542EC32E9 /* CGPaintUtils.m */,
-				2603A114A7DD8E5724F76AA8E9369EFB /* core */,
-				CFBA1B0F8A650DA0630FB2B488FF4397 /* filter */,
-				FC24199AB692DD08B4F62F2FEEC73EC2 /* input */,
-				11B2823B9C5B49213539BC310713F9AE /* output */,
-				891D3DA21620F39B884FE1E44BB09CEA /* pipeline */,
-				D5EA56FFD01D71B1291E200033050977 /* Pod */,
-				4A2765B622FB2A76F93AD135172CD51E /* shader */,
-				782194896108FBE5EAB038C78F35E55A /* Support Files */,
+				7867BA65D30C717A2914AD7B44D78C3A /* CGPaintFramebuffer.h */,
+				D59478470872D46EF9A6CA8DD37A6CF5 /* CGPaintFramebuffer.m */,
+				BE59B25426D481DC0DC4230BA1B921CD /* CGPaintFramebufferCache.h */,
+				066254D2C1A0D176C650099ED99B2EFC /* CGPaintFramebufferCache.m */,
+				AE80729289978ECDA63177C002D8CAB1 /* CGPaintInput.h */,
+				4B9DC6B12B502F542D76882CAF153F96 /* CGPaintOutput.h */,
+				B303F917196A6A21ED36A7318D877ECB /* CGPaintOutput.m */,
+				EC857E49663B81FF4EE22611CE3CA2D8 /* CGPaintProgram.h */,
+				3B8464CDC17BB4764E49442BADC7DAE5 /* CGPaintProgram.m */,
+				A0EC8AC284AE1B62B1210D4E784E5845 /* CGPixelContext.h */,
+				6A69D4A7582877A5527A49F9B31F5D34 /* CGPixelContext.m */,
+				76C1A144206119E1A0F002DF82292C1E /* CGPixelFilterInput.h */,
 			);
-			name = CGPixel;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		FC24199AB692DD08B4F62F2FEEC73EC2 /* input */ = {
-			isa = PBXGroup;
-			children = (
-				AEF59C5A00A619A4204B9D67534FC7F2 /* CGPaintCameraInput.h */,
-				21E4954142DD3FF74EE3EB0CB91A524B /* CGPaintCameraInput.m */,
-				39D10C30BA3035AD65D50ED5D4868A66 /* CGPaintImageInput.h */,
-				E1B32D9463EC9F71C1B9660FAD3353BD /* CGPaintImageInput.m */,
-				C0F139DE89A3A766D0E74225B1BA5980 /* CGPaintPixelBufferInput.h */,
-				2084EE5CDAC4404DA0318651387A94A9 /* CGPaintPixelBufferInput.m */,
-				4C0625CC8E0B743A2D00985EE90AED74 /* CGPaintRawDataInput.h */,
-				78A914093F5513FA92CA60806BD6CCBF /* CGPaintRawDataInput.m */,
-				845685875E56DB0EA93F99120D60782D /* CGPaintTextureInput.h */,
-				761EA732A519AC6E0FCC7231AFB4EADD /* CGPaintTextureInput.m */,
-				2CCFF427F55F104F0DC6570E872E3FB3 /* CGPaintVideoInput.h */,
-				C7D3F993278461188BBACF1CF7590BD9 /* CGPaintVideoInput.m */,
-			);
-			name = input;
-			path = src/input;
+			name = core;
+			path = src/core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,43 +462,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C592EF26A7026ECE63D846B35351B031 /* Headers */ = {
+		2B0DA4D43D0095BF2D56F7251B64C1F4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F634465D2418BB4B50E161551C5F7E56 /* CGPaint.h in Headers */,
-				9D9A6B6EA86D99A746C0298B86A74758 /* CGPaintCameraInput.h in Headers */,
-				FE0801B19F7D7C9FE598D6F61A1AE713 /* CGPaintFilter.h in Headers */,
-				6A4E9A8E5AF415DAF3821BEC4B7332DA /* CGPaintFramebuffer.h in Headers */,
-				8E48D9869B161E503699DD782EB106C6 /* CGPaintFramebufferCache.h in Headers */,
-				7126A53F2C395C2012AA366AEB471F02 /* CGPaintGlitchFilter.h in Headers */,
-				3E43D7283E4A7017FC146B0A4E9987F6 /* CGPaintGrayFilter.h in Headers */,
-				01784FC9075AC5B40A5AE973654E14A9 /* CGPaintImageInput.h in Headers */,
-				749796A9A51EE6612F8E5310077D34AE /* CGPaintImageOutput.h in Headers */,
-				8E9845D9B23238D53C1530964716F1E6 /* CGPaintInput.h in Headers */,
-				115C5EAD0D64908B793910A2367F2B01 /* CGPaintOutput.h in Headers */,
-				EDB24A0F54081FDAE780208932A29EEA /* CGPaintPipelineOutput.h in Headers */,
-				532DA1576695162E2CCBCB6BF955FC14 /* CGPaintPixelBufferInput.h in Headers */,
-				02C6558544696D0366082708FB2AA197 /* CGPaintPixelbufferOutput.h in Headers */,
-				B03D4B6F556716619CCFC653CD5FECE4 /* CGPaintProgram.h in Headers */,
-				CF49E6CE4CB5A08B87950A519457D813 /* CGPaintRadialFastBlurFilter.h in Headers */,
-				40B00DF8279B28F7ABD7BA5C7720CC07 /* CGPaintRadialRotateBlurFilter.h in Headers */,
-				5A6836582989C0276B22CE0DD56E4999 /* CGPaintRadialScaleBlurFilter.h in Headers */,
-				3E968B0B9BB03CE505B0362322ECFCD7 /* CGPaintRawDataInput.h in Headers */,
-				FAD5B1046E7BFDD2167D7ECFE5A3176D /* CGPaintRawDataOutput.h in Headers */,
-				7C4643A41B387F66E0ADA72DCAAC8EAC /* CGPaintRenderPipeline.h in Headers */,
-				B0F1ED11FC1B68C871BC26CDBE07ED85 /* CGPaintShakeFilter.h in Headers */,
-				7E95345FD7EC99467C60A60CFCC44848 /* CGPaintSoulFilter.h in Headers */,
-				3DD1DFA5EDC39C975DF69CE624C98D4E /* CGPaintTargetOutput.h in Headers */,
-				2277D96764CB484AEFEE0F8FAF360A84 /* CGPaintTextureInput.h in Headers */,
-				0708DF542A8C342F9247E48DD813754F /* CGPaintTextureOutput.h in Headers */,
-				33E3A6A30199D6DAFCDC6E885BDE583C /* CGPaintUtils.h in Headers */,
-				57159C47EED44EAF5206CBE00BFA9F10 /* CGPaintVideoInput.h in Headers */,
-				F415BAB2804D81246D256986F14C3F48 /* CGPaintViewOutput.h in Headers */,
-				C4F58B6A9D19B8630506F0CCA7DD1903 /* CGPaintVortexFilter.h in Headers */,
-				55AC62A1C0B9F13F4239695D64F158AC /* CGPixel-umbrella.h in Headers */,
-				293FD811552DBE98F125F4CF1CC7C2E9 /* CGPixelContext.h in Headers */,
-				3BFD535BFFB0995B5C5783C8C4B8327C /* CGPixelFilterInput.h in Headers */,
+				859D5F941B07FD8831D86AFCD0BAAE91 /* CGPaintCameraInput.h in Headers */,
+				7AAE22176C1E76E5D1DEEF588C84AFED /* CGPaintFilter.h in Headers */,
+				2ECE73DCDC0D1C57E89CDBADDAF691F2 /* CGPaintFramebuffer.h in Headers */,
+				A3D6C181E53360FDA57F0820B179822A /* CGPaintFramebufferCache.h in Headers */,
+				95267D66F98A5FEFCECBE86F74C52323 /* CGPaintGlitchFilter.h in Headers */,
+				9D38E87B3799449EF95024400CDE5558 /* CGPaintGrayFilter.h in Headers */,
+				C8FC2C6E8CA3952EA083EABC2B206CA5 /* CGPaintImageInput.h in Headers */,
+				0265D68AD1AEB43994A58FE9ABDB2A02 /* CGPaintImageOutput.h in Headers */,
+				2C106977DE654FB25EBF03230DCBB841 /* CGPaintInput.h in Headers */,
+				DFD0115D8550E5888AE327723B5BF2A8 /* CGPaintOutput.h in Headers */,
+				15A734A5BA66A12460CF4F7C42BC9A5D /* CGPaintPipelineOutput.h in Headers */,
+				5FB3ABDD59B376736CCAD84FA0BB9F3A /* CGPaintPixelBufferInput.h in Headers */,
+				CCFC7569136207BCC991A1D555492E54 /* CGPaintPixelbufferOutput.h in Headers */,
+				552E15695C3CE656E7EBF4F8E4A8F4CB /* CGPaintProgram.h in Headers */,
+				0C045C9FF9876C6E84185ADE1B01E3B3 /* CGPaintRadialFastBlurFilter.h in Headers */,
+				E5AAA961662DB0B42DF0AF54042DFF9B /* CGPaintRadialRotateBlurFilter.h in Headers */,
+				CE7A3970D09E439C678F066BEAC02A0F /* CGPaintRadialScaleBlurFilter.h in Headers */,
+				EF82B2930F106060104A209BF7D57EC1 /* CGPaintRawDataInput.h in Headers */,
+				B4E62B5775A6421D2D1C2EEF37E01FCE /* CGPaintRawDataOutput.h in Headers */,
+				ECF8C2DA62489C743D8D8233D60BCF39 /* CGPaintRenderPipeline.h in Headers */,
+				FC10F56B8540BD538F470D1602B1183A /* CGPaintShakeFilter.h in Headers */,
+				41B9224D931F64F9339089A2B5B9BBF8 /* CGPaintSoulFilter.h in Headers */,
+				27F2B70CF79D46D1DC7F8FEDA01D1934 /* CGPaintTargetOutput.h in Headers */,
+				9AA81FD6D0AFAB5235E7421634082D5B /* CGPaintTextureInput.h in Headers */,
+				8315F6C16B8F9CC31697128E93A02072 /* CGPaintTextureOutput.h in Headers */,
+				B45FB3C066FAAAD04AA3F73C4B5545E0 /* CGPaintUtils.h in Headers */,
+				7FBAE60D4266519FB21424684179C27F /* CGPaintVideoInput.h in Headers */,
+				E7E8D9B0F9D3C9246C3590A2404CC0C3 /* CGPaintViewOutput.h in Headers */,
+				3F26B7254E98509AF1726287AEA576BB /* CGPaintVortexFilter.h in Headers */,
+				0013DF7750326D814F1CC49856B545F6 /* CGPixel.h in Headers */,
+				F9996338A7E7DD6852F3187AD95490D9 /* CGPixel-umbrella.h in Headers */,
+				38AA2AB4CF605634D69EFC2C2C421A4F /* CGPixelContext.h in Headers */,
+				13E639E71992453370A580E477CA71CA /* CGPixelFilterInput.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +509,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 149FAF8782785F30983E2370287CF6B3 /* Build configuration list for PBXNativeTarget "CGPixel" */;
 			buildPhases = (
-				C592EF26A7026ECE63D846B35351B031 /* Headers */,
+				2B0DA4D43D0095BF2D56F7251B64C1F4 /* Headers */,
 				E190001088E80A5DA010E195DECDB9ED /* Sources */,
 				A58E9946CCF9633D95A6095E1926CE7B /* Frameworks */,
 				677A09BF77464FA05E3E2898C1B5D4E5 /* Resources */,
@@ -655,7 +655,7 @@
 /* Begin XCBuildConfiguration section */
 		0A456A01663CB09AF26912D5F392310A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F734519299A969EEC39B4B7EF1654B88 /* CGPixel.release.xcconfig */;
+			baseConfigurationReference = 76BA2C70250BD717365E0842751E1263 /* CGPixel.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -765,7 +765,7 @@
 		};
 		8659C59E9CDF29C5CC015DB88099FF6A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B40E0E315592464190D093A854AEB0B6 /* CGPixel.debug.xcconfig */;
+			baseConfigurationReference = 93C094824CFB22038CF7911112132780 /* CGPixel.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

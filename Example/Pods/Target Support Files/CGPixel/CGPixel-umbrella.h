@@ -10,8 +10,8 @@
 #endif
 #endif
 
-#import "CGPaint.h"
 #import "CGPaintUtils.h"
+#import "CGPixel.h"
 #import "CGPaintFramebuffer.h"
 #import "CGPaintFramebufferCache.h"
 #import "CGPaintInput.h"
