@@ -1,6 +1,6 @@
 //
-//  CGPaintVortexFilter.h
-//  CGPaint
+//  CGPixelVortexFilter.h
+//  CGPixel
 //
 //  Created by CGPaint on 2021/5/24.
 //

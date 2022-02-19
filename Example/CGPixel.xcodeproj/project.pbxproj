@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9646E528278556FD00BFE83C /* CGPaintCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9646E526278556FD00BFE83C /* CGPaintCameraController.m */; };
-		9655B331273582B900491380 /* CGPaintSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655B330273582B900491380 /* CGPaintSource.m */; };
+		9646E528278556FD00BFE83C /* CGPixelCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9646E526278556FD00BFE83C /* CGPixelCameraController.m */; };
+		9655B331273582B900491380 /* CGPixelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655B330273582B900491380 /* CGPixelSource.m */; };
 		96A94BC62659596E00CCF932 /* Test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 96A94BC52659596E00CCF932 /* Test.mp4 */; };
 		96A94BCD26596F2400CCF932 /* CGPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A94BCC26596F2400CCF932 /* CGPreviewController.m */; };
-		96B1D75026652E71003C29D0 /* CGPaintSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D74F26652E71003C29D0 /* CGPaintSourceController.m */; };
-		96C028C82659511A0009C77D /* CGPaintListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C028C12659511A0009C77D /* CGPaintListController.m */; };
-		96C028C92659511A0009C77D /* CGPaintController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C028C32659511A0009C77D /* CGPaintController.m */; };
+		96B1D75026652E71003C29D0 /* CGPixelSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D74F26652E71003C29D0 /* CGPixelSourceController.m */; };
+		96C028C82659511A0009C77D /* CGPixelListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C028C12659511A0009C77D /* CGPixelListController.m */; };
+		96C028C92659511A0009C77D /* CGPixelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C028C32659511A0009C77D /* CGPixelController.m */; };
 		E3898E1D6EC4580B5D30980C /* Pods_CGPixel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748D40AA499A7EC3348C2F32 /* Pods_CGPixel.framework */; };
 		E5E9816A2658D257008ED21D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E981692658D257008ED21D /* AppDelegate.m */; };
 		E5E981752658D259008ED21D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E981742658D259008ED21D /* Assets.xcassets */; };
@@ -26,26 +26,26 @@
 		E5E9825D2658D756008ED21D /* nv21_1120x1120.yuv in Resources */ = {isa = PBXBuildFile; fileRef = E5E982292658D756008ED21D /* nv21_1120x1120.yuv */; };
 		E5E9825E2658D756008ED21D /* nv12_1120x1120.yuv in Resources */ = {isa = PBXBuildFile; fileRef = E5E9822A2658D756008ED21D /* nv12_1120x1120.yuv */; };
 		E5E9825F2658D756008ED21D /* nv12_1120x1120_bgra.yuv in Resources */ = {isa = PBXBuildFile; fileRef = E5E9822B2658D756008ED21D /* nv12_1120x1120_bgra.yuv */; };
-		E5FE984F266507BD00548BB1 /* CGPaintVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FE984E266507BD00548BB1 /* CGPaintVideoController.m */; };
+		E5FE984F266507BD00548BB1 /* CGPixelVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FE984E266507BD00548BB1 /* CGPixelVideoController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02A12414E844F676F7CAC7CE /* Pods-CGPixel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGPixel.release.xcconfig"; path = "Target Support Files/Pods-CGPixel/Pods-CGPixel.release.xcconfig"; sourceTree = "<group>"; };
 		333C159742C0EBCC1433B48C /* Pods-CGPixel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGPixel.debug.xcconfig"; path = "Target Support Files/Pods-CGPixel/Pods-CGPixel.debug.xcconfig"; sourceTree = "<group>"; };
 		748D40AA499A7EC3348C2F32 /* Pods_CGPixel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGPixel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9646E526278556FD00BFE83C /* CGPaintCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintCameraController.m; sourceTree = "<group>"; };
-		9646E527278556FD00BFE83C /* CGPaintCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintCameraController.h; sourceTree = "<group>"; };
-		9655B32F273582B900491380 /* CGPaintSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPaintSource.h; sourceTree = "<group>"; };
-		9655B330273582B900491380 /* CGPaintSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPaintSource.m; sourceTree = "<group>"; };
+		9646E526278556FD00BFE83C /* CGPixelCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPixelCameraController.m; sourceTree = "<group>"; };
+		9646E527278556FD00BFE83C /* CGPixelCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPixelCameraController.h; sourceTree = "<group>"; };
+		9655B32F273582B900491380 /* CGPixelSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPixelSource.h; sourceTree = "<group>"; };
+		9655B330273582B900491380 /* CGPixelSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPixelSource.m; sourceTree = "<group>"; };
 		96A94BC52659596E00CCF932 /* Test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Test.mp4; sourceTree = "<group>"; };
 		96A94BCB26596F2400CCF932 /* CGPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPreviewController.h; sourceTree = "<group>"; };
 		96A94BCC26596F2400CCF932 /* CGPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPreviewController.m; sourceTree = "<group>"; };
-		96B1D74E26652E71003C29D0 /* CGPaintSourceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPaintSourceController.h; sourceTree = "<group>"; };
-		96B1D74F26652E71003C29D0 /* CGPaintSourceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPaintSourceController.m; sourceTree = "<group>"; };
-		96C028BF2659511A0009C77D /* CGPaintController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintController.h; sourceTree = "<group>"; };
-		96C028C12659511A0009C77D /* CGPaintListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintListController.m; sourceTree = "<group>"; };
-		96C028C32659511A0009C77D /* CGPaintController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintController.m; sourceTree = "<group>"; };
-		96C028C52659511A0009C77D /* CGPaintListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintListController.h; sourceTree = "<group>"; };
+		96B1D74E26652E71003C29D0 /* CGPixelSourceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPixelSourceController.h; sourceTree = "<group>"; };
+		96B1D74F26652E71003C29D0 /* CGPixelSourceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPixelSourceController.m; sourceTree = "<group>"; };
+		96C028BF2659511A0009C77D /* CGPixelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPixelController.h; sourceTree = "<group>"; };
+		96C028C12659511A0009C77D /* CGPixelListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPixelListController.m; sourceTree = "<group>"; };
+		96C028C32659511A0009C77D /* CGPixelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPixelController.m; sourceTree = "<group>"; };
+		96C028C52659511A0009C77D /* CGPixelListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPixelListController.h; sourceTree = "<group>"; };
 		E5E981652658D256008ED21D /* CGPixel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGPixel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E981682658D257008ED21D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5E981692658D257008ED21D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 		E5E982292658D756008ED21D /* nv21_1120x1120.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nv21_1120x1120.yuv; sourceTree = "<group>"; };
 		E5E9822A2658D756008ED21D /* nv12_1120x1120.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nv12_1120x1120.yuv; sourceTree = "<group>"; };
 		E5E9822B2658D756008ED21D /* nv12_1120x1120_bgra.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nv12_1120x1120_bgra.yuv; sourceTree = "<group>"; };
-		E5FE984D266507BD00548BB1 /* CGPaintVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPaintVideoController.h; sourceTree = "<group>"; };
-		E5FE984E266507BD00548BB1 /* CGPaintVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPaintVideoController.m; sourceTree = "<group>"; };
+		E5FE984D266507BD00548BB1 /* CGPixelVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPixelVideoController.h; sourceTree = "<group>"; };
+		E5FE984E266507BD00548BB1 /* CGPixelVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPixelVideoController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,20 +129,20 @@
 		E5E9820C2658D756008ED21D /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				9646E527278556FD00BFE83C /* CGPaintCameraController.h */,
-				9646E526278556FD00BFE83C /* CGPaintCameraController.m */,
-				96C028BF2659511A0009C77D /* CGPaintController.h */,
-				96C028C32659511A0009C77D /* CGPaintController.m */,
-				96C028C52659511A0009C77D /* CGPaintListController.h */,
-				96C028C12659511A0009C77D /* CGPaintListController.m */,
+				9646E527278556FD00BFE83C /* CGPixelCameraController.h */,
+				9646E526278556FD00BFE83C /* CGPixelCameraController.m */,
+				96C028BF2659511A0009C77D /* CGPixelController.h */,
+				96C028C32659511A0009C77D /* CGPixelController.m */,
+				96C028C52659511A0009C77D /* CGPixelListController.h */,
+				96C028C12659511A0009C77D /* CGPixelListController.m */,
 				96A94BCB26596F2400CCF932 /* CGPreviewController.h */,
 				96A94BCC26596F2400CCF932 /* CGPreviewController.m */,
-				E5FE984D266507BD00548BB1 /* CGPaintVideoController.h */,
-				E5FE984E266507BD00548BB1 /* CGPaintVideoController.m */,
-				96B1D74E26652E71003C29D0 /* CGPaintSourceController.h */,
-				96B1D74F26652E71003C29D0 /* CGPaintSourceController.m */,
-				9655B32F273582B900491380 /* CGPaintSource.h */,
-				9655B330273582B900491380 /* CGPaintSource.m */,
+				E5FE984D266507BD00548BB1 /* CGPixelVideoController.h */,
+				E5FE984E266507BD00548BB1 /* CGPixelVideoController.m */,
+				96B1D74E26652E71003C29D0 /* CGPixelSourceController.h */,
+				96B1D74F26652E71003C29D0 /* CGPixelSourceController.m */,
+				9655B32F273582B900491380 /* CGPixelSource.h */,
+				9655B330273582B900491380 /* CGPixelSource.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -284,13 +284,13 @@
 			files = (
 				E5E9816A2658D257008ED21D /* AppDelegate.m in Sources */,
 				E5E9817B2658D259008ED21D /* main.m in Sources */,
-				E5FE984F266507BD00548BB1 /* CGPaintVideoController.m in Sources */,
+				E5FE984F266507BD00548BB1 /* CGPixelVideoController.m in Sources */,
 				96A94BCD26596F2400CCF932 /* CGPreviewController.m in Sources */,
-				96C028C92659511A0009C77D /* CGPaintController.m in Sources */,
-				9655B331273582B900491380 /* CGPaintSource.m in Sources */,
-				96C028C82659511A0009C77D /* CGPaintListController.m in Sources */,
-				96B1D75026652E71003C29D0 /* CGPaintSourceController.m in Sources */,
-				9646E528278556FD00BFE83C /* CGPaintCameraController.m in Sources */,
+				96C028C92659511A0009C77D /* CGPixelController.m in Sources */,
+				9655B331273582B900491380 /* CGPixelSource.m in Sources */,
+				96C028C82659511A0009C77D /* CGPixelListController.m in Sources */,
+				96B1D75026652E71003C29D0 /* CGPixelSourceController.m in Sources */,
+				9646E528278556FD00BFE83C /* CGPixelCameraController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 //
-//  CGPaintGrayFilter.m
-//  CGPaint
+//  CGPixelGrayFilter.m
+//  CGPixel
 //
 //  Created by Jason on 2021/5/30.
 //

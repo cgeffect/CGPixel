@@ -1,6 +1,6 @@
 //
-//  CGPaintFilterInput.h
-//  CGPaint
+//  CGPixelFilterInput.h
+//  CGPixel
 //
 //  Created by Jason on 2021/6/11.
 //

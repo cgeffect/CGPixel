@@ -1,6 +1,6 @@
 //
-//  CGPaintUtils.h
-//  CGPaint
+//  CGPixelUtils.h
+//  CGPixel
 //
 //  Created by Jason on 2021/5/15.
 //

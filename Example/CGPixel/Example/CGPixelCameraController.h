@@ -1,6 +1,6 @@
 //
-//  CGPaintCameraController.h
-//  CGMetaliOS
+//  CGPixelCameraController.h
+//  CGPixel
 //
 //  Created by Jason on 2021/12/25.
 //
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintCameraController : UIViewController
+@interface CGPixelCameraController : UIViewController
 
 @end
 

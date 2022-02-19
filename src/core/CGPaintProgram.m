@@ -1,6 +1,6 @@
 //
-//  CGPaintProgram.m
-//  CGPaint
+//  CGPixelProgram.m
+//  CGPixel
 //
 //  Created by Jason on 21/3/1.
 //

@@ -1,19 +1,19 @@
 //
-//  CGPaintListController.m
-//  CGPaint
+//  CGPixelListController.m
+//  CGPixel
 //
 //  Created by CGPaint on 2021/5/19.
 //
 
-#import "CGPaintListController.h"
-#import "CGPaintController.h"
-#import "CGPaintVideoController.h"
+#import "CGPixelListController.h"
+#import "CGPixelController.h"
+#import "CGPixelVideoController.h"
 
-@interface CGPaintListController ()
+@interface CGPixelListController ()
 
 @end
 
-@implementation CGPaintListController
+@implementation CGPixelListController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,7 +53,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    CGPaintController *vc = [[CGPaintController alloc] init];
+    CGPixelController *vc = [[CGPixelController alloc] init];
     vc.filterType = (CGRFilterType)indexPath.row;
     vc.inputType = CG_IMAGE;
     [self.navigationController pushViewController:vc animated:YES];

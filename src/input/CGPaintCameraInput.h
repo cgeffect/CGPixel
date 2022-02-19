@@ -1,5 +1,5 @@
 //
-//  CGPaintCameraInput.h
+//  CGPixelCameraInput.h
 //  CGMetal
 //
 //  Created by Jason on 2021/12/23.

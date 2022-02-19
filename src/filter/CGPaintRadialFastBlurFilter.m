@@ -1,6 +1,6 @@
 //
-//  CGPaintRadialFastBlurFilter.m
-//  CGPaint
+//  CGPixelRadialFastBlurFilter.m
+//  CGPixel
 //
 //  Created by CGPaint on 2021/5/18.
 //

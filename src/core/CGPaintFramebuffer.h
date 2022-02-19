@@ -1,6 +1,6 @@
 //
-//  CGPaintFramebuffer.h
-//  CGPaint
+//  CGPixelFramebuffer.h
+//  CGPixel
 //
 //  Created by Jason on 21/3/1.
 //

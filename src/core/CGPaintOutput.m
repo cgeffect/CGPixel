@@ -1,6 +1,6 @@
 //
-//  CGPaintOutput.m
-//  CGPaint
+//  CGPixelOutput.m
+//  CGPixel
 //
 //  Created by Jason on 21/3/3.
 //

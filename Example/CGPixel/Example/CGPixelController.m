@@ -1,15 +1,15 @@
 //
-//  CGPaintController.m
-//  CGPaint
+//  CGPixelController.m
+//  CGPixel
 //
 //  Created by Jason on 2021/5/15.
 //
 
-#import "CGPaintController.h"
+#import "CGPixelController.h"
 #import "CGPaint.h"
 #import "CGPreviewController.h"
-#import "CGPaintSource.h"
-@interface CGPaintController ()
+#import "CGPixelSource.h"
+@interface CGPixelController ()
 {
     CGPaintOutput *_inputSource;
     CGPaintFilter<CGPaintInput> *filter;
@@ -19,7 +19,7 @@
 }
 @end
 
-@implementation CGPaintController
+@implementation CGPixelController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -59,8 +59,8 @@
             self.navigationItem.title = @"CG_PIXELBUFFER";
             NSString *path = [[NSBundle mainBundle] pathForResource:@"nv12_1120x1120_bgra" ofType:@"yuv"];
             NSData *nv12 = [NSData dataWithContentsOfFile:path];
-            CVPixelBufferRef pixel = [CGPaintSource pixelBufferCreate:kCVPixelFormatType_32BGRA width:1120 height:1120];
-            [CGPaintSource create32BGRAPixelBufferWithNV12:(UInt8 *)nv12.bytes width:1120 height:1120 dstBuffer:pixel];
+            CVPixelBufferRef pixel = [CGPixelSource pixelBufferCreate:kCVPixelFormatType_32BGRA width:1120 height:1120];
+            [CGPixelSource create32BGRAPixelBufferWithNV12:(UInt8 *)nv12.bytes width:1120 height:1120 dstBuffer:pixel];
             _inputSource = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixel format:CGPixelFormatBGRA];
             CVPixelBufferRelease(pixel);
         } break;
@@ -117,14 +117,14 @@
         if (seg.selectedSegmentIndex == 0) {
             NSString *path = [[NSBundle mainBundle] pathForResource:@"nv12_1120x1120_bgra" ofType:@"yuv"];
             NSData *nv12 = [NSData dataWithContentsOfFile:path];
-            CVPixelBufferRef pixel = [CGPaintSource pixelBufferCreate:kCVPixelFormatType_32BGRA width:1120 height:1120];
-            [CGPaintSource create32BGRAPixelBufferWithNV12:(UInt8 *)nv12.bytes width:1120 height:1120 dstBuffer:pixel];
+            CVPixelBufferRef pixel = [CGPixelSource pixelBufferCreate:kCVPixelFormatType_32BGRA width:1120 height:1120];
+            [CGPixelSource create32BGRAPixelBufferWithNV12:(UInt8 *)nv12.bytes width:1120 height:1120 dstBuffer:pixel];
             self->_inputSource = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixel format:CGPixelFormatBGRA];
             CVPixelBufferRelease(pixel);
         } else if (seg.selectedSegmentIndex == 1) {
             NSString *path = [[NSBundle mainBundle] pathForResource:@"nv12_1120x1120" ofType:@"yuv"];
             NSData *nv12 = [NSData dataWithContentsOfFile:path];
-            CVPixelBufferRef pixel = [CGPaintSource create420Yp8_CbCr8PixelBufferWithNV12:(UInt8 *)nv12.bytes width:1120 height:1120];
+            CVPixelBufferRef pixel = [CGPixelSource create420Yp8_CbCr8PixelBufferWithNV12:(UInt8 *)nv12.bytes width:1120 height:1120];
             self->_inputSource = [[CGPaintPixelBufferInput alloc] initWithPixelBuffer:pixel format:CGPixelFormatNV12];
             CVPixelBufferRelease(pixel);
         }

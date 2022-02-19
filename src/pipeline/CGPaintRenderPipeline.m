@@ -1,6 +1,6 @@
 //
-//  CGPaintRenderPipeline.m
-//  CGPaint
+//  CGPixelRenderPipeline.m
+//  CGPixel
 //
 //  Created by Jason on 21/3/1.
 //

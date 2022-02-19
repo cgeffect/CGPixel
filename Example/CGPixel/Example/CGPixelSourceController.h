@@ -1,6 +1,6 @@
 //
-//  CGPaintSourceController.h
-//  CGPaint
+//  CGPixelSourceController.h
+//  CGPixel
 //
 //  Created by Jason on 2021/5/31.
 //
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintSourceController : UITableViewController
+@interface CGPixelSourceController : UITableViewController
 
 @end
 

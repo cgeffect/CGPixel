@@ -1,6 +1,6 @@
 //
-//  CGPaintController.h
-//  CGPaint
+//  CGPixelController.h
+//  CGPixel
 //
 //  Created by Jason on 2021/5/15.
 //
@@ -29,7 +29,7 @@ typedef enum {
     CG_VIDEO
 } CGRInputType;
 
-@interface CGPaintController : UIViewController
+@interface CGPixelController : UIViewController
 @property(nonatomic, assign)CGRFilterType filterType;
 @property(nonatomic, assign)CGRInputType inputType;
 @end

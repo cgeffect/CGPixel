@@ -1,16 +1,16 @@
 //
-//  CGPaintVideoController.h
-//  CGPaint
+//  CGPixelVideoController.h
+//  CGPixel
 //
 //  Created by Jason on 2021/5/31.
 //
 
 #import <UIKit/UIKit.h>
-#import "CGPaintController.h"
+#import "CGPixelController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintVideoController : UIViewController
+@interface CGPixelVideoController : UIViewController
 
 @end
 

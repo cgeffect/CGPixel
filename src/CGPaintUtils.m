@@ -1,6 +1,6 @@
 //
-//  CGPaintUtils.m
-//  CGPaint
+//  CGPixelUtils.m
+//  CGPixel
 //
 //  Created by Jason on 2021/5/15.
 //

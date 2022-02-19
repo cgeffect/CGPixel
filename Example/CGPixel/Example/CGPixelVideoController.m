@@ -1,14 +1,14 @@
 //
-//  CGPaintVideoController.m
-//  CGPaint
+//  CGPixelVideoController.m
+//  CGPixel
 //
 //  Created by Jason on 2021/5/31.
 //
 
-#import "CGPaintVideoController.h"
+#import "CGPixelVideoController.h"
 #import "CGPaint.h"
 
-@interface CGPaintVideoController ()
+@interface CGPixelVideoController ()
 {
     CGPaintViewOutput *_paintview;
     CGPaintVideoInput *_inputSource;
@@ -18,7 +18,7 @@
 }
 @end
 
-@implementation CGPaintVideoController
+@implementation CGPixelVideoController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

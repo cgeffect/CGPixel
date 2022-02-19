@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  CGPaint
+//  CGPixel
 //
 //  Created by CGPaint on 2021/5/22.
 //

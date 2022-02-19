@@ -1,6 +1,6 @@
 //
-//  CGPaintFilter.h
-//  CGPaint
+//  CGPixelFilter.h
+//  CGPixel
 //
 //  Created by CGPaint on 2021/5/13.
 //

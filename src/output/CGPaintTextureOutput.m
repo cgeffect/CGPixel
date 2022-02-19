@@ -1,6 +1,6 @@
 //
-//  CGPaintTextureOutput.m
-//  CGPaint
+//  CGPixelTextureOutput.m
+//  CGPixel
 //
 //  Created by CGPaint on 2021/5/13.
 //  Copyright © 2021 CGPaint. All rights reserved.

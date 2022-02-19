@@ -1,6 +1,6 @@
 //
-//  CGPaintPixelbufferOutput.m
-//  CGPaint
+//  CGPixelPixelbufferOutput.m
+//  CGPixel
 //
 //  Created by CGPaint on 2021/5/14.
 //

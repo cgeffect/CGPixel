@@ -1,6 +1,6 @@
 //
-//  CGPaintSource.h
-//  CGPaint
+//  CGPixelSource.h
+//  CGPixel
 //
 //  Created by Jason on 2021/11/5.
 //
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CGPaintSource : NSObject
+@interface CGPixelSource : NSObject
 UInt8 * CGRDecodeImage32LittleARGB1(CGImageRef imageRef, int width, int height);
 
 //大端模式RGBA

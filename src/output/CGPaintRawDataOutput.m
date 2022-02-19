@@ -1,6 +1,6 @@
 //
-//  CGPaintRawDataOutput.m
-//  CGPaint
+//  CGPixelRawDataOutput.m
+//  CGPixel
 //
 //  Created by CGPaint on 2021/5/13.
 //

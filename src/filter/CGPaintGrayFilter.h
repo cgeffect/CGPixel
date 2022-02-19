@@ -1,6 +1,6 @@
 //
-//  CGPaintGrayFilter.h
-//  CGPaint
+//  CGPixelGrayFilter.h
+//  CGPixel
 //
 //  Created by Jason on 2021/5/30.
 //

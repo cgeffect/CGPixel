@@ -1,11 +1,11 @@
 //
-//  CGPaintSource.m
-//  CGPaint
+//  CGPixelSource.m
+//  CGPixel
 //
 //  Created by Jason on 2021/11/5.
 //
 
-#import "CGPaintSource.h"
+#import "CGPixelSource.h"
 #import <Accelerate/Accelerate.h>
 
 CGColorSpaceRef YYCGColorSpaceGetDeviceRGB(void) {
@@ -17,7 +17,7 @@ CGColorSpaceRef YYCGColorSpaceGetDeviceRGB(void) {
     return space;
 }
 
-@implementation CGPaintSource
+@implementation CGPixelSource
 
 /*
  kCGImageAlphaPremultipliedFirst所表示的信息

@@ -1,6 +1,6 @@
 //
-//  CGPaintViewOutput.h
-//  CGPaint
+//  CGPixelViewOutput.h
+//  CGPixel
 //
 //  Created by Jason on 21/3/3.
 //

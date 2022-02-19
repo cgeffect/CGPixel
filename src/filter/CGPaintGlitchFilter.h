@@ -1,6 +1,6 @@
 //
-//  CGPaintGlitchFilter.h
-//  CGPaint
+//  CGPixelGlitchFilter.h
+//  CGPixel
 //
 //  Created by CGPaint on 2021/5/19.
 //  Copyright © 2021 CGPaint. All rights reserved.

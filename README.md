@@ -4,7 +4,7 @@
 
 CGPixel 是一个适用于 iOS 的GPU加速OpenGL处理库<br>
 
-SDK 的 Github 地址：https://github.com/cgeffect/CGPaint
+SDK 的 Github 地址：https://github.com/cgeffect/CGPixel
 
 感谢 GPUImage https://github.com/BradLarson/GPUImage
 

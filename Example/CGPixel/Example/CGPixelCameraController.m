@@ -1,15 +1,15 @@
 //
-//  CGPaintCameraController.m
-//  CGMetaliOS
+//  CGPixelCameraController.m
+//  CGPixel
 //
 //  Created by Jason on 2021/12/25.
 //
 
-#import "CGPaintCameraController.h"
+#import "CGPixelCameraController.h"
 #import "CGPreviewController.h"
 #import "CGPaint.h"
 
-@interface CGPaintCameraController ()<CGPaintCaptureDelegate>
+@interface CGPixelCameraController ()<CGPaintCaptureDelegate>
 {
     CGPaintViewOutput *_metalView;
     CGPaintCameraInput *_cameraInput;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation CGPaintCameraController
+@implementation CGPixelCameraController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

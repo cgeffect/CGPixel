@@ -1,6 +1,6 @@
 //
-//  CGPaintSoulFilter.m
-//  CGPaint
+//  CGPixelSoulFilter.m
+//  CGPixel
 //
 //  Created by CGPaint on 2021/5/14.
 //  Copyright © 2021 CGPaint. All rights reserved.

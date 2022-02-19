@@ -1,6 +1,6 @@
 //
-//  CGPaintRadialScaleBlurFilter.m
-//  CGPaint
+//  CGPixelRadialScaleBlurFilter.m
+//  CGPixel
 //
 //  Created by CGPaint on 2021/5/19.
 //

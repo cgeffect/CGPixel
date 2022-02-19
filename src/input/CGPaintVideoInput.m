@@ -1,6 +1,6 @@
 //
-//  CGPaintVideoInput.m
-//  CGPaint
+//  CGPixelVideoInput.m
+//  CGPixel
 //
 //  Created by Jason on 2021/5/31.
 //

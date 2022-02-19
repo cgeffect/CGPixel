@@ -1,6 +1,6 @@
 //
 //  CGPreviewController.h
-//  CGPaint
+//  CGPixel
 //
 //  Created by Jason on 2021/5/23.
 //
