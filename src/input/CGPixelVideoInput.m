@@ -75,8 +75,8 @@ static void *AVPlayerItemStatusContext = &AVPlayerItemStatusContext;
         CVPixelBufferRef pixelBuffer = NULL;
         pixelBuffer = [[self videoOutput] copyPixelBufferForItemTime:outputItemTime itemTimeForDisplay:NULL];
         [self.delegate output:self pixelbuffer:pixelBuffer];
-        size_t w = CVPixelBufferGetWidth(pixelBuffer);
-        size_t h = CVPixelBufferGetHeight(pixelBuffer);
+//        size_t w = CVPixelBufferGetWidth(pixelBuffer);
+//        size_t h = CVPixelBufferGetHeight(pixelBuffer);
         
 //        if (_dstData == nil) {
 //            _dstData = malloc(w * h * 3 / 2);

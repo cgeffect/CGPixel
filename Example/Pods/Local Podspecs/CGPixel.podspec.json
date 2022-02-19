@@ -1,6 +1,6 @@
 {
   "name": "CGPixel",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "summary": "A short description of OpenGL.",
   "description": "GPU Render use OpenGL.",
   "homepage": "https://github.com/cgeffect/CGPaint",
@@ -9,7 +9,7 @@
     "Jason": "JasonBee@163.com"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "11.0"
   },
   "source": {
     "path": "."

@@ -11,6 +11,7 @@
 #endif
 
 #import "CGPixel.h"
+#import "CGPixelDefine.h"
 #import "CGPixelUtils.h"
 #import "CGPixelContext.h"
 #import "CGPixelFilterInput.h"
