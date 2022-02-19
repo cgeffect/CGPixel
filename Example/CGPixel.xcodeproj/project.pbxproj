@@ -46,8 +46,6 @@
 		96C028C12659511A0009C77D /* CGPaintListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintListController.m; sourceTree = "<group>"; };
 		96C028C32659511A0009C77D /* CGPaintController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPaintController.m; sourceTree = "<group>"; };
 		96C028C52659511A0009C77D /* CGPaintListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPaintListController.h; sourceTree = "<group>"; };
-		98A558B9CEFCC69B7031A1EB /* Pods-CGRImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGRImage.debug.xcconfig"; path = "Target Support Files/Pods-CGRImage/Pods-CGRImage.debug.xcconfig"; sourceTree = "<group>"; };
-		CA02DD8EC87AFF29345AB2F8 /* Pods-CGRImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGRImage.release.xcconfig"; path = "Target Support Files/Pods-CGRImage/Pods-CGRImage.release.xcconfig"; sourceTree = "<group>"; };
 		E5E981652658D256008ED21D /* CGPixel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGPixel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E981682658D257008ED21D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5E981692658D257008ED21D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,8 +79,6 @@
 		30F37C3CBD6CB3D0F49043F8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				98A558B9CEFCC69B7031A1EB /* Pods-CGRImage.debug.xcconfig */,
-				CA02DD8EC87AFF29345AB2F8 /* Pods-CGRImage.release.xcconfig */,
 				333C159742C0EBCC1433B48C /* Pods-CGPixel.debug.xcconfig */,
 				02A12414E844F676F7CAC7CE /* Pods-CGPixel.release.xcconfig */,
 			);
