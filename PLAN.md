@@ -4,3 +4,6 @@
 接下来两个计划:
 把opengl的渲染流程改成和metal相似
 把渲染任务全部放进队列异步执行
+
+https://github.com/LinBinghe/XMedia
+https://github.com/wangyijin/GPUImage-x
