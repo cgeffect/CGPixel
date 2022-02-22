@@ -146,7 +146,7 @@ GLfloat textureCoordinates[] = {
     
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, inputTex);
-    glUniform1i(_uTexture, CG_TEXTURE0);
+    glUniform1i(_uTexture, VGX_TEXTURE0);
     
     glEnableVertexAttribArray(_aPosition);
     glVertexAttribPointer(_aPosition, 2, GL_FLOAT, 0, 0, imageVertices);

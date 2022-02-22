@@ -230,7 +230,7 @@ static const GLfloat textureCoordinates[] = {
     } else if (format == CGPixelDataFormatI420) {
         [self drawI420ToFBO];
     }
-    [self->_outputFramebuffer bindFramebuffer];
+    [self->_outputFramebuffer unbindFramebuffer];
     [self->_shaderProgram unuse];
 }
 
@@ -243,11 +243,11 @@ static const GLfloat textureCoordinates[] = {
     
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, _yFramebuffer.texture);
-    glUniform1i(_yTexUniform, CG_TEXTURE0);
+    glUniform1i(_yTexUniform, VGX_TEXTURE0);
     
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, _uvFramebuffer.texture);
-    glUniform1i(_uvTexUniform, CG_TEXTURE1);
+    glUniform1i(_uvTexUniform, VGX_TEXTURE1);
     
     glEnableVertexAttribArray(self->_position);
     glVertexAttribPointer(_position, 2, GL_FLOAT, 0, 0, imageVertices);
@@ -266,15 +266,15 @@ static const GLfloat textureCoordinates[] = {
     
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, _yFramebuffer.texture);
-    glUniform1i(_yTexUniform, CG_TEXTURE0);
+    glUniform1i(_yTexUniform, VGX_TEXTURE0);
     
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, _uFramebuffer.texture);
-    glUniform1i(_uTexUniform, CG_TEXTURE1);
+    glUniform1i(_uTexUniform, VGX_TEXTURE1);
     
     glActiveTexture(GL_TEXTURE2);
     glBindTexture(GL_TEXTURE_2D, _vFramebuffer.texture);
-    glUniform1i(_vTexUniform, CG_TEXTURE2);
+    glUniform1i(_vTexUniform, VGX_TEXTURE2);
     
     glEnableVertexAttribArray(self->_position);
     glVertexAttribPointer(_position, 2, GL_FLOAT, 0, 0, imageVertices);

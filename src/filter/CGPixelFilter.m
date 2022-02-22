@@ -187,7 +187,7 @@ static const GLfloat textureCoordinates[] = {
 
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, _inputFramebuffer.texture);
-    glUniform1i(_uTexture, CG_TEXTURE0);
+    glUniform1i(_uTexture, VGX_TEXTURE0);
 
     //这个地方要修改, 使用VBO
     //纹理和顶点坐标一定要是有VBO, 否则某些情况下会出现bug

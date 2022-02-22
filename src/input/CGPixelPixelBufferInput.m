@@ -240,11 +240,11 @@ NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
     
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, _yTex);
-    glUniform1i(_yTexUniform, CG_TEXTURE0);
+    glUniform1i(_yTexUniform, VGX_TEXTURE0);
     
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, _uvTex);
-    glUniform1i(_uvTexUniform, CG_TEXTURE1);
+    glUniform1i(_uvTexUniform, VGX_TEXTURE1);
     
     glEnableVertexAttribArray(self->_position);
     glVertexAttribPointer(self->_position, 2, GL_FLOAT, 0, 0, imageVertices);
