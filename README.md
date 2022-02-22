@@ -48,3 +48,5 @@ CGPixelViewOutput * paintview = [[CGPixelViewOutput alloc] initWithFrame:frame];
 iOS11以上, Xcode 13及其以上
 
 Metal实现滤镜渲染链[CGMetal](https://github.com/cgeffect/CGMetal)
+
+没啥历史包袱建议直接上metal, Api简单, 健壮, 性能强劲!!!
