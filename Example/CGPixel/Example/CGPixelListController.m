@@ -47,6 +47,11 @@
         case CG_RADIAL_SCALE_BLUR: cell.textLabel.text = @"径向缩放模糊"; break;
         case CG_RADIAL_ROTATE_BLUR: cell.textLabel.text = @"径向旋转模糊"; break;
         case CG_VORTEX: cell.textLabel.text = @"旋涡"; break;
+        case CG_SKETCH: cell.textLabel.text = @"素描"; break;
+        case CG_MOSAIC: cell.textLabel.text = @"马赛克"; break;
+        case CG_DOT_MOSAIC: cell.textLabel.text = @"点状马赛克"; break;
+        case CG_CARTOON: cell.textLabel.text = @"卡通"; break;
+
     }
         
     return cell;

@@ -165,6 +165,22 @@
         {
             filter = [[CGPixelVortexFilter alloc] init];
         }break;
+        case CG_SKETCH:
+        {
+            filter = [[CGPixelSketchFilter alloc] init];
+        }break;
+        case CG_MOSAIC:
+        {
+            filter = [[CGPixelMosaicFilter alloc] init];
+        }break;
+        case CG_DOT_MOSAIC:
+        {
+            filter = [[CGPixelDotMosaicFilter alloc] init];
+        }break;
+        case CG_CARTOON:
+        {
+            filter = [[CGPixelCartoonFilter alloc] init];
+        }break;
         default:
             break;
     }

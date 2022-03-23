@@ -18,6 +18,10 @@ typedef enum {
     CG_RADIAL_SCALE_BLUR,
     CG_RADIAL_ROTATE_BLUR,
     CG_VORTEX,
+    CG_SKETCH,
+    CG_MOSAIC,
+    CG_DOT_MOSAIC,
+    CG_CARTOON,
     CG_NUMFILTERS
 } CGRFilterType;
 
