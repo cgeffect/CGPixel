@@ -104,8 +104,10 @@
         return;
     }
     NSMutableArray *framebufferList = [_framebufferCache objectForKey:framebuffer.hashKey];
-    [framebufferList addObject:framebuffer];
-    framebuffer.isActivite = NO;
+    if (framebufferList) {
+        [framebufferList addObject:framebuffer];
+        framebuffer.isActivite = NO;
+    }
 }
 
 - (void)dealloc
