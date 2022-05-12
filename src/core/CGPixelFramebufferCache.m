@@ -100,6 +100,9 @@
 }
 
 - (void)recycleFramebufferToCache:(CGPixelFramebuffer *)framebuffer {
+    if (framebuffer.hashKey.length == 0) {
+        return;
+    }
     NSMutableArray *framebufferList = [_framebufferCache objectForKey:framebuffer.hashKey];
     [framebufferList addObject:framebuffer];
     framebuffer.isActivite = NO;
