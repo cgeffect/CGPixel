@@ -34,6 +34,7 @@
 #import "CGPixelSketchFilter.h"
 #import "CGPixelSoulFilter.h"
 #import "CGPixelVortexFilter.h"
+#import "CGPixelYuvFilter.h"
 #import "CGPixelCameraInput.h"
 #import "CGPixelImageInput.h"
 #import "CGPixelPixelBufferInput.h"
@@ -43,9 +44,9 @@
 #import "CGPixelImageOutput.h"
 #import "CGPixelPixelbufferOutput.h"
 #import "CGPixelRawDataOutput.h"
-#import "CGPixelTargetOutput.h"
 #import "CGPixelTextureOutput.h"
 #import "CGPixelViewOutput.h"
+#import "CGPixelYuvOutput.h"
 #import "CGPixelPipelineOutput.h"
 #import "CGPixelRenderPipeline.h"
 

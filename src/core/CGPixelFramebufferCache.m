@@ -87,6 +87,7 @@
 }
 
 - (void)deleteAllUnassignedFramebuffers {
+    //CGPixelFramebuffer从数组移除之后会被释放, 在CGPixelFramebuffer的dealloc里进行纹理和fbo释放, 释放可以考虑放在这里
     [self->_framebufferCache removeAllObjects];
     CVOpenGLESTextureCacheFlush([[CGPixelContext sharedRenderContext] coreVideoTextureCache], 0);
 }

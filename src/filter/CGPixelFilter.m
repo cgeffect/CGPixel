@@ -209,15 +209,19 @@ static const GLfloat textureCoordinates[] = {
     [self->_outputFramebuffer unbindFramebuffer];
     [self->_outputFramebuffer unbindTexture];
     [self->_shaderProgram unuse];
-    if (_inputFramebuffer.isOnlyGenTexture == NO) {
-        [_inputFramebuffer recycle];
-    }
+//    if (_inputFramebuffer.isOnlyGenTexture == NO) {
+//        [_inputFramebuffer recycle];
+//    }
 }
 
 - (void)notifyNextTargetsAboutNewFrameAtTime:(CMTime)frameTime {
+    [_inputFramebuffer recycle];
+
     for (id<CGPixelInput> currentTarget in _targets) {
         [currentTarget newFrameReadyAtTime:kCMTimeZero framebuffer:self->_outputFramebuffer];
     }
+    
+    [_outputFramebuffer recycle];
 }
 
 #pragma mark -

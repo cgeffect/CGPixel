@@ -63,7 +63,7 @@
 //        memcpy(dst, bgra, totalBytesForImage);
 //        CVPixelBufferUnlockBaseAddress(dstBuffer, kCVPixelBufferLock_ReadOnly);
 //        self.outputCallback(dstBuffer);
-//        free(rgba);
+        free(rgba);
 //        free(bgra);
 //        CVPixelBufferRelease(dstBuffer);
     }
