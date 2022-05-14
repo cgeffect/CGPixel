@@ -47,6 +47,12 @@ CGPixelViewOutput * paintview = [[CGPixelViewOutput alloc] initWithFrame:frame];
 模拟器不支持fast texture upload, 使用真机运行
 iOS11以上, Xcode 13及其以上
 
-Metal实现滤镜渲染链[CGMetal](https://github.com/cgeffect/CGMetal)
+Metal实现滤镜渲染[CGMetal](https://github.com/cgeffect/CGMetal)
 
 没啥历史包袱建议直接上metal, Api简单, 健壮, 性能强劲!!!
+
+### PLAN
+现代最新版的一些图形api, 包括vulkan/metal 都有相同的设计理念, opengl是面向过程的, metal是面向对象的, 最要命的是opengl天生不适合多线程并发, 线程和上下文绑定 
+接下来两个计划:
+1. GL线程单独抽离出来, 和渲染完全分开
+2. 把opengl的渲染流程改成和metal相似
