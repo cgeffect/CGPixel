@@ -26,6 +26,7 @@
 #import "CGPixelGlitchFilter.h"
 #import "CGPixelGrayFilter.h"
 #import "CGPixelMosaicFilter.h"
+#import "CGPixelPhotoFilter.h"
 #import "CGPixelRadialFastBlurFilter.h"
 #import "CGPixelRadialRotateBlurFilter.h"
 #import "CGPixelRadialScaleBlurFilter.h"

@@ -9,10 +9,17 @@
 #import <Accelerate/Accelerate.h>
 
 @implementation CGPixelPixelbufferOutput
+{
+    CGPixelFramebuffer *_finallyFramebuffer;
+}
 
 #pragma mark -
-#pragma mark Image capture
-- (void)captureFramebufferToOutput {
+#pragma mark CGPaintInput
+- (void)setInputFramebuffer:(CGPixelFramebuffer *)framebuffer {
+    _finallyFramebuffer = framebuffer;
+}
+
+- (void)newFrameReadyAtTime:(CMTime)frameTime timimgInfo:(CMSampleTimingInfo)timimgInfo {
     if (_outputCallback == nil || self.enableOutput == NO) {
         return;
     }
@@ -24,23 +31,43 @@
         NSAssert(_finallyFramebuffer.textureOptions.internalFormat == GL_RGBA, @"For conversion to a CGImage the output texture format for this filter must be GL_RGBA.");
         NSAssert(_finallyFramebuffer.textureOptions.type == GL_UNSIGNED_BYTE, @"For conversion to a CGImage the type of the output texture of this filter must be GL_UNSIGNED_BYTE.");
         
-        __block GLubyte *rawImagePixels;
-        CGSize _size = self->_finallyFramebuffer.fboSize;
-        NSUInteger totalBytesForImage = (int)_size.width * (int)_size.height * 4;
+        __block GLubyte *rgba;
+        CGSize size = self->_finallyFramebuffer.fboSize;
+        NSUInteger totalBytesForImage = (int)size.width * (int)size.height * 4;
         runSyncOnSerialQueue(^{
             [[CGPixelContext sharedRenderContext] useAsCurrentContext];
             [self->_finallyFramebuffer bindFramebuffer];
-            rawImagePixels = (GLubyte *)malloc(totalBytesForImage);
-            glReadPixels(0, 0, (int)_size.width, (int)_size.height, GL_RGBA, GL_UNSIGNED_BYTE, rawImagePixels);
+            rgba = (GLubyte *)malloc(totalBytesForImage);
+            glReadPixels(0, 0, (int)size.width, (int)size.height, GL_RGBA, GL_UNSIGNED_BYTE, rgba);
         });
-        CVPixelBufferRef dstBuffer = [self pixelBufferCreate:kCVPixelFormatType_32BGRA width:_size.width height:_size.height];
-        CVPixelBufferLockBaseAddress(dstBuffer, kCVPixelBufferLock_ReadOnly);
-        void * dst = CVPixelBufferGetBaseAddress(dstBuffer);
-        memcpy(dst, rawImagePixels, totalBytesForImage);
-        CVPixelBufferUnlockBaseAddress(dstBuffer, kCVPixelBufferLock_ReadOnly);
-        self.outputCallback(dstBuffer);
-        free(rawImagePixels);
-        CVPixelBufferRelease(dstBuffer);
+        
+//        CGColorSpaceRef defaultRGBColorSpace = CGColorSpaceCreateDeviceRGB();
+//        CGDataProviderRef dataProvider = CGDataProviderCreateWithData(NULL, rawImagePixels, totalBytesForImage, NULL);
+//        CGImageRef cgImageFromBytes = CGImageCreate((int)size.width, (int)size.height, 8, 32, 4 * (int)size.width, defaultRGBColorSpace, kCGBitmapByteOrderDefault | kCGImageAlphaLast, dataProvider, NULL, NO, kCGRenderingIntentDefault);
+//        CGDataProviderRelease(dataProvider);
+//        CGColorSpaceRelease(defaultRGBColorSpace);
+
+//        uint8_t *bgra = (uint8_t *)malloc(size.width * size.height * 4);
+//        int index = 0;
+//        for (int i = 0; i < size.width; i++) {
+//            for (int j = 0; j < size.height; j++) {
+//                //BGRA -> RGBA
+//                memcpy(*(bgra + index + 0), *(rgba + index + 2), 1);
+//                memcpy(*(bgra + index + 1), *(rgba + index + 1), 1);
+//                memcpy(*(bgra + index + 2), *(rgba + index + 0), 1);
+//                memcpy(*(bgra + index + 3), *(rgba + index + 3), 1);
+//                index += 4;
+//            }
+//        }
+//        CVPixelBufferRef dstBuffer = [self pixelBufferCreate:kCVPixelFormatType_32BGRA width:size.width height:size.height];
+//        CVPixelBufferLockBaseAddress(dstBuffer, kCVPixelBufferLock_ReadOnly);
+//        void * dst = CVPixelBufferGetBaseAddress(dstBuffer);
+//        memcpy(dst, bgra, totalBytesForImage);
+//        CVPixelBufferUnlockBaseAddress(dstBuffer, kCVPixelBufferLock_ReadOnly);
+//        self.outputCallback(dstBuffer);
+//        free(rgba);
+//        free(bgra);
+//        CVPixelBufferRelease(dstBuffer);
     }
 }
 

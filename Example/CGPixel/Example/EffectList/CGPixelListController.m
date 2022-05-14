@@ -51,7 +51,7 @@
         case CG_MOSAIC: cell.textLabel.text = @"马赛克"; break;
         case CG_DOT_MOSAIC: cell.textLabel.text = @"点状马赛克"; break;
         case CG_CARTOON: cell.textLabel.text = @"卡通"; break;
-
+        case CG_COLORIZE: cell.textLabel.text = @"仿色"; break;
     }
         
     return cell;

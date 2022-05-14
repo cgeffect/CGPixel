@@ -30,6 +30,7 @@ FOUNDATION_EXPORT const unsigned char CGPaintVersionString[];
 #import "CGPixelDotMosaicFilter.h"
 #import "CGPixelMosaicFilter.h"
 #import "CGPixelCartoonFilter.h"
+#import "CGPixelPhotoFilter.h"
 
 #pragma mark -
 #pragma mark Input

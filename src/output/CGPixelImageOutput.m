@@ -8,26 +8,18 @@
 
 #import "CGPixelImageOutput.h"
 
-@interface CGPixelImageOutput ()
-{
-}
-@end
-
 @implementation CGPixelImageOutput
+{
+    CGPixelFramebuffer *_finallyFramebuffer;
+}
 
 #pragma mark -
-#pragma mark Image capture
-void dataProviderReleaseCallbackForImage (void *info, const void *data, size_t size)
-{
-    free((void *)data);
-}
-void dataProviderCallbackForImage (void *info, const void *data, size_t size)
-{
-//    CGPixelFramebuffer *framebuffer = (__bridge_transfer CGPixelFramebuffer*)info;
-    
+#pragma mark CGPaintInput
+- (void)setInputFramebuffer:(CGPixelFramebuffer *)framebuffer {
+    _finallyFramebuffer = framebuffer;
 }
 
-- (void)captureFramebufferToOutput {
+- (void)newFrameReadyAtTime:(CMTime)frameTime timimgInfo:(CMSampleTimingInfo)timimgInfo {
     if (_outputCallback == nil || self.enableOutput == NO) {
         return;
     }
@@ -66,6 +58,18 @@ void dataProviderCallbackForImage (void *info, const void *data, size_t size)
     });
     self.outputCallback(cgImageFromBytes);
     CGImageRelease(cgImageFromBytes);
+}
+
+#pragma mark -
+#pragma mark Image capture
+void dataProviderReleaseCallbackForImage (void *info, const void *data, size_t size)
+{
+    free((void *)data);
+}
+void dataProviderCallbackForImage (void *info, const void *data, size_t size)
+{
+//    CGPixelFramebuffer *framebuffer = (__bridge_transfer CGPixelFramebuffer*)info;
+    
 }
 
 - (void)dealloc

@@ -261,6 +261,9 @@ static const GLfloat textureCoordinates[] = {
     _value = value;
 }
 
+- (void)setInValue3:(vec_float3)inValue {
+    
+}
 #pragma mark -
 #pragma mark Image capture
 void dataProviderReleaseCallback (void *info, const void *data, size_t size)

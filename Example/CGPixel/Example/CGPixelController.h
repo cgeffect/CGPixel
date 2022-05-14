@@ -22,6 +22,7 @@ typedef enum {
     CG_MOSAIC,
     CG_DOT_MOSAIC,
     CG_CARTOON,
+    CG_COLORIZE,
     CG_NUMFILTERS
 } CGRFilterType;
 

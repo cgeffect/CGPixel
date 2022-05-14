@@ -44,6 +44,15 @@
 - (void)removeAllTargets
 {
     runSyncOnSerialQueue(^{
+        //这里不用加递归删除, 滤镜链的结构为数组里面套数组, 最外层数组被删除, 内部的数组也会被删除
+        for (CGPixelOutput *output in self->_targets) {
+            
+            //最后一个输出节点是没有输出的, 所以也就没有removeAllTargets
+            if ([output respondsToSelector:@selector(removeAllTargets)]) {
+                [output removeAllTargets];
+            }
+        }
+        
         [self->_targets removeAllObjects];
     });
 }
@@ -58,7 +67,7 @@
 
 - (void)dealloc
 {
-    [self removeAllTargets];
+//    [self removeAllTargets];
     [[CGPixelFramebufferCache sharedFramebufferCache] deleteAllUnassignedFramebuffers];
 }
 
