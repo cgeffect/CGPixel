@@ -24,9 +24,7 @@
     runSyncOnSerialQueue(^{
         [[CGPixelContext sharedRenderContext] useAsCurrentContext];
         for (id<CGPixelInput> currentTarget in self->_targets){
-            [currentTarget setInputFramebuffer:self->_outputFramebuffer];
-            CMSampleTimingInfo info = {0};
-            [currentTarget newFrameReadyAtTime:kCMTimeZero timimgInfo:info];
+            [currentTarget newFrameReadyAtTime:kCMTimeZero framebuffer:self->_outputFramebuffer];
         }
     });
 }

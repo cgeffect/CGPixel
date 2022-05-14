@@ -16,10 +16,10 @@
 #pragma mark -
 #pragma mark CGPaintInput
 - (void)setInputFramebuffer:(CGPixelFramebuffer *)framebuffer {
-    _finallyFramebuffer = framebuffer;
 }
 
-- (void)newFrameReadyAtTime:(CMTime)frameTime timimgInfo:(CMSampleTimingInfo)timimgInfo {
+- (void)newFrameReadyAtTime:(CMTime)frameTime framebuffer:(CGPixelFramebuffer *)framebuffer {
+    _finallyFramebuffer = framebuffer;
     if (_outputCallback == nil || self.enableOutput == NO) {
         return;
     }

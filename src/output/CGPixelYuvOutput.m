@@ -1,13 +1,13 @@
 //
-//  CGPixelRawDataOutput.m
+//  CGPixelYuvOutput.m
 //  CGPixel
 //
-//  Created by CGPixel on 2021/5/13.
+//  Created by Jason on 2022/5/14.
 //
 
-#import "CGPixelRawDataOutput.h"
+#import "CGPixelYuvOutput.h"
 
-@implementation CGPixelRawDataOutput
+@implementation CGPixelYuvOutput
 {
     CGPixelFramebuffer *_finallyFramebuffer;
 }
@@ -16,9 +16,6 @@
 #pragma mark CGPaintInput
 - (void)newFrameReadyAtTime:(CMTime)frameTime framebuffer:(CGPixelFramebuffer *)framebuffer {
     _finallyFramebuffer = framebuffer;
-    if (_outputCallback == nil || self.enableOutput == NO) {
-        return;
-    }
 
     [_finallyFramebuffer bindFramebuffer];
     NSAssert(_finallyFramebuffer.textureOptions.internalFormat == GL_RGBA, @"For conversion to a CGImage the output texture format for this filter must be GL_RGBA.");
@@ -33,9 +30,10 @@
         rawImagePixels = (GLubyte *)malloc(totalBytesForImage);
         glReadPixels(0, 0, (int)_size.width, (int)_size.height, GL_RGBA, GL_UNSIGNED_BYTE, rawImagePixels);
     });
-    NSData *data = [NSData dataWithBytes:rawImagePixels length:totalBytesForImage];
-    self.outputCallback(data);
-    free(rawImagePixels);
+}
+
+- (void)dealloc {
+
 }
 
 @end
