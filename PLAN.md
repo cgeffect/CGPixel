@@ -1,9 +1,9 @@
 # CGPixel
 
-现代最新版的一些图形api, 包括vulkan/metal 都有相同的设计理念, opengl是基于状态机的渲染, vulkan是基于流程的, 都有一个commandbuffer, opengl在这一点上很不友好, 上线文绑定, 很容易出错, 
+现代最新版的一些图形api, 包括vulkan/metal 都有相同的设计理念, opengl是面向过程的, metal是面向对象的, 最要命的是opengl天生不适合多线程并发, 线程和上下文绑定, opengl在这一点上很容易出错 
 接下来两个计划:
-把opengl的渲染流程改成和metal相似
-把渲染任务全部放进队列异步执行
+1. GL线程单独抽离出来, 和渲染完全分开
+2. 把opengl的渲染流程改成和metal相似
 
 https://github.com/LinBinghe/XMedia
 https://github.com/wangyijin/GPUImage-x

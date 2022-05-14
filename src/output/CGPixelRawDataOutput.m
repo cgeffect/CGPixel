@@ -8,10 +8,14 @@
 #import "CGPixelRawDataOutput.h"
 
 @implementation CGPixelRawDataOutput
+{
+    CGPixelFramebuffer *_finallyFramebuffer;
+}
 
 #pragma mark -
-#pragma mark Image capture
-- (void)captureFramebufferToOutput {
+#pragma mark CGPaintInput
+- (void)newFrameReadyAtTime:(CMTime)frameTime framebuffer:(CGPixelFramebuffer *)framebuffer {
+    _finallyFramebuffer = framebuffer;
     if (_outputCallback == nil || self.enableOutput == NO) {
         return;
     }

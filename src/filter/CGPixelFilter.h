@@ -13,6 +13,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef struct _vec_float3 {
+    float x;
+    float y;
+    float z;
+} vec_float3;
+
 @interface CGPixelFilter : CGPixelOutput<CGPixelInput, CGPixelFilterInput>
 {
 @protected
@@ -44,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark -
 #pragma mark set
 - (void)setValue:(CGFloat)value;
-
+- (void)setInValue3:(vec_float3)inValue;
 #pragma mark -
 #pragma mark 输出结果
 //The caller maintains memory

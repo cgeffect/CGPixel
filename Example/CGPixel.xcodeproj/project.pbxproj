@@ -85,6 +85,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9650B810282D039200642BA4 /* EffectList */ = {
+			isa = PBXGroup;
+			children = (
+				96C028C52659511A0009C77D /* CGPixelListController.h */,
+				96C028C12659511A0009C77D /* CGPixelListController.m */,
+			);
+			path = EffectList;
+			sourceTree = "<group>";
+		};
 		C3557C5F71716B5E1D7BA1EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,12 +138,11 @@
 		E5E9820C2658D756008ED21D /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				9650B810282D039200642BA4 /* EffectList */,
 				9646E527278556FD00BFE83C /* CGPixelCameraController.h */,
 				9646E526278556FD00BFE83C /* CGPixelCameraController.m */,
 				96C028BF2659511A0009C77D /* CGPixelController.h */,
 				96C028C32659511A0009C77D /* CGPixelController.m */,
-				96C028C52659511A0009C77D /* CGPixelListController.h */,
-				96C028C12659511A0009C77D /* CGPixelListController.m */,
 				96A94BCB26596F2400CCF932 /* CGPreviewController.h */,
 				96A94BCC26596F2400CCF932 /* CGPreviewController.m */,
 				E5FE984D266507BD00548BB1 /* CGPixelVideoController.h */,

@@ -14,7 +14,7 @@
     CGPixelOutput *_inputSource;
     CGPixelFilter<CGPixelInput> *filter;
     CGPixelViewOutput * paintview;
-    CGPixelTargetOutput *_targetOutput;
+    CGPixelPixelbufferOutput * _targetOutput;
     UIImage *_sourceImage;
 }
 @end
@@ -181,12 +181,18 @@
         {
             filter = [[CGPixelCartoonFilter alloc] init];
         }break;
+        case CG_COLORIZE:
+        {
+            filter = [[CGPixelPhotoFilter alloc] init];
+        }break;
         default:
             break;
     }
+    CGPixelFilter *ff = [[CGPixelFilter alloc] init];
     _targetOutput = [[CGPixelPixelbufferOutput alloc] init];
     [_inputSource addTarget:filter];
-    [filter addTarget:paintview];
+    [filter addTarget:ff];
+    [ff addTarget:paintview];
     [filter addTarget:_targetOutput];
     [_inputSource requestRender];
 }
@@ -200,11 +206,12 @@
         case CG_RADIAL_SCALE_BLUR:[filter setValue:slide.value * 100];break;
         case CG_RADIAL_ROTATE_BLUR:[filter setValue:slide.value * 100];break;
         case CG_VORTEX:[filter setValue:slide.value * 100 - 50];break;
+        case CG_COLORIZE:[filter setValue:slide.value * 100];break;
         default:
             break;
     }
     [_inputSource requestRender];
-//    _targetOutput.enableOutput = YES;
+    _targetOutput.enableOutput = YES;
     [((CGPixelPixelbufferOutput *)_targetOutput) setOutputCallback:^(CVPixelBufferRef  _Nonnull pixelbuffer) {
         
     }];

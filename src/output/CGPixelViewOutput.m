@@ -49,11 +49,8 @@
     return self;
 }
 
-- (void)setInputFramebuffer:(CGPixelFramebuffer *)framebuffer {
+- (void)newFrameReadyAtTime:(CMTime)frameTime framebuffer:(CGPixelFramebuffer *)framebuffer {
     _inputFramebuffer = framebuffer;
-}
-
-- (void)newFrameReadyAtTime:(CMTime)frameTime timimgInfo:(CMSampleTimingInfo)timimgInfo {
     [_renderPipline glDraw:[_inputFramebuffer texture] width:_inputFramebuffer.fboSize.width height:_inputFramebuffer.fboSize.height];
     if (_inputFramebuffer.isOnlyGenTexture == NO) {
         [_inputFramebuffer recycle];

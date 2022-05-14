@@ -153,12 +153,10 @@ static const GLfloat textureCoordinates[] = {
 #pragma mark -
 #pragma mark CGRenderInput
 
-- (void)setInputFramebuffer:(nonnull CGPixelFramebuffer *)framebuffer {
+- (void)newFrameReadyAtTime:(CMTime)frameTime framebuffer:(CGPixelFramebuffer *)framebuffer {
     _inputFramebuffer = framebuffer;
     [self glReceivedInput:framebuffer];
-}
-- (void)newFrameReadyAtTime:(CMTime)frameTime timimgInfo:(CMSampleTimingInfo)timimgInfo {
-    
+
     //1.处理自己的滤镜
     [self renderToTextureWithVertices:imageVertices textureCoordinates:textureCoordinates];
     
@@ -211,18 +209,19 @@ static const GLfloat textureCoordinates[] = {
     [self->_outputFramebuffer unbindFramebuffer];
     [self->_outputFramebuffer unbindTexture];
     [self->_shaderProgram unuse];
-    if (_inputFramebuffer.isOnlyGenTexture == NO) {
-        [_inputFramebuffer recycle];
-    }
+//    if (_inputFramebuffer.isOnlyGenTexture == NO) {
+//        [_inputFramebuffer recycle];
+//    }
 }
 
 - (void)notifyNextTargetsAboutNewFrameAtTime:(CMTime)frameTime {
-    for (id<CGPixelInput> currentTarget in _targets)
-    {
-        [currentTarget setInputFramebuffer:self->_outputFramebuffer];
-        CMSampleTimingInfo info = {0};
-        [currentTarget newFrameReadyAtTime:kCMTimeZero timimgInfo:info];
+    [_inputFramebuffer recycle];
+
+    for (id<CGPixelInput> currentTarget in _targets) {
+        [currentTarget newFrameReadyAtTime:kCMTimeZero framebuffer:self->_outputFramebuffer];
     }
+    
+    [_outputFramebuffer recycle];
 }
 
 #pragma mark -
@@ -261,6 +260,9 @@ static const GLfloat textureCoordinates[] = {
     _value = value;
 }
 
+- (void)setInValue3:(vec_float3)inValue {
+    
+}
 #pragma mark -
 #pragma mark Image capture
 void dataProviderReleaseCallback (void *info, const void *data, size_t size)
