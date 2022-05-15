@@ -1,6 +1,6 @@
 precision highp float;
 
-varying vec2 varyTextCoord;
+varying vec2 vTexCoord;
 uniform sampler2D uTexture;
 uniform float Time;
 
@@ -15,13 +15,13 @@ void main()
    float alpha = maxAlpha * (1.0 - progress);
    float scale = 1.0 + (maxScale - 1.0) * progress;
    
-   float weakX = 0.5 + (varyTextCoord.x - 0.5) / scale;
-   float weakY = 0.5 + (varyTextCoord.y - 0.5) / scale;
+   float weakX = 0.5 + (vTexCoord.x - 0.5) / scale;
+   float weakY = 0.5 + (vTexCoord.y - 0.5) / scale;
    vec2 weakTextureCoords = vec2(weakX, weakY);
    
    vec4 weakMask = texture2D(uTexture, weakTextureCoords);
    
-   vec4 mask = texture2D(uTexture, varyTextCoord);
+   vec4 mask = texture2D(uTexture, vTexCoord);
    
    gl_FragColor = mask * (1.0 - alpha) + weakMask * alpha;
 }

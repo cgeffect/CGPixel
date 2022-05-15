@@ -1,5 +1,5 @@
 precision highp float;
-varying vec2 varyTextCoord;
+varying vec2 vTexCoord;
 uniform sampler2D uTexture;
 uniform vec3 uColor;
 uniform float uRatio;
@@ -7,7 +7,7 @@ uniform float time;
 
 void main() {
     // UV map
-    vec2 uv = varyTextCoord;
+    vec2 uv = vTexCoord;
 
     // Input image
     vec4 image = texture(uTexture, uv);

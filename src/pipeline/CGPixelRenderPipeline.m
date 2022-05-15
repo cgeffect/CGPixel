@@ -16,24 +16,24 @@ NSString *const directPassVertexShaderString = CG_SHADER_STRING
  attribute vec4 position;
  attribute vec4 aTexCoord;
  
- varying vec2 varyTextCoord;
+ varying vec2 vTexCoord;
  
  void main()
  {
     gl_Position = position;
-    varyTextCoord = vec2(aTexCoord.x, 1.0 - aTexCoord.y);
+    vTexCoord = vec2(aTexCoord.x, 1.0 - aTexCoord.y);
  }
  );
 
 NSString *const directPassFragmentShaderString = CG_SHADER_STRING
 (
- varying highp vec2 varyTextCoord;
+ varying highp vec2 vTexCoord;
  
  uniform sampler2D uTexture;
  
  void main()
  {
-     gl_FragColor = texture2D(uTexture, varyTextCoord);
+     gl_FragColor = texture2D(uTexture, vTexCoord);
  }
  );
 

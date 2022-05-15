@@ -1,6 +1,6 @@
 precision highp float;
 
-varying vec2 varyTextCoord;
+varying vec2 vTexCoord;
 uniform sampler2D uTexture;
 uniform vec2 uSize;
 uniform vec2 uCenter;
@@ -20,7 +20,7 @@ mat2 rotate2d(float angle) {
 void main() {
     float factor = uCount * 3.14159 * 0.00025;
 
-    vec2 loc_tex = varyTextCoord * uSize;
+    vec2 loc_tex = vTexCoord * uSize;
     vec2 loc_cnt = uCenter;
     vec2 loc_dist = loc_tex - loc_cnt;
 

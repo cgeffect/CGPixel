@@ -25,7 +25,14 @@
 }
 
 - (void)glProgramUsed {
+    
     int index = [_shaderProgram getUniformLocation:@"Time"];
+
+//    int index = [_shaderProgram getUniformLocation:@"Time"];
+//
+//    int index = [_shaderProgram getUniformLocation:@"Time"];
+//
+//    int index = [_shaderProgram getUniformLocation:@"Time"];
     [_shaderProgram setUniform1f:index x:_value];
 }
 @end

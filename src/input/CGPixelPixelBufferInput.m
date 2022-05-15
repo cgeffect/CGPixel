@@ -24,23 +24,23 @@ NSString *const gl_pix_vert = CG_SHADER_STRING (
     attribute vec4 position;
     attribute vec2 aTexCoord;
 
-    varying lowp vec2 varyTextCoord;
+    varying lowp vec2 vTexCoord;
     void main() {
-      varyTextCoord = aTexCoord;
+      vTexCoord = aTexCoord;
       gl_Position = position;
     }
 );
 NSString *const gl_pix_frag_nv12 = CG_SHADER_STRING (
     precision highp float;
-    varying vec2 varyTextCoord;
+    varying vec2 vTexCoord;
     uniform sampler2D y_texture;
     uniform sampler2D vu_texture;
 
     void main()
     {
       vec3 yuv;
-      yuv.x = texture2D(y_texture, varyTextCoord).r;
-      yuv.yz = texture2D(vu_texture, varyTextCoord).rg;
+      yuv.x = texture2D(y_texture, vTexCoord).r;
+      yuv.yz = texture2D(vu_texture, vTexCoord).rg;
 
       float y = yuv.x;
       float u = yuv.y - 0.5;

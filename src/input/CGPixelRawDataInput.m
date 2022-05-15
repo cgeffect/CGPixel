@@ -12,23 +12,23 @@ NSString *const gl_vert = CG_SHADER_STRING (
     attribute vec4 position;
     attribute vec2 aTexCoord;
 
-    varying lowp vec2 varyTextCoord;
+    varying lowp vec2 vTexCoord;
     void main() {
-      varyTextCoord = aTexCoord;
+      vTexCoord = aTexCoord;
       gl_Position = position;
     }
 );
 
 NSString *const gl_frag_nv21 = CG_SHADER_STRING (
     precision highp float;
-    varying vec2 varyTextCoord;
+    varying vec2 vTexCoord;
     uniform sampler2D y_texture;
     uniform sampler2D vu_texture;
     void main()
     {
       vec3 yuv;
-      yuv.x = texture2D(y_texture, varyTextCoord).r;
-      yuv.yz = texture2D(vu_texture, varyTextCoord).ra;
+      yuv.x = texture2D(y_texture, vTexCoord).r;
+      yuv.yz = texture2D(vu_texture, vTexCoord).ra;
 
       float y = yuv.x;
       float v = yuv.y - 0.5;
@@ -43,14 +43,14 @@ NSString *const gl_frag_nv21 = CG_SHADER_STRING (
 
 NSString *const gl_frag_nv12 = CG_SHADER_STRING (
     precision highp float;
-    varying vec2 varyTextCoord;
+    varying vec2 vTexCoord;
     uniform sampler2D y_texture;
     uniform sampler2D vu_texture;
     void main()
     {
       vec3 yuv;
-      yuv.x = texture2D(y_texture, varyTextCoord).r;
-      yuv.yz = texture2D(vu_texture, varyTextCoord).ra;
+      yuv.x = texture2D(y_texture, vTexCoord).r;
+      yuv.yz = texture2D(vu_texture, vTexCoord).ra;
 
       float y = yuv.x;
       float u = yuv.y - 0.5;
@@ -65,7 +65,7 @@ NSString *const gl_frag_nv12 = CG_SHADER_STRING (
 
 NSString *const gl_frag_i420 = CG_SHADER_STRING (
     precision highp float;
-    varying vec2 varyTextCoord;
+    varying vec2 vTexCoord;
     uniform sampler2D y_texture;
     uniform sampler2D u_texture;
     uniform sampler2D v_texture;
@@ -73,9 +73,9 @@ NSString *const gl_frag_i420 = CG_SHADER_STRING (
     void main()
     {
       vec3 yuv;
-      yuv.x = texture2D(y_texture, varyTextCoord).r;
-      yuv.y = texture2D(u_texture, varyTextCoord).r;
-      yuv.z = texture2D(v_texture, varyTextCoord).r;
+      yuv.x = texture2D(y_texture, vTexCoord).r;
+      yuv.y = texture2D(u_texture, vTexCoord).r;
+      yuv.z = texture2D(v_texture, vTexCoord).r;
 
       float y = yuv.x;
       float u = yuv.y - 0.5;

@@ -6,14 +6,14 @@ uniform sampler2D uTexture;
 uniform float uD;
 const float uR = 0.5;
 
-varying vec2 varyTextCoord;
+varying vec2 vTexCoord;
 
 void main()
 {
     ivec2 ires = ivec2(512, 512);
     float Res = float(ires.y);
     
-    vec2 st = varyTextCoord;
+    vec2 st = vTexCoord;
     float Radius = Res * uR;
     
     vec2 xy = Res * st;

@@ -1,5 +1,5 @@
 precision highp float;
-varying vec2 varyTextCoord;
+varying vec2 vTexCoord;
 uniform sampler2D uTexture;
 uniform vec3 uColor;
 uniform float uRatio;
@@ -24,7 +24,7 @@ void main()
 
   // The input fragment color.
   // Can come from a texture, a varying or a contant.
-  vec4 inputColor = texture2D(uTexture, varyTextCoord);
+  vec4 inputColor = texture2D(uTexture, vTexCoord);
   
   // Convert to grayscale first:
   vec4 grayscale = toGrayscale(inputColor);

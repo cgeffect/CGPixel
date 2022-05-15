@@ -1,6 +1,6 @@
 precision highp float;
 
-varying vec2 varyTextCoord;
+varying vec2 vTexCoord;
 uniform sampler2D uTexture;
 uniform vec3 uColor;
 uniform float uRatio;
@@ -21,7 +21,7 @@ vec3 YUV2RGB(float y, float u, float v) {
 
 //yuv
 void main() {
-    vec4 src = texture2D(uTexture, varyTextCoord);
+    vec4 src = texture2D(uTexture, vTexCoord);
     vec3 yuv = RGB2YUV(src.r, src.g, src.b);
 
     vec3 color = vec3(1.0, 0.0, 0.0);
