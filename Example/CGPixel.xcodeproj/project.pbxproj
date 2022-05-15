@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9646E528278556FD00BFE83C /* CGPixelCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9646E526278556FD00BFE83C /* CGPixelCameraController.m */; };
 		9655B331273582B900491380 /* CGPixelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655B330273582B900491380 /* CGPixelSource.m */; };
+		9687D8DA2830F3BE00FCA89C /* CGPixelYuvController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9687D8D92830F3BE00FCA89C /* CGPixelYuvController.m */; };
 		96A94BC62659596E00CCF932 /* Test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 96A94BC52659596E00CCF932 /* Test.mp4 */; };
 		96A94BCD26596F2400CCF932 /* CGPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A94BCC26596F2400CCF932 /* CGPreviewController.m */; };
 		96B1D75026652E71003C29D0 /* CGPixelSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D74F26652E71003C29D0 /* CGPixelSourceController.m */; };
@@ -37,6 +38,8 @@
 		9646E527278556FD00BFE83C /* CGPixelCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPixelCameraController.h; sourceTree = "<group>"; };
 		9655B32F273582B900491380 /* CGPixelSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPixelSource.h; sourceTree = "<group>"; };
 		9655B330273582B900491380 /* CGPixelSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPixelSource.m; sourceTree = "<group>"; };
+		9687D8D82830F3BE00FCA89C /* CGPixelYuvController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPixelYuvController.h; sourceTree = "<group>"; };
+		9687D8D92830F3BE00FCA89C /* CGPixelYuvController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPixelYuvController.m; sourceTree = "<group>"; };
 		96A94BC52659596E00CCF932 /* Test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Test.mp4; sourceTree = "<group>"; };
 		96A94BCB26596F2400CCF932 /* CGPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGPreviewController.h; sourceTree = "<group>"; };
 		96A94BCC26596F2400CCF932 /* CGPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGPreviewController.m; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 				E5FE984E266507BD00548BB1 /* CGPixelVideoController.m */,
 				96B1D74E26652E71003C29D0 /* CGPixelSourceController.h */,
 				96B1D74F26652E71003C29D0 /* CGPixelSourceController.m */,
+				9687D8D82830F3BE00FCA89C /* CGPixelYuvController.h */,
+				9687D8D92830F3BE00FCA89C /* CGPixelYuvController.m */,
 				9655B32F273582B900491380 /* CGPixelSource.h */,
 				9655B330273582B900491380 /* CGPixelSource.m */,
 			);
@@ -299,6 +304,7 @@
 				96C028C82659511A0009C77D /* CGPixelListController.m in Sources */,
 				96B1D75026652E71003C29D0 /* CGPixelSourceController.m in Sources */,
 				9646E528278556FD00BFE83C /* CGPixelCameraController.m in Sources */,
+				9687D8DA2830F3BE00FCA89C /* CGPixelYuvController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

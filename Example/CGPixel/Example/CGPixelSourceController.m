@@ -10,6 +10,7 @@
 #import "CGPixelController.h"
 #import "CGPixelVideoController.h"
 #import "CGPixelCameraController.h"
+#import "CGPixelYuvController.h"
 
 @interface CGPixelSourceController ()
 {
@@ -24,7 +25,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     self.navigationItem.title = @"CGPaint";
 
-    _inputList = @[@"camera input", @"data input", @"image input", @"pixel input", @"video input", @"effect"];
+    _inputList = @[@"camera input", @"data input", @"image input", @"pixel input", @"video input", @"effect", @"yuv"];
     
 //    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"play" style:UIBarButtonItemStyleDone target:self action:@selector(goAction)];
 //    self.navigationItem.rightBarButtonItem = item;
@@ -80,6 +81,9 @@
         [self.navigationController pushViewController:vc animated:YES];
     } else if ([type isEqualToString:@"effect"]) {
         CGPixelListController *vc = [[CGPixelListController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if ([type isEqualToString:@"yuv"]) {
+        CGPixelYuvController *vc = [[CGPixelYuvController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
