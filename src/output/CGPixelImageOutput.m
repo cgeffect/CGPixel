@@ -27,7 +27,6 @@
     __block CGImageRef cgImageFromBytes;
     runSyncOnSerialQueue(^{
         [[CGPixelContext sharedRenderContext] useAsCurrentContext];
-        glFinish();
         if ([CGPixelContext supportsFastTextureUpload]) {
             CVPixelBufferRef renderTarget = self->_finallyFramebuffer.renderTarget;
             NSUInteger paddedWidthOfImage = CVPixelBufferGetBytesPerRow(renderTarget) / 4.0;
