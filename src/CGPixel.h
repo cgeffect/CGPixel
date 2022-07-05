@@ -31,6 +31,7 @@ FOUNDATION_EXPORT const unsigned char CGPaintVersionString[];
 #import "CGPixelMosaicFilter.h"
 #import "CGPixelCartoonFilter.h"
 #import "CGPixelPhotoFilter.h"
+#import "CGPixelYuvFilter.h"
 
 #pragma mark -
 #pragma mark Input
@@ -48,4 +49,5 @@ FOUNDATION_EXPORT const unsigned char CGPaintVersionString[];
 #import "CGPixelRawDataOutput.h"
 #import "CGPixelTextureOutput.h"
 #import "CGPixelPixelbufferOutput.h"
+#import "CGPixelYuvOutput.h"
 

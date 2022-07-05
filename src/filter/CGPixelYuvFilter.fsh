@@ -1,6 +1,7 @@
-precision mediump float;
-varying vec2 vTextureCoord;
+precision highp float;
 uniform sampler2D tex;
+varying vec2 vTextureCoord;
+
 uniform float width;
 uniform float height;
 uniform float offset;

@@ -51,25 +51,25 @@ NSString *const kCGVertexShaderString = CG_SHADER_STRING
  attribute vec4 position;
  attribute vec4 aTexCoord;
  
- varying vec2 varyTextCoord;
+ varying vec2 vTexCoord;
  
  void main()
  {
     gl_Position = position;
-    varyTextCoord = aTexCoord.xy;
+    vTexCoord = aTexCoord.xy;
  }
  );
 
 NSString *const kCGFragmentShaderString = CG_SHADER_STRING
 (
  precision highp float;
- varying vec2 varyTextCoord;
+ varying vec2 vTexCoord;
  
  uniform sampler2D uTexture;
  uniform float a;
  void main()
  {
-     gl_FragColor = texture2D(uTexture, varyTextCoord);
+     gl_FragColor = texture2D(uTexture, vTexCoord);
  }
 );
 

@@ -1,6 +1,6 @@
 precision highp float;
 
-varying vec2 varyTextCoord;
+varying vec2 vTexCoord;
 uniform sampler2D uTexture;
 
 uniform float Time;
@@ -20,11 +20,11 @@ void main (void) {
     float time = mod(Time, duration * 2.0);
     float amplitude = max(sin(time * (PI / duration)), 0.0);
     
-    float jitter = rand(varyTextCoord.y) * 2.0 - 1.0; // -1~1
+    float jitter = rand(vTexCoord.y) * 2.0 - 1.0; // -1~1
     bool needOffset = abs(jitter) < maxJitter * amplitude;
     
-    float textureX = varyTextCoord.x + (needOffset ? jitter : (jitter * amplitude * 0.006));
-    vec2 textureCoords = vec2(textureX, varyTextCoord.y);
+    float textureX = vTexCoord.x + (needOffset ? jitter : (jitter * amplitude * 0.006));
+    vec2 textureCoords = vec2(textureX, vTexCoord.y);
     
     
     vec4 mask = texture2D(uTexture, textureCoords);

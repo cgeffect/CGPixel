@@ -1,6 +1,6 @@
 precision highp float;
 
-varying vec2 varyTextCoord;
+varying vec2 vTexCoord;
 uniform sampler2D uTexture;
 uniform vec2 uSize;
 uniform vec2 uCenter;
@@ -13,7 +13,7 @@ highp float rand( const in vec2 uv) {
 }
 
 void main() {
-    vec2 texCoord = varyTextCoord;
+    vec2 texCoord = vTexCoord;
     vec2 center = uCenter / uSize;
     vec2 toCenter = center - texCoord;
 

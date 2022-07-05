@@ -1,6 +1,6 @@
 precision highp float;
 
-varying vec2 varyTextCoord;
+varying vec2 vTexCoord;
 uniform sampler2D uTexture;
 
 uniform float Time;
@@ -14,7 +14,7 @@ void main (void) {
     vec2 offsetCoords = vec2(offset, offset) * progress;
     float scale = 1.0 + (maxScale - 1.0) * progress;
     
-    vec2 ScaleTextureCoords = vec2(0.5, 0.5) + (varyTextCoord - vec2(0.5, 0.5)) / scale;
+    vec2 ScaleTextureCoords = vec2(0.5, 0.5) + (vTexCoord - vec2(0.5, 0.5)) / scale;
     
     vec4 maskR = texture2D(uTexture, ScaleTextureCoords + offsetCoords);
     vec4 maskB = texture2D(uTexture, ScaleTextureCoords - offsetCoords);

@@ -8,28 +8,31 @@
 #import "CGPixelYuvOutput.h"
 
 @implementation CGPixelYuvOutput
-{
-    CGPixelFramebuffer *_finallyFramebuffer;
-}
 
 #pragma mark -
 #pragma mark CGPaintInput
 - (void)newFrameReadyAtTime:(CMTime)frameTime framebuffer:(CGPixelFramebuffer *)framebuffer {
-    _finallyFramebuffer = framebuffer;
+    [framebuffer bindFramebuffer];
 
-    [_finallyFramebuffer bindFramebuffer];
-    NSAssert(_finallyFramebuffer.textureOptions.internalFormat == GL_RGBA, @"For conversion to a CGImage the output texture format for this filter must be GL_RGBA.");
-    NSAssert(_finallyFramebuffer.textureOptions.type == GL_UNSIGNED_BYTE, @"For conversion to a CGImage the type of the output texture of this filter must be GL_UNSIGNED_BYTE.");
+    int width = framebuffer.fboSize.width;
+    int height = framebuffer.fboSize.height;
     
-    __block GLubyte *rawImagePixels;
-    CGSize _size = self->_finallyFramebuffer.fboSize;
-    NSUInteger totalBytesForImage = (int)_size.width * (int)_size.height * 4;
-    runSyncOnSerialQueue(^{
-        [[CGPixelContext sharedRenderContext] useAsCurrentContext];
-        [self->_finallyFramebuffer bindFramebuffer];
-        rawImagePixels = (GLubyte *)malloc(totalBytesForImage);
-        glReadPixels(0, 0, (int)_size.width, (int)_size.height, GL_RGBA, GL_UNSIGNED_BYTE, rawImagePixels);
-    });
+    uint8_t *yuv = (uint8_t *)malloc(width * height * 3 / 2);
+    glPixelStorei(GL_PACK_ALIGNMENT, 4);
+
+    int offset = width * height;
+    // Y
+    glReadPixels(0, 0, width / 4, height,  GL_RGBA, GL_UNSIGNED_BYTE, yuv);
+    // U
+    glReadPixels(width / 4, 0, width / 8, height / 2, GL_RGBA, GL_UNSIGNED_BYTE, yuv + offset);
+    // V
+    glReadPixels(width / 4, height / 2, width / 8, height / 2, GL_RGBA, GL_UNSIGNED_BYTE, yuv + offset * 5 / 4);
+    
+    NSString *documentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    documentsDir = [documentsDir stringByAppendingPathComponent:@"log.yuv"];
+
+    NSData *d = [NSData dataWithBytes:yuv length:width * height * 3 / 2];
+    [d writeToFile:documentsDir atomically:YES];
 }
 
 - (void)dealloc {

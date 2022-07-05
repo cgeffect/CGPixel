@@ -14,7 +14,7 @@
     CGPixelOutput *_inputSource;
     CGPixelFilter<CGPixelInput> *filter;
     CGPixelViewOutput * paintview;
-    CGPixelPixelbufferOutput * _targetOutput;
+    CGPixelImageOutput * _targetOutput;
     UIImage *_sourceImage;
 }
 @end
@@ -38,7 +38,7 @@
     [slide addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:slide];
     
-    _sourceImage = [UIImage imageNamed:@"rgba"];
+    _sourceImage = [UIImage imageNamed:@"rgba_1120"];
     switch (_inputType) {
         case CG_TEXTURE:
             self.navigationItem.title = @"CG_TEXTURE";
@@ -189,7 +189,7 @@
             break;
     }
     CGPixelFilter *ff = [[CGPixelFilter alloc] init];
-    _targetOutput = [[CGPixelPixelbufferOutput alloc] init];
+    _targetOutput = [[CGPixelImageOutput alloc] init];
     [_inputSource addTarget:filter];
     [filter addTarget:ff];
     [ff addTarget:paintview];
@@ -212,7 +212,7 @@
     }
     [_inputSource requestRender];
     _targetOutput.enableOutput = YES;
-    [((CGPixelPixelbufferOutput *)_targetOutput) setOutputCallback:^(CVPixelBufferRef  _Nonnull pixelbuffer) {
+    [((CGPixelImageOutput *)_targetOutput) setOutputCallback:^(CGImageRef  _Nonnull imageRef) {
         
     }];
 }

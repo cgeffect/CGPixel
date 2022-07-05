@@ -1,14 +1,14 @@
 precision highp float;
 
 uniform sampler2D uTexture;
-varying vec2 varyTextCoord;
+varying vec2 vTexCoord;
 
 const vec2 BLUR_CENTER = vec2(0.5, 0.5);
 const int NUM_SAMPLES = 70;
 
 uniform float ratio;//0-1
 void main() {
-    vec2 curPos = varyTextCoord;
+    vec2 curPos = vTexCoord;
     float strength = ratio / float(NUM_SAMPLES);
     vec2 dir = BLUR_CENTER - curPos;
     vec2 blurVector = dir * strength;

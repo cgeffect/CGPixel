@@ -5,7 +5,8 @@
 //  Created by Jason on 2022/5/14.
 //
 
-#import <CGPixel/CGPixel.h>
+#import <Foundation/Foundation.h>
+#import "CGPixelFilter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

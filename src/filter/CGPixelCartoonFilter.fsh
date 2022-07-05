@@ -1,6 +1,6 @@
 precision highp float;
 
-varying vec2 varyTextCoord;
+varying vec2 vTexCoord;
 
 uniform sampler2D uTexture;
 
@@ -35,7 +35,7 @@ vec4 dip_filter(mat3 _filter, sampler2D _image, vec2 _xy, vec2 texSize)
 }
 
 void main(void) {
-    vec2 vUV = varyTextCoord;
+    vec2 vUV = vTexCoord;
     vec2 intXY = vec2(vUV.x * texSize.x, vUV.y * texSize.y);
 
     gl_FragColor = dip_filter(kernel, uTexture, intXY, texSize);
