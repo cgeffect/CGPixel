@@ -183,14 +183,22 @@ static const GLfloat textureCoordinates[] = {
     glClearColor(1, 1, 1, 1);
     glClear(GL_COLOR_BUFFER_BIT);
 
+    //开启0号绑定点, 可以理解为0号绑定点就是在显卡上的以为物理位置, 开启意味着可以像这个位置读写数据
     glActiveTexture(GL_TEXTURE0);
+    //把_inputFramebuffer.texture这个纹理的id绑定到0号绑定点上, 并且设置是GL_TEXTURE_2D类型, 纹理有多种不同的类型
+    //此时0号绑定点上存储的就是_inputFramebuffer.texture纹理id
     glBindTexture(GL_TEXTURE_2D, _inputFramebuffer.texture);
+    //在把0号绑定点传输给着色器里的_uTexture位置, 着色器就会从0号绑定点去读取里面的纹理
     glUniform1i(_uTexture, VGX_TEXTURE0);
-
+    
     //这个地方要修改, 使用VBO
     //纹理和顶点坐标一定要是有VBO, 否则某些情况下会出现bug
     //Execution of the command buffer was aborted due to an error during execution. Ignored (for causing prior/excessive GPU errors) (IOAF code 4)
+    //------------
+    //改为VAO, 更为方便
+    //glGenVertexArraysOES(GLsizei n, GLuint *arrays)
     glEnableVertexAttribArray(self->_position);
+    //在没有使用VBO/VAO的情况下, 最后一个参数直接传地址数据源的第也可以, 为什么可以呢?
     glVertexAttribPointer(self->_position, 2, GL_FLOAT, 0, 0, vertices);
     glEnableVertexAttribArray(self->_aTexCoord);
     glVertexAttribPointer(self->_aTexCoord, 2, GL_FLOAT, 0, 0, textureCoordinates);
