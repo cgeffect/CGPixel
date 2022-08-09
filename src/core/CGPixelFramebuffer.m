@@ -116,6 +116,7 @@
     if (isOverride) {
         glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, size.width, size.height, format, GL_UNSIGNED_BYTE, data);
     } else {
+        //GL_UNSIGNED_BYTE的含义的无符号整形占4个字节, 和format士对应的, 比如format是RGBA8888, 正好是4个字节
         glTexImage2D(GL_TEXTURE_2D, 0, internalformat, size.width, size.height, 0, format, GL_UNSIGNED_BYTE, data);
     }
 }

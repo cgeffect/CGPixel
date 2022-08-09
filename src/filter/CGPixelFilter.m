@@ -198,7 +198,9 @@ static const GLfloat textureCoordinates[] = {
     //改为VAO, 更为方便
     //glGenVertexArraysOES(GLsizei n, GLuint *arrays)
     glEnableVertexAttribArray(self->_position);
-    //在没有使用VBO/VAO的情况下, 最后一个参数直接传地址数据源的第也可以, 为什么可以呢?
+    //参考OpenGL ES 3.0编程指南第2版, 6.12 顶点数组, 89页
+    //如果使用的是顶点数组, 则最后一个参数是顶点数组的指针地址, 如果使用的是VBO, 则最后一个参数表示该数据在缓存中的偏移量
+    //倒数第三个参数是是否归一化, 因为我们传的数据就是归一化的数据, 所以不需要归一化
     glVertexAttribPointer(self->_position, 2, GL_FLOAT, 0, 0, vertices);
     glEnableVertexAttribArray(self->_aTexCoord);
     glVertexAttribPointer(self->_aTexCoord, 2, GL_FLOAT, 0, 0, textureCoordinates);
